@@ -1,0 +1,254 @@
+\documentclass{aa}
+% \documentclass[referee]{aa}
+\usepackage[varg]{txfonts}
+\usepackage[separate-uncertainty=true]{siunitx}
+\usepackage[version=3]{mhchem}
+
+\sisetup{range-units = brackets}
+
+\def\eps{\varepsilon}
+\def\aap{A\&A}
+\def\eprint{e-prints}
+\def\apj{ApJ}
+\def\apjs{ApJS}
+\def\apjl{ApJL}
+\def\mnras{MNRAS}
+\def\aj{AJ}
+\def\nat{Nature}
+\def\aaps{A\&A Supp.}
+\def\prd{Phys. Rev. D}
+\def\prl{Phys. Rev. Lett.}
+\def\araa{ARA\&A}       % Annual Review of Astron and Astrophys
+
+\begin{document}
+
+
+\title{High resolution near-IR spectroscopy of Arcturus and HD010853}
+\subtitle{Refining a near-IR iron line list}
+
+
+\author{ D.~T.~Andreasen\inst{1,2}
+    \and S.~G.~Sousa\inst{1}
+    \and E.~Delgado Mena\inst{1}
+    \and N.~C.~Santos\inst{1,2}
+    \and M.~Tsantaki\inst{1}
+    \and B.~Rojas-Ayala\inst{1}
+    \and V.~Neves\inst{3}}
+
+
+\institute{
+Instituto de Astrof\'isica e Ci\^encias do Espa\c{c}o, Universidade do Porto, CAUP, Rua das Estrelas, 4150-762 Porto, Portugal
+\email{daniel.andreasen@astro.up.pt}
+\and
+Departamento de F\'isica e Astronomia, Faculdade de Ci\^encias, Universidade do Porto, Rua Campo Alegre, 4169-007 Porto, Portugal
+\and
+Departamento de F\'{i}sica, Universidade Federal do Rio Grande do Norte, 59072-970 Natal, RN, Brazil
+}
+
+
+
+
+
+\date{Received ...; accepted ...}
+
+\abstract
+% Context
+{Effective temperature, surface gravity, and metallicity are basic
+spectroscopic stellar parameters necessary to characterize
+a star or a planetary system. Reliable atmospheric parameters for
+FGK stars have been obtained mostly from methods that relay on high
+resolution and high signal-to-noise optical spectroscopy. The
+advent of a new generation of high resolution near-IR spectrographs
+opens the possibility of using classic spectroscopic methods with
+high resolution and high signal-to-noise in the NIR spectral window.}
+% Aims
+{We aim to compile a new iron line list in the NIR from a solar
+spectrum to derive precise stellar atmospheric parameters,
+comparable to the ones already obtained from high resolution optical
+spectra. The spectral range covers \SI{10000}{\angstrom} to
+\SI{25000}{\angstrom}, which is equivalent to the Y, J, H, and K bands.}
+% Methods
+{Our spectroscopic analysis is based on the iron excitation and
+ionization balance done in LTE. We
+use a high resolution and high signal-to-noise ratio spectrum of the Sun
+from the Kitt Peak telescope as a starting point to compile the iron
+line list. The oscillator strengths ($\log\mathit{gf}$) of the iron lines were calibrated for the Sun.
+The abundance analysis was done using
+the MOOG code after measuring equivalent widths of 357 solar iron lines.}
+% Results
+{We successfully derived stellar atmospheric parameters for the
+Sun.
+Furthermore, we analysed
+HD20010, a F8IV star, from which we derived stellar atmospheric
+parameters using the same line list as for the Sun. The spectrum
+was obtained from the CRIRES-POP database.
+The results are compatible with the ones found in the literature,
+confirming the reliability of our line list. However, due to the
+quality of the data we obtain large errors.}
+% Conclusions
+{}
+
+
+
+\keywords{data reduction: high resolution spectra --
+          stars individual: HD20010 --
+          stars individual: Sun}
+\maketitle
+
+
+
+\section{Introduction}
+\label{sec:introduction}
+
+
+\section{Results}
+\label{sec:results}
+
+
+
+\subsection{Arcturus}
+\label{sec:derived_parameters_of_the_sun}
+Arcturus is one of the brightest stars on the night sky with a V magnitude of
+-0.05 \citep{Ducati2002}. Hence it has been subject to numerous observations
+(add some nice references here...) and is therefore a prime target for testing
+the line list by \cite{Andreasen2016}.
+
+We use the atlas from \cite{Hinkle2003} which covers the spectral range of
+interest. We identify the spectral lines with plot\textunderscore{}fits also presented in
+\cite{Andreasen2016}, where we also correct for RV by comparing to to a
+synthetic spectrum from the PHOENIX library \citep{Husser2013}. Similarly,
+strong telluric features were identified with a spectrum from the TAPAS
+web page \citep{Bertaux2014}. Lines blended with telluric were ommited
+from the analysis. The EW of rest of the lines were measure by hand using the
+splot function in IRAF. In the atlas there exist both a summer observation
+set and a winter observation set. This is in order to minimize the effect of
+tellurics at different spectral regions. As many lines as possible were
+measured in both sets, and combined to the final measure line list.
+The results can be seen in Table~\ref{tab:arcturus} and shows excellent
+agreement with the literature. Note, that due to the few \ion{Fe}{II} lines
+we have to fix the surface gravity. The value was a mean of many literature
+values
+
+The derivation of the parameters follow exactly the same procedure as used
+in \cite{Andreasen2016}.
+
+\begin{table*}[htb!]
+    \caption{The derived parameters for Arcturus with
+    fixed surface gravity cut after 3$\sigma$ outlier removal. linelist: arcturus2Cut4ol.moog}
+    \label{tab:arcturus}
+    \centering
+    \begin{tabular}{lllll}
+      \hline\hline
+                     & $T_\mathrm{eff}$ (K) &  $\log g$ (dex)  &   $\xi_\mathrm{micro}$ (km/s)  & [Fe/H] (dex)      \\
+      \hline
+        Literature   & $6131 \pm 255$       &  $4.01 \pm 0.60$ &    $1.90 \pm 1.08$              & $-0.23 \pm 0.14$ \\
+      \hline
+                     & $4363 \pm 75$        &   1.59 (fixed)   &    $1.25 \pm 0.07$              & $-0.34 \pm 0.03$ \\
+      \hline
+    \end{tabular}
+\end{table*}
+
+
+
+\subsection{HD010853 (Katie)}
+\label{sub:HD010853}
+HD010853 is K3 dwarf star with a 8.9 V magnitude \citep{Koen2010}. It has
+been subject to several studies (fancy references). We compare our results
+with (ref to ELODIE) since they derive the same parameters as us. However,
+previous studies agree well. The ELODIE spectrum is public, and we derived
+parameters for the optical part as well for this star using the line list
+presented in \citet{Sousa2008a}. Our results from the ELODIE spectrum is
+similar to (ref to ELODIE) as presented in Table~\ref{tab:hd010853}.
+
+The near-IR spectrum we use of this star was observed with the GIANO
+spectrograph installed at Telescopio Nazionale Galileo (TNG).
+
+
+
+
+
+
+
+
+
+
+
+\begin{table*}[htb!]
+    \caption{The derived parameters for HD010853 with
+    fixed surface gravity cut after 3$\sigma$ outlier removal. linelist: arcturus2Cut4ol.moog}
+    \label{tab:hd010853}
+    \centering
+    \begin{tabular}{lllll}
+      \hline\hline
+                     & $T_\mathrm{eff}$ (K) &  $\log g$ (dex)  &   $\xi_\mathrm{micro}$ (km/s)  & [Fe/H] (dex)      \\
+      \hline
+        Literature   & $6131 \pm 255$       &  $4.01 \pm 0.60$ &    $1.90 \pm 1.08$              & $-0.23 \pm 0.14$ \\
+      \hline
+                     & $4363 \pm 75$        &   1.59 (fixed)   &    $1.25 \pm 0.07$              & $-0.34 \pm 0.03$ \\
+      \hline
+    \end{tabular}
+\end{table*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Conclusion}
+\label{sec:conclusion}
+Being able to successfully determine parameters for Arcturus, a K0 giant,
+and Katie, a K3 dwarf,
+we are now making the bridge for the line list towards cooler temperatures.
+The obvious next step is the even colder M stars. Particular interesting
+are the M dwarfs known to be prone forming rocky planets.
+
+
+
+
+
+\begin{acknowledgements}
+
+This work was supported by Funda\c{c}\~ao para a Ci\^encia e a
+Tecnologia (FCT) through the research grants UID/FIS/04434/2013 and
+PTDC/FIS-AST/1526/2014. N.C.S., and S.G.S. acknowledge the support from
+FCT through Investigador FCT contracts of reference IF/00169/2012, and
+IF/00028/2014, respectively, and POPH/FSE (EC) by FEDER funding through
+the program “Programa Operacional de Factores de Competitividade
+- COMPETE”. E.D.M. and B.J.A. acknowledge the support from FCT in
+form of the fellowship SFRH/BPD/76606/2011 and SFRH/BPD/87776/2012,
+respectively. This work also benefit from the collaboration of a
+cooperation project FCT/CAPES - 2014/2015 (FCT Proc 4.4.1.00 CAPES).
+
+This research has made use of the SIMBAD database operated at CDS,
+Strasbourg (France).
+
+This work has made use of the VALD database, operated at Uppsala
+University, the Institute of Astronomy RAS in Moscow, and the University
+of Vienna.
+
+\end{acknowledgements}
+
+
+\bibpunct{(}{)}{;}{a}{}{,}
+\bibliographystyle{aa}
+\bibliography{thesis}
+
+
+\begin{appendix}
+\section{An appendix}
+
+
+\end{appendix}
+
+
+
+
+\end{document}
