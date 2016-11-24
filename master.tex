@@ -23,7 +23,7 @@
 \begin{document}
 
 
-\title{High resolution near-IR spectroscopy of FGKM stars}
+\title{High resolution near-IR spectroscopy of KM stars}
 \subtitle{Refining a near-IR iron line list}
 
 
@@ -99,10 +99,13 @@ quality of the data we obtain large errors.}
 
 Some introduction goes here...
 
-In this work we analyze spectra for a wide range of spectral types
-ranging from F to late K using different spectrographs. An overview
-of the different spectra and which spectrograph was used to acquire the
-data can be seen in Table~\ref{tab:data}.
+In this work we analyze spectra for a wide range of spectral types ranging from
+F to late K using different spectrographs. An overview of the different spectra
+and which spectrograph was used to acquire the data can be seen in
+Table~\ref{tab:data}. The spectral types are from Simbad as a reference. By
+applying the method described in \citet{Andreasen2016} to a sample of K and
+early M dwarfs we successfully make the bridge from the hotter end of solar type
+stars.
 
 
 
@@ -110,6 +113,15 @@ data can be seen in Table~\ref{tab:data}.
 
 \section{Data}
 \label{sec:data}
+
+The data are obtained from five different spectrograph with different
+characteristics as presented in Table~\ref{tab:data}. While the community is
+currently on the verge to access of a large amount of high resolution NIR
+spectra with e.g. the spectrographs used here, the available spectra at the
+moment are sparse. We obtain spectra from the archive, collaborations, and
+successful proposals (i-Shell).
+
+
 
 \begin{table*}[htb!]
     \caption{The spectra and spectral type (from Simbad) of our sample with
@@ -148,20 +160,19 @@ Arcturus is one of the brightest stars on the night sky with a V magnitude of
 the line list by \cite{Andreasen2016}.
 
 We use the atlas from \cite{Hinkle2003} which covers the spectral range of
-interest. We identify the spectral lines with plot\textunderscore{}fits also presented in
-\cite{Andreasen2016}, where we also correct for RV by comparing to to a
-synthetic spectrum from the PHOENIX library \citep{Husser2013}. Similarly,
-strong telluric features were identified with a spectrum from the TAPAS
-web page \citep{Bertaux2014}. Lines blended with telluric were ommited
-from the analysis. The EW of rest of the lines were measure by hand using the
-splot function in IRAF. In the atlas there exist both a summer observation
-set and a winter observation set. This is in order to minimize the effect of
-tellurics at different spectral regions. As many lines as possible were
-measured in both sets, and combined to the final measure line list.
-The results can be seen in Table~\ref{tab:arcturus} and shows excellent
-agreement with the literature. Note, that due to the few \ion{Fe}{II} lines
-we have to fix the surface gravity. The value was a mean of many literature
-values
+interest. We identify the spectral lines with plot\textunderscore{}fits also
+presented in \cite{Andreasen2016}, where we also correct for RV by comparing to
+to a synthetic spectrum from the PHOENIX library \citep{Husser2013}. Similarly,
+strong telluric features were identified with a spectrum from the TAPAS web page
+\citep{Bertaux2014}. Lines blended with telluric were ommited from the analysis.
+The EW of rest of the lines were measure by hand using the splot function in
+IRAF. In the atlas there exist both a summer observation set and a winter
+observation set. This is in order to minimize the effect of tellurics at
+different spectral regions. As many lines as possible were measured in both
+sets, and combined to the final measure line list. The results can be seen in
+Table~\ref{tab:arcturus} and shows excellent agreement with the literature.
+Note, that due to the few \ion{Fe}{II} lines we have to fix the surface gravity.
+The value was a mean of many literature values
 
 The derivation of the parameters follow exactly the same procedure as used
 in \cite{Andreasen2016}.
@@ -186,13 +197,13 @@ in \cite{Andreasen2016}.
 
 \subsection{HD010853 (Katie)}
 \label{sub:HD010853}
-HD010853 is K3 dwarf star with a 8.9 V magnitude \citep{Koen2010}. It has
-been subject to several studies (fancy references). We compare our results
-with (ref to ELODIE) since they derive the same parameters as us. However,
-previous studies agree well. The ELODIE spectrum is public, and we derived
-parameters for the optical part as well for this star using the line list
-presented in \citet{Sousa2008a}. Our results from the ELODIE spectrum is
-similar to (ref to ELODIE) as presented in Table~\ref{tab:hd010853}.
+HD010853 is K3 dwarf star with a 8.9 V magnitude \citep{Koen2010}. It has been
+subject to several studies (fancy references). We compare our results with (ref
+to ELODIE) since they derive the same parameters as us. However, previous
+studies agree well. The ELODIE spectrum is public, and we derived parameters for
+the optical part as well for this star using the line list presented in
+\citet{Sousa2008a}. Our results from the ELODIE spectrum is similar to (ref to
+ELODIE) as presented in Table~\ref{tab:hd010853}.
 
 The near-IR spectrum we use of this star was observed with the GIANO
 spectrograph installed at Telescopio Nazionale Galileo (TNG).
@@ -237,11 +248,10 @@ telluric lines. Hence, de-blending is nearly impossible.
 
 \section{Conclusion}
 \label{sec:conclusion}
-Being able to successfully determine parameters for Arcturus, a K0 giant,
-and Katie, a K3 dwarf,
-we are now making the bridge for the line list towards cooler temperatures.
-The obvious next step is the even colder M stars. Particular interesting
-are the M dwarfs known to be prone forming rocky planets.
+Being able to successfully determine parameters for Arcturus, a K0 giant, and
+Katie, a K3 dwarf, we are now making the bridge for the line list towards cooler
+temperatures. The obvious next step is the even colder M stars. Particular
+interesting are the M dwarfs known to be prone forming rocky planets.
 
 
 
