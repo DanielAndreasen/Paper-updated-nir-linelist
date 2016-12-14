@@ -128,7 +128,7 @@ successful proposals (i-Shell).
              the corresponding spectrograph used to acquire the data and its
              spectra resolution. In the last column we show the SNR measured
              with splot in IRAF.}
-    \label{tab:data}
+\label{tab:data}
     \centering
     \begin{tabular}{lrrrr}
       \hline\hline
@@ -140,8 +140,11 @@ successful proposals (i-Shell).
         HD285968  &      M2.5V    & CRIRES        &    ---       &  ---  \\
         HD10853   &      K3.5V    & GIANO         &    ---       &  ---  \\
         HD170693  &      K1.5III  & GIANO         &    ---       &  ---  \\
-        Gl880     &      M1.5V    & i-Shell       &    ---       &  ---  \\
+        Gl205     &      M1V      & i-Shell       &    ---       &  ---  \\
+        Gl250A    &      K3V      & i-Shell       &    ---       &  ---  \\
         Gl250B    &      M2V      & i-Shell       &    ---       &  ---  \\
+        Gl880     &      M1.5V    & i-Shell       &    ---       &  ---  \\
+        Gl908     &      M2V      & i-Shell       &    ---       &  ---  \\
     \end{tabular}
 \end{table*}
 
@@ -151,20 +154,19 @@ successful proposals (i-Shell).
 \label{sec:results}
 
 
-
 \subsection{Arcturus}
 \label{sec:derived_parameters_of_the_sun}
 Arcturus is one of the brightest stars on the night sky with a V magnitude of
 -0.05 \citep{Ducati2002}. Hence it has been subject to numerous observations
 (add some nice references here...) and is therefore a prime target for testing
-the line list by \cite{Andreasen2016}.
+the line list by~\cite{Andreasen2016}.
 
-We use the atlas from \cite{Hinkle2003} which covers the spectral range of
+We use the atlas from~\cite{Hinkle2003} which covers the spectral range of
 interest. We identify the spectral lines with plot\textunderscore{}fits also
-presented in \cite{Andreasen2016}, where we also correct for RV by comparing to
+presented in~\cite{Andreasen2016}, where we also correct for RV by comparing to
 to a synthetic spectrum from the PHOENIX library \citep{Husser2013}. Similarly,
 strong telluric features were identified with a spectrum from the TAPAS web page
-\citep{Bertaux2014}. Lines blended with telluric were ommited from the analysis.
+\citep{Bertaux2014}. Lines blended with telluric were omitted from the analysis.
 The EW of rest of the lines were measure by hand using the splot function in
 IRAF. In the atlas there exist both a summer observation set and a winter
 observation set. This is in order to minimize the effect of tellurics at
@@ -175,7 +177,7 @@ Note, that due to the few \ion{Fe}{II} lines we have to fix the surface gravity.
 The value was a mean of many literature values
 
 The derivation of the parameters follow exactly the same procedure as used
-in \cite{Andreasen2016}.
+in~\cite{Andreasen2016}.
 
 \begin{table*}[htb!]
     \caption{The derived parameters for Arcturus with
@@ -195,7 +197,7 @@ in \cite{Andreasen2016}.
 
 
 
-\subsection{HD010853 (Katie)}
+\subsection{HD010853}
 \label{sub:HD010853}
 HD010853 is K3 dwarf star with a 8.9 V magnitude \citep{Koen2010}. It has been
 subject to several studies (fancy references). We compare our results with (ref
