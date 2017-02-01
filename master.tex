@@ -23,14 +23,15 @@
 \begin{document}
 
 
-\title{High resolution near-IR spectroscopy of KM stars}
+\title{High resolution near-IR spectroscopy of Arcturus and 10 Leo}
 \subtitle{Refining a near-IR iron line list}
 
 
 \author{ D.~T.~Andreasen\inst{1,2}
     \and S.~G.~Sousa\inst{1}
     \and E.~Delgado Mena\inst{1}
-    \and N.~C.~Santos\inst{1,2}}
+    \and N.~C.~Santos\inst{1,2}
+    \and T.~Lebzelter}
 
 
 \institute{
@@ -65,13 +66,12 @@ comparable to the ones already obtained from high resolution optical
 spectra. The spectral range covers \SI{10000}{\angstrom} to
 \SI{25000}{\angstrom}, which is equivalent to the Y, J, H, and K bands.}
 % Methods
-{Our spectroscopic analysis is based on the iron excitation and
-ionization balance done in LTE. We
-use a high resolution and high signal-to-noise ratio spectrum of the Sun
-from the Kitt Peak telescope as a starting point to compile the iron
-line list. The oscillator strengths ($\log\mathit{gf}$) of the iron lines were calibrated for the Sun.
-The abundance analysis was done using
-the MOOG code after measuring equivalent widths of 357 solar iron lines.}
+{Our spectroscopic analysis is based on the iron excitation and ionization
+balance done in LTE. We use a high resolution and high signal-to-noise ratio
+spectrum of the Sun from the Kitt Peak telescope as a starting point to compile
+the iron line list. The oscillator strengths ($\log\mathit{gf}$) of the iron
+lines were calibrated for the Sun. The abundance analysis was done using the
+MOOG code after measuring equivalent widths of 357 solar iron lines.}
 % Results
 {We successfully derived stellar atmospheric parameters for the
 Sun.
@@ -97,16 +97,84 @@ quality of the data we obtain large errors.}
 \section{Introduction}
 \label{sec:introduction}
 
-Some introduction goes here...
+Effective temperature ($T_\mathrm{eff}$), surface gravity ($\log g$),
+and metallicity ([M/H], where iron is normally used as a proxy)
+are fundamental atmospheric parameters necessary to characterise a single
+star, and to determine other indirect fundamental parameters
+such as mass, radius, and age from stellar evolutionary models
+\citep[see e.g.][]{Girardi2000,Dotter2008,Baraffe2015}.
+Precise and accurate stellar parameters are also essential in
+exoplanet searches. Planetary radius and mass are mainly found from
+lightcurve analysis and radial velocity analysis, respectively. The
+determination of the mass of the planet implies a knowledge of the
+stellar mass, while the measurement of the radius of the planet
+is dependent on our capability to derive the radius of the star
+\citep[see e.g.][]{Torres2008,Ammler2009,Torres2012}.
 
-In this work we analyze spectra for a wide range of spectral types ranging from
-F to late K using different spectrographs. An overview of the different spectra
-and which spectrograph was used to acquire the data can be seen in
-Table~\ref{tab:data}. The spectral types are from Simbad as a reference. By
-applying the method described in \citet{Andreasen2016} to a sample of K and
-early M dwarfs we successfully make the bridge from the hotter end of solar type
-stars.
+The derivation of precise stellar atmospheric parameters is not a simple task.
+Different approaches often lead to discrepant results
+\citep[see e.g.][]{Santos13}. Interferometry is usually considered  an accurate
+method for deriving stellar radii \citep[e.g.][]{Boyajian2012}; however, it is
+only applicable for bright nearby stars. Asteroseismology, on the other hand,
+reveals the inner stellar structure by observing the stellar pulsations at the
+surface. From asteroseismology it is possible to measure the surface gravity and
+mean density, and therefore to calculate the mass and radius
+\citep[e.g.][]{Kjeldsen1995}.
 
+A crucial parameter for the indirect determination of stellar bulk
+properties is the effective temperature. In that respect, the infrared
+flux method (IRFM) has proven to be reliable for FGK dwarf and
+subgiant stars. However, the IRFM needs a priori knowledge of the
+bolometric flux, reddening, surface gravity, and stellar metallicity
+\citep{Blackwell1977,Ramirez2005b,Casagrande2010}.
+
+Finally, the use of high resolution spectroscopy along with stellar atmospheric
+models is an extensively tested method that allows the derivation of the
+fundamental parameters of a star \citep[see e.g.][]{Valenti2005,Santos13}. The
+procedure depends on the quality of the spectra, their resolution, and
+wavelength region. For low resolution spectra ($\lambda/\Delta\lambda <
+20\,000$) the preferred method is to fit the overall observed spectrum with a
+synthetic one \citep[see e.g.][]{Recio2006}. Higher resolution spectra of slowly
+rotating stars (below 10 to 15 \si{km/s})  are in the regime where the
+equivalent width (EW) method can be used
+\citep[see e.g.][for details]{Andreasen2017}.
+
+The derivation of stellar atmospheric parameters from high resolution spectra in
+the optical is now based on a standard procedure
+\citep[see e.g.][]{Valenti2005,Sousa2008a}. With the advancement of high
+resolution near-infrared (NIR) instruments, we will now be able to use a similar
+technique to that used in the optical part of the spectrum
+\citep[see e.g.][]{Melendez1999,Sousa2008a,Tsantaki2013,Mucciarelli2013,Bensby2014}.
+At the moment, the GIANO spectrograph installed at \emph{Telescopio Nazionale
+Galileo} (TNG) is already available \citep{GIANO}, the \emph{infrered doppler
+instrument} (IRD) installed at the Subaru telescope \citep{IRD}, as is
+\emph{Calar Alto high-Resolution search for M dwarfs with Exoearths with
+Near-infrared and optical Échelle Spectrographs} (CARMENES) for the \SI{3.5}{m}
+telescope at Calar Alto Observatory \citep{CARMENES}. Two new spectrographs are
+planned for the near future: 1) The \emph{CRyogenic InfraRed Echelle
+Spectrograph Upgrade Project} (CRIRES+) at the \emph{Very Large Telescope} (VLT)
+\citep{CRIRESp} with expected first light in 2017, and 2) \emph{un
+SpectroPolarimètre Infra-Rouge A Near-InfraRed Spectropolarimeter} (SPIRou) at
+\emph{The Canada-France-Hawaii Telescope} (CFHT) \citep{SPIROU1,SPIROU2} with
+expected first light in 2017 as well. The spectral resolutions for these
+spectrographs range between $50\,000$ and $100\,000$.
+
+With the advance of NIR spectrographs, we are yet to be to ready for the
+analysis of the data arriving at the moment and in the future. The analysis of
+stellar spectra is well understood for FGK stars in the optical part of the
+spectrum, however some work still needs to be done for the NIR part.
+
+In this work we analyse the spectrum of Arcturus (K0III) and 10 Leo (K1III). The
+spectrum from Arcturus was aquired from XXX and 10 Leo from CRIRES
+\citep{Nicholls2016}. For the analysis we use the iron line list presented in
+\citet{Andreasen2016}. This work serve as a continuation of our previous work.
+
+The paper is organized as follows. In Sect.~\ref{sec:data} we present the data
+we have aquired for this work along with some information of the two stars we
+will analyse. in Sect.~\ref{sec:refining_the_line_list} we refine the iron line
+list in order to get more reliable stellar parameters. The results are presented
+in Sect.~\ref{sec:results} before we discuss our results in
+Sect.~\ref{sec:conclusion}.
 
 
 
@@ -135,27 +203,31 @@ successful proposals (i-Shell).
         Star      & Spectral type & Spectrograph  & Resolution   &  SNR  \\
       \hline
         Arcturus  &      K0III    &  ---          &    ---       &  ---  \\
-        HD79210   &      M0V      & CARMENES      &    ---       &  ---  \\
-        HD79211   &      M0V      & CARMENES      &    ---       &  ---  \\
-        HD285968  &      M2.5V    & CRIRES        &    ---       &  ---  \\
-        HD10853   &      K3.5V    & GIANO         &    ---       &  ---  \\
-        HD170693  &      K1.5III  & GIANO         &    ---       &  ---  \\
-        Gl205     &      M1V      & i-Shell       &    ---       &  ---  \\
-        Gl250A    &      K3V      & i-Shell       &    ---       &  ---  \\
-        Gl250B    &      M2V      & i-Shell       &    ---       &  ---  \\
-        Gl880     &      M1.5V    & i-Shell       &    ---       &  ---  \\
-        Gl908     &      M2V      & i-Shell       &    ---       &  ---  \\
+        10 Leo    &      K1III    & CRIRES        &  $100\;000$  &  300
     \end{tabular}
 \end{table*}
 
 
 
+
+\section{Refining the NIR line list}
+\label{sec:refining_the_line_list}
+
+Besides testing the line list at cooler effective temperatures with two K stars,
+we also want to refine the line list. This includes identifying recurring
+outliers, and lines which we are not able to measure, e.g. if a line is amidst a
+forrest of telluric lines. Hence, de-blending is nearly impossible.
+
+
 \section{Results}
 \label{sec:results}
 
+We derive the stellar atmospheric parameters in a similar way as described in
+\citet{Andreasen2016} using FASMA \citep{Andreasen2017a}.
+
 
 \subsection{Arcturus}
-\label{sec:derived_parameters_of_the_sun}
+\label{sec:arcturus}
 Arcturus is one of the brightest stars on the night sky with a V magnitude of
 -0.05 \citep{Ducati2002}. Hence it has been subject to numerous observations
 (add some nice references here...) and is therefore a prime target for testing
@@ -196,51 +268,8 @@ in~\cite{Andreasen2016}.
 \end{table*}
 
 
-
-\subsection{HD010853}
-\label{sub:HD010853}
-HD010853 is K3 dwarf star with a 8.9 V magnitude \citep{Koen2010}. It has been
-subject to several studies (fancy references). We compare our results with (ref
-to ELODIE) since they derive the same parameters as us. However, previous
-studies agree well. The ELODIE spectrum is public, and we derived parameters for
-the optical part as well for this star using the line list presented in
-\citet{Sousa2008a}. Our results from the ELODIE spectrum is similar to (ref to
-ELODIE) as presented in Table~\ref{tab:hd010853}.
-
-The near-IR spectrum we use of this star was observed with the GIANO
-spectrograph installed at Telescopio Nazionale Galileo (TNG).
-
-
-
-
-\begin{table*}[htb!]
-    \caption{The derived parameters for HD010853 with
-    fixed surface gravity cut after 3$\sigma$ outlier removal. linelist: arcturus2Cut4ol.moog}
-    \label{tab:hd010853}
-    \centering
-    \begin{tabular}{lllll}
-      \hline\hline
-                     & $T_\mathrm{eff}$ (K) &  $\log g$ (dex)  &   $\xi_\mathrm{micro}$ (km/s)  & [Fe/H] (dex)      \\
-      \hline
-        Literature   & $6131 \pm 255$       &  $4.01 \pm 0.60$ &    $1.90 \pm 1.08$              & $-0.23 \pm 0.14$ \\
-      \hline
-                     & $4363 \pm 75$        &   1.59 (fixed)   &    $1.25 \pm 0.07$              & $-0.34 \pm 0.03$ \\
-      \hline
-    \end{tabular}
-\end{table*}
-
-
-
-
-\subsection{Refining the line list}
-\label{sub:refining_the_line_list}
-Besides testing the line list at cooler effective temperatures
-with two K stars, we also want to refine the line list. This
-includes identifying recurring outliers, and lines which we are
-not able to measure, e.g. if a line is amidst a forrest of
-telluric lines. Hence, de-blending is nearly impossible.
-
-
+\subsection{10 Leo}
+\label{sec:10Leo}
 
 
 
@@ -250,10 +279,11 @@ telluric lines. Hence, de-blending is nearly impossible.
 
 \section{Conclusion}
 \label{sec:conclusion}
-Being able to successfully determine parameters for Arcturus, a K0 giant, and
-Katie, a K3 dwarf, we are now making the bridge for the line list towards cooler
-temperatures. The obvious next step is the even colder M stars. Particular
-interesting are the M dwarfs known to be prone forming rocky planets.
+
+Being able to successfully determine parameters for two early K giants, we are
+now making the bridge for the line list towards cooler temperatures. The obvious
+next step is the even colder M stars. Particular interesting are the M dwarfs
+known to be prone forming rocky planets.
 
 
 
@@ -285,15 +315,6 @@ of Vienna.
 \bibpunct{(}{)}{;}{a}{}{,}
 \bibliographystyle{aa}
 \bibliography{thesis}
-
-
-\begin{appendix}
-\section{An appendix}
-
-
-\end{appendix}
-
-
 
 
 \end{document}
