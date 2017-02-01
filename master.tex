@@ -164,10 +164,12 @@ analysis of the data arriving at the moment and in the future. The analysis of
 stellar spectra is well understood for FGK stars in the optical part of the
 spectrum, however some work still needs to be done for the NIR part.
 
-In this work we analyse the spectrum of Arcturus (K0III) and 10 Leo (K1III). The
-spectrum from Arcturus was aquired from XXX and 10 Leo from CRIRES
-\citep{Nicholls2016}. For the analysis we use the iron line list presented in
-\citet{Andreasen2016}. This work serve as a continuation of our previous work.
+In this work we analyse the atlas of Arcturus (K0III) and the spectrum 10 Leo
+(K1III). The atlas of Arcturus was aquired at Kitt Peak National Observatory
+using the FTS spectrograph at the Mayall telescope \citep{Hinkle2003} and 10 Leo
+from CRIRES \citep{Nicholls2016}. For the analysis we use the iron line list
+presented in \citet{Andreasen2016}. This work serve as a continuation of our
+previous work.
 
 The paper is organized as follows. In Sect.~\ref{sec:data} we present the data
 we have aquired for this work along with some information of the two stars we
@@ -182,12 +184,35 @@ Sect.~\ref{sec:conclusion}.
 \section{Data}
 \label{sec:data}
 
-The data are obtained from five different spectrograph with different
-characteristics as presented in Table~\ref{tab:data}. While the community is
-currently on the verge to access of a large amount of high resolution NIR
-spectra with e.g. the spectrographs used here, the available spectra at the
-moment are sparse. We obtain spectra from the archive, collaborations, and
-successful proposals (i-Shell).
+While the community is currently on the verge to access of a large amount of
+high resolution NIR spectra with e.g. the spectrographs used here, the available
+spectra at the moment are sparse. We chose to use two stars cooler than the Sun
+since we showed in \citet{Andreasen2016} that this method works for a star
+hotter than the Sun (HD20010).
+
+We have collected the atlas of Arcturus, one of the brightest stars on the
+Nothern hemisphere. Thus it is well studied
+\citep[see e.g.][to mention a few]{Griffin1967,McWilliam1990,Ramirez2013}. We
+use the atlas from \cite{Hinkle2003} which covers the spectral range of interest
+(YJHK bands). Strong telluric features were identified with a spectrum from the
+TAPAS web page \citep{Bertaux2014}.
+
+The second spectrum we have achieved is from the CRIRES-POP team
+\citep{Nicholls2016}. 10 Leo is a very similar star to Arcturus, which is also
+one reason this star was the first to be fully reduced by the team. It is a
+great help to be able to compare with the atlas of Arcturus. The main difference
+is the metallicity of the two stars, where Arcturus is metal poor and 10 Leo has
+solar metallicity. The fully reduced spectrum of 10 Leo is also telluric
+corrected using molecfit \citep{Smette2015,Kausch2015}. There are a few gaps in
+the spectrum. This is either due to a telluric that could not be properly
+removed, low S/R, bad pixels, etc. Rather than giving an uncertain
+interpolation, \citet{Nicholls2016} decided to leave small gaps in the data.
+This have very little affect on this analysis. However, we were unable to
+measure one \ion{Fe}{II} line, which are very important to determine the surface
+gravity.
+
+A small summarise of the data is given in Tab.~\ref{tab:data}.
+
 
 
 
@@ -202,7 +227,7 @@ successful proposals (i-Shell).
       \hline\hline
         Star      & Spectral type & Spectrograph  & Resolution   &  SNR  \\
       \hline
-        Arcturus  &      K0III    &  ---          &    ---       &  ---  \\
+        Arcturus  &      K0III    & FTS           &  $100\;000$  &  300  \\
         10 Leo    &      K1III    & CRIRES        &  $100\;000$  &  300
     \end{tabular}
 \end{table*}
@@ -233,20 +258,12 @@ Arcturus is one of the brightest stars on the night sky with a V magnitude of
 (add some nice references here...) and is therefore a prime target for testing
 the line list by~\cite{Andreasen2016}.
 
-We use the atlas from~\cite{Hinkle2003} which covers the spectral range of
-interest. We identify the spectral lines with plot\textunderscore{}fits also
-presented in~\cite{Andreasen2016}, where we also correct for RV by comparing to
-to a synthetic spectrum from the PHOENIX library \citep{Husser2013}. Similarly,
-strong telluric features were identified with a spectrum from the TAPAS web page
-\citep{Bertaux2014}. Lines blended with telluric were omitted from the analysis.
-The EW of rest of the lines were measure by hand using the splot function in
+Lines blended with telluric were omitted from the analysis. The equivalent width
+(EW) of rest of the lines were measured by hand using the splot function in
 IRAF. In the atlas there exist both a summer observation set and a winter
 observation set. This is in order to minimize the effect of tellurics at
 different spectral regions. As many lines as possible were measured in both
-sets, and combined to the final measure line list. The results can be seen in
-Table~\ref{tab:arcturus} and shows excellent agreement with the literature.
-Note, that due to the few \ion{Fe}{II} lines we have to fix the surface gravity.
-The value was a mean of many literature values
+sets, and combined to the final measure line list.
 
 The derivation of the parameters follow exactly the same procedure as used
 in~\cite{Andreasen2016}.
