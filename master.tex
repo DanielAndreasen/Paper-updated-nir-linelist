@@ -60,11 +60,7 @@ advent of a new generation of high resolution near-IR spectrographs
 opens the possibility of using classic spectroscopic methods with
 high resolution and high signal-to-noise in the NIR spectral window.}
 % Aims
-{We aim to compile a new iron line list in the NIR from a solar
-spectrum to derive precise stellar atmospheric parameters,
-comparable to the ones already obtained from high resolution optical
-spectra. The spectral range covers \SI{10000}{\angstrom} to
-\SI{25000}{\angstrom}, which is equivalent to the Y, J, H, and K bands.}
+{tralala}
 % Methods
 {Our spectroscopic analysis is based on the iron excitation and ionization
 balance done in LTE. We use a high resolution and high signal-to-noise ratio
@@ -73,15 +69,7 @@ the iron line list. The oscillator strengths ($\log\mathit{gf}$) of the iron
 lines were calibrated for the Sun. The abundance analysis was done using the
 MOOG code after measuring equivalent widths of 357 solar iron lines.}
 % Results
-{We successfully derived stellar atmospheric parameters for the
-Sun.
-Furthermore, we analysed
-HD20010, a F8IV star, from which we derived stellar atmospheric
-parameters using the same line list as for the Sun. The spectrum
-was obtained from the CRIRES-POP database.
-The results are compatible with the ones found in the literature,
-confirming the reliability of our line list. However, due to the
-quality of the data we obtain large errors.}
+{tralala}
 % Conclusions
 {}
 
@@ -89,7 +77,7 @@ quality of the data we obtain large errors.}
 
 \keywords{data reduction: high resolution spectra --
           stars individual: Arcturus --
-          stars individual: HD010853}
+          stars individual: 10 Leo}
 \maketitle
 
 
@@ -195,23 +183,25 @@ Nothern hemisphere. Thus it is well studied
 \citep[see e.g.][to mention a few]{Griffin1967,McWilliam1990,Ramirez2013}. We
 use the atlas from \cite{Hinkle2003} which covers the spectral range of interest
 (YJHK bands). Strong telluric features were identified with a spectrum from the
-TAPAS web page \citep{Bertaux2014}.
+TAPAS web page \citep{Bertaux2014}. The atlas also comes with the telluric from
+a telluric standard and the ratio of the two spectra in order to correct for the
+tellurics. We use both, but note that the telluric correction for Arcturus is
+not of the same quality as for 10 Leo as described below.
 
 The second spectrum we have achieved is from the CRIRES-POP team
 \citep{Nicholls2016}. 10 Leo is a very similar star to Arcturus, which is also
 one reason this star was the first to be fully reduced by the team. It is a
 great help to be able to compare with the atlas of Arcturus. The main difference
 is the metallicity of the two stars, where Arcturus is metal poor and 10 Leo has
-solar metallicity. The fully reduced spectrum of 10 Leo is also telluric
-corrected using molecfit \citep{Smette2015,Kausch2015}. There are a few gaps in
-the spectrum. This is either due to a telluric that could not be properly
-removed, low S/R, bad pixels, etc. Rather than giving an uncertain
-interpolation, \citet{Nicholls2016} decided to leave small gaps in the data.
-This have very little affect on this analysis. However, we were unable to
-measure one \ion{Fe}{II} line, which are very important to determine the surface
-gravity.
+solar metallicity. due to a telluric that could not be properly removed, low
+S/N, bad pixels, etc. Rather than giving an uncertain interpolation,
+\citet{Nicholls2016} decided to leave small gaps in the data. This have very
+little affect on this analysis. However, we were unable to measure one
+\ion{Fe}{II} line, which are very important to determine the surface gravity.
 
-A small summarise of the data is given in Tab.~\ref{tab:data}.
+A small summarise of the data is given in Tab.~\ref{tab:data}. The data is very
+similar, with similar S/N which is an approximately value measured with IRAF.
+The resolutions of the two spectrographs used are the same.
 
 
 
@@ -219,13 +209,13 @@ A small summarise of the data is given in Tab.~\ref{tab:data}.
 \begin{table*}[htb!]
     \caption{The spectra and spectral type (from Simbad) of our sample with
              the corresponding spectrograph used to acquire the data and its
-             spectra resolution. In the last column we show the SNR measured
+             spectra resolution. In the last column we show the S/N measured
              with splot in IRAF.}
-\label{tab:data}
+    \label{tab:data}
     \centering
     \begin{tabular}{lrrrr}
       \hline\hline
-        Star      & Spectral type & Spectrograph  & Resolution   &  SNR  \\
+        Star      & Spectral type & Spectrograph  & Resolution   &  S/N  \\
       \hline
         Arcturus  &      K0III    & FTS           &  $100\;000$  &  300  \\
         10 Leo    &      K1III    & CRIRES        &  $100\;000$  &  300
@@ -241,22 +231,38 @@ A small summarise of the data is given in Tab.~\ref{tab:data}.
 Besides testing the line list at cooler effective temperatures with two K stars,
 we also want to refine the line list. This includes identifying recurring
 outliers, and lines which we are not able to measure, e.g. if a line is amidst a
-forrest of telluric lines. Hence, de-blending is nearly impossible.
+forrest of telluric lines. Hence, de-blending is nearly impossible. The first
+step was to go back and have a second look at the solar atlas used in
+\citet{Andreasen2016}. We removed 342 \ion{Fe}{I} lines and 13 \ion{Fe}{II}
+lines in the process. Most of these were blended with other tellurics while a
+few were blended with other stellar absorption lines. We are down to 84
+\ion{Fe}{I} lines and 5 \ion{Fe}{II} lines. The \ion{Fe}{II} lines are used to
+determine $\log g$ by imposing ionization balance with \ion{Fe}{I}. However, the
+low number of \ion{Fe}{II} lines available is a concern, since the average
+abundance of \ion{Fe}{II} is less trustworthy. One might fix $\log g$ during the
+process of obtaining stellar parameters, but this has an impact on the other
+derived parameters. It is better to leave $\log g$ free if possible, and either
+make corrections at the end or change it to a value from a more reliable source.
+This could for example be asteroseismology or from the parallaxes measured with
+Gaia.
 
 
 \section{Results}
 \label{sec:results}
 
-We derive the stellar atmospheric parameters in a similar way as described in
-\citet{Andreasen2016} using FASMA \citep{Andreasen2017a}.
+We derive the stellar atmospheric parameters in the same way as described in
+\citet{Andreasen2016} using FASMA \citep{Andreasen2017a}. The EWs are measured
+for both stars automatically with ARES \citep{Sousa2015a} and by hand with splot
+in IRAF. We compare the derived stellar parameters from the two measured sets of
+EWs.
 
 
 \subsection{Arcturus}
 \label{sec:arcturus}
+
 Arcturus is one of the brightest stars on the night sky with a V magnitude of
--0.05 \citep{Ducati2002}. Hence it has been subject to numerous observations
-(add some nice references here...) and is therefore a prime target for testing
-the line list by~\cite{Andreasen2016}.
+-0.05 \citep{Ducati2002}. Hence it is a prime target for testing the line list
+by \cite{Andreasen2016} with numerous measurements as mentioned above.
 
 Lines blended with telluric were omitted from the analysis. The equivalent width
 (EW) of rest of the lines were measured by hand using the splot function in
