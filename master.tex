@@ -275,17 +275,25 @@ The derivation of the parameters follow exactly the same procedure as used
 in~\cite{Andreasen2016}.
 
 \begin{table*}[htb!]
-    \caption{The derived parameters for Arcturus with
-    fixed surface gravity cut after 3$\sigma$ outlier removal. linelist: arcturus2Cut4ol.moog}
+    \caption{The derived parameters for Arcturus with and without fixed surface
+             gravity after 3$\sigma$ outlier removal. The litereature values are
+             a simple mean of all the available parameters on Simbad with the
+             corresponding standard error. There is no microturbulence
+             available, so we derived it ourself using the empirical relation
+             from \citet{Adibekyan2015} for each set of parameters.}
     \label{tab:arcturus}
     \centering
     \begin{tabular}{lllll}
       \hline\hline
-                     & $T_\mathrm{eff}$ (K) &  $\log g$ (dex)  &   $\xi_\mathrm{micro}$ (km/s)   & [Fe/H] (dex)      \\
+                     & $T_\mathrm{eff}$ (K) &  $\log g$ (dex)  &   $\xi_\mathrm{micro}$ (km/s)   & [Fe/H] (dex)     \\
       \hline
-        Literature   & $6131 \pm 255$       &  $4.01 \pm 0.60$ &    $1.90 \pm 1.08$              & $-0.23 \pm 0.14$ \\
+        Literature   & $4306 \pm 100$       &  $1.69 \pm 0.32$ &    $1.92 \pm 0.15$              & $-0.54 \pm 0.11$ \\
       \hline
-                     & $4363 \pm 75$        &   1.59 (fixed)   &    $1.25 \pm 0.07$              & $-0.34 \pm 0.03$ \\
+        IRAF         & $4380 \pm  79$       &  $0.64 \pm 0.33$ &    $1.14 \pm 0.09$              & $-0.49 \pm 0.07$ \\
+        IRAF         & $4212 \pm  77$       &   1.69 (fixed)   &    $1.25 \pm 0.08$              & $-0.37 \pm 0.03$ \\
+      \hline
+        ARES         &     ....             &        ...       &          ....                   &         ...      \\
+        ARES         &     ....             &   1.69 (fixed)   &          ....                   &         ...      \\
       \hline
     \end{tabular}
 \end{table*}
@@ -294,9 +302,38 @@ in~\cite{Andreasen2016}.
 \subsection{10 Leo}
 \label{sec:10Leo}
 
+The approach for determining the atmospheric stellar parameters for 10 Leo is
+identical as for Arcturus. The final reduced data is divided in YJ, H, and K
+bands. We use ARES on each band separately. For the small gaps in the spectrum,
+we simply set the value to 1, since the spectrum is already normalized. This
+will also prevent ARES to measure any lines in these regions. The EWs from the
+three regions are combined to one final line list used for the determination of
+the parameters. We list the result in Tab.~\ref{tab:10Leo} alongside with a mean
+of literature values taken from Simbad.
 
-
-
+\begin{table*}[htb!]
+    \caption{The derived parameters for 10 Leo with and without fixed surface
+             gravity after 3$\sigma$ outlier removal. The litereature values are
+             a simple mean of all the available parameters on Simbad with the
+             corresponding standard error. There is no microturbulence
+             available, so we derived it ourself using the empirical relation
+             from \citet{Adibekyan2015} for each set of parameters.}
+    \label{tab:arcturus}
+    \centering
+    \begin{tabular}{lllll}
+      \hline\hline
+                     & $T_\mathrm{eff}$ (K) &  $\log g$ (dex)  &   $\xi_\mathrm{micro}$ (km/s)   & [Fe/H] (dex)     \\
+      \hline
+        Literature   & $4720 \pm  42$       &  $2.54 \pm 0.11$ &    $1.59 \pm 0.02$              & $ 0.00 \pm 0.03$ \\
+      \hline
+        IRAF         & $4835 \pm  85$       &  $2.41 \pm 0.41$ &    $1.28 \pm 0.08$              & $ 0.09 \pm 0.06$ \\
+        IRAF         & $4768 \pm  88$       &   2.54 (fixed)   &    $1.20 \pm 0.08$              & $ 0.01 \pm 0.05$ \\
+      \hline
+        ARES         & $4805 \pm  98$       &  $2.42 \pm 0.61$ &    $1.23 \pm 0.10$              & $-0.01 \pm 0.07$ \\
+        ARES         & $4768 \pm 105$       &   2.54 (fixed)   &    $1.20 \pm 0.10$              & $-0.01 \pm 0.06$ \\
+      \hline
+    \end{tabular}
+\end{table*}
 
 
 
@@ -313,25 +350,23 @@ known to be prone forming rocky planets.
 
 
 \begin{acknowledgements}
+  This work was supported by Funda\c{c}\~ao para a Ci\^encia e a
+  Tecnologia (FCT) through the research grants UID/FIS/04434/2013 and
+  PTDC/FIS-AST/1526/2014. N.C.S., and S.G.S. acknowledge the support from
+  FCT through Investigador FCT contracts of reference IF/00169/2012, and
+  IF/00028/2014, respectively, and POPH/FSE (EC) by FEDER funding through
+  the program “Programa Operacional de Factores de Competitividade
+  - COMPETE”. E.D.M. and B.J.A. acknowledge the support from FCT in
+  form of the fellowship SFRH/BPD/76606/2011 and SFRH/BPD/87776/2012,
+  respectively. This work also benefit from the collaboration of a
+  cooperation project FCT/CAPES - 2014/2015 (FCT Proc 4.4.1.00 CAPES).
 
-This work was supported by Funda\c{c}\~ao para a Ci\^encia e a
-Tecnologia (FCT) through the research grants UID/FIS/04434/2013 and
-PTDC/FIS-AST/1526/2014. N.C.S., and S.G.S. acknowledge the support from
-FCT through Investigador FCT contracts of reference IF/00169/2012, and
-IF/00028/2014, respectively, and POPH/FSE (EC) by FEDER funding through
-the program “Programa Operacional de Factores de Competitividade
-- COMPETE”. E.D.M. and B.J.A. acknowledge the support from FCT in
-form of the fellowship SFRH/BPD/76606/2011 and SFRH/BPD/87776/2012,
-respectively. This work also benefit from the collaboration of a
-cooperation project FCT/CAPES - 2014/2015 (FCT Proc 4.4.1.00 CAPES).
+  This research has made use of the SIMBAD database operated at CDS,
+  Strasbourg (France).
 
-This research has made use of the SIMBAD database operated at CDS,
-Strasbourg (France).
-
-This work has made use of the VALD database, operated at Uppsala
-University, the Institute of Astronomy RAS in Moscow, and the University
-of Vienna.
-
+  This work has made use of the VALD database, operated at Uppsala
+  University, the Institute of Astronomy RAS in Moscow, and the University
+  of Vienna.
 \end{acknowledgements}
 
 
