@@ -1,5 +1,6 @@
 # Own stuff
 *.pyc
+*.fits
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
