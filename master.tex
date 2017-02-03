@@ -269,10 +269,13 @@ Lines blended with telluric were omitted from the analysis. The equivalent width
 IRAF. In the atlas there exist both a summer observation set and a winter
 observation set. This is in order to minimize the effect of tellurics at
 different spectral regions. As many lines as possible were measured in both
-sets, and combined to the final measure line list.
+sets. Parameters were derived from the manual measurements and from the
+automatic (using both the summer and winter set). For all three sets parameters
+were derived with and without $\log g$ fixed. The derivation follows the
+procedure presented in \citet{Andreasen2016} with removal 1 outlier iteratively
+after the minimization routine \citep{Andreasen2017a} reach convergence. The
+final results are presented in Tab.~\ref{tab:arcturus}.
 
-The derivation of the parameters follow exactly the same procedure as used
-in~\cite{Andreasen2016}.
 
 \begin{table*}[htb!]
     \caption{The derived parameters for Arcturus with and without fixed surface
@@ -285,18 +288,30 @@ in~\cite{Andreasen2016}.
     \centering
     \begin{tabular}{lllll}
       \hline\hline
-                     & $T_\mathrm{eff}$ (K) &  $\log g$ (dex)  &   $\xi_\mathrm{micro}$ (km/s)   & [Fe/H] (dex)     \\
+                      & $T_\mathrm{eff}$ (K) &  $\log g$ (dex)  &   $\xi_\mathrm{micro}$ (km/s)   & [Fe/H] (dex)     \\
       \hline
-        Literature   & $4306 \pm 100$       &  $1.69 \pm 0.32$ &    $1.92 \pm 0.15$              & $-0.54 \pm 0.11$ \\
+        Literature    & $4306 \pm 100$       &  $1.69 \pm 0.32$ &    $1.92 \pm 0.15$              & $-0.54 \pm 0.11$ \\
       \hline
-        IRAF         & $4380 \pm  79$       &  $0.64 \pm 0.33$ &    $1.14 \pm 0.09$              & $-0.49 \pm 0.07$ \\
-        IRAF         & $4212 \pm  77$       &   1.69 (fixed)   &    $1.25 \pm 0.08$              & $-0.37 \pm 0.03$ \\
+        IRAF          & $4380 \pm  79$       &  $0.64 \pm 0.33$ &    $1.14 \pm 0.09$              & $-0.49 \pm 0.07$ \\
+        IRAF          & $4212 \pm  77$       &   1.69 (fixed)   &    $1.25 \pm 0.08$              & $-0.37 \pm 0.03$ \\
       \hline
-        ARES         &     ....             &        ...       &          ....                   &         ...      \\
-        ARES         &     ....             &   1.69 (fixed)   &          ....                   &         ...      \\
+        ARES (summer) & $4439 \pm  63$       &  $1.20 \pm 0.20$ &    $1.55 \pm 0.10$              & $-0.58 \pm 0.06$ \\
+        ARES (summer) & $4348 \pm  75$       &   1.69 (fixed)   &    $1.58 \pm 0.09$              & $-0.53 \pm 0.03$ \\
+        ARES (winter) & $4436 \pm  67$       &  $0.55 \pm 1.77$ &    $1.35 \pm 0.09$              & $-0.56 \pm 0.07$ \\
+        ARES (winter) & $4233 \pm 109$       &   1.69 (fixed)   &    $1.43 \pm 0.09$              & $-0.49 \pm 0.04$ \\
       \hline
     \end{tabular}
 \end{table*}
+
+We generally see good agreement between the derived parameters and the values
+from the literature. The only parameter being difficult to measure is the
+surface gravity due to the lack of \ion{Fe}{II} lines in the NIR. The
+metallicity is very important to derive accurately, and we report good results
+overall, but especially with the automatic measurements, compared to literature
+values.
+
+
+
 
 
 \subsection{10 Leo}
@@ -318,7 +333,7 @@ of literature values taken from Simbad.
              corresponding standard error. There is no microturbulence
              available, so we derived it ourself using the empirical relation
              from \citet{Adibekyan2015} for each set of parameters.}
-    \label{tab:arcturus}
+    \label{tab:10Leo}
     \centering
     \begin{tabular}{lllll}
       \hline\hline
