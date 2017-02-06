@@ -28,13 +28,14 @@ def weighted_avg_and_std(values, weights=None):
         weights = (np.abs(values-np.median(values))/(np.std(values)+1E-13)+0.25)**(-1)
     average = round(np.average(values, weights=weights), 3)
     std = np.sqrt(np.average((values-average)**2, weights=weights))
-    return average, std
+    std1 = np.sqrt(np.sum((1/weights)**2))/len(weights)
+    return average, std, std1
 
 
 def make_histogram(lit, val, err):
 
     lit = lit[~np.isnan(lit)]
-    value, error = weighted_avg_and_std(val, 1/err)
+    value, error, _ = weighted_avg_and_std(val, 1/err)
     plt.hist(lit)
     _, y = plt.ylim()
     height = 0.90*y
@@ -54,12 +55,12 @@ if __name__ == '__main__':
     df2 = df[~df.fixlogg]
     params = ('teff', 'logg', 'feh', 'vt')
     for param in params:
-        v1, e1 = weighted_avg_and_std(df1[param], 1/df1[param+'err'])
-        v2, e2 = weighted_avg_and_std(df2[param], 1/df2[param+'err'])
+        v1, e1, ee1 = weighted_avg_and_std(df1[param], 1/df1[param+'err'])
+        v2, e2, ee2 = weighted_avg_and_std(df2[param], 1/df2[param+'err'])
         print 'Fixed logg'
-        print param, round(v1, 2), round(e1, 2)
+        print param, round(v1, 2), round(e1, 2), round(ee1, 2)
         print 'Free logg'
-        print param, round(v2, 2), round(e2, 2)
+        print param, round(v2, 2), round(e2, 2), round(ee2, 2)
         print ' '
 
     plt.subplot(311)

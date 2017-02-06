@@ -1,4 +1,4 @@
-linelist                            teff  tefferr logg    loggerr   feh      feherr    vt      vterr  convergence fixteff  fixlogg  fixfeh    fixvt    outlier    weights    model       refine    EPcrit    RWcrit    ABdiffcrit
+linelist                            teff  tefferr logg    loggerr   feh      feherr    vt      vterr g1 g1e g2 g2e  convergence fixteff  fixlogg  fixfeh    fixvt    outlier    weights    model       refine    EPcrit    RWcrit    ABdiffcrit
 10Leo_outlier.moog     	4805	98	2.42	0.61	-0.01	0.07	1.23	0.10	2.65	0.61	2.81	0.61	True	False	False	False	False	1Iter	null	kurucz95	True	0.0003	0.001	0.0033
 10Leo_outlier.moog     	4768	105	2.54	2.06	-0.01	0.06	1.20	0.10	2.79	2.06	2.95	2.06	True	False	True	False	False	1Iter	null	kurucz95	True	0.0003	0.001	0.0033
 10Leo_iraf_outlier.moog	4835	85	2.41	0.41	0.09	0.06	1.28	0.08	2.63	0.41	2.79	0.41	True	False	False	False	False	1Iter	null	kurucz95	True	0.0003	0.001	0.0033
