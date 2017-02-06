@@ -280,12 +280,24 @@ Lines blended with telluric were omitted from the analysis. The equivalent width
 IRAF. In the atlas there exist both a summer observation set and a winter
 observation set. This is in order to minimize the effect of tellurics at
 different spectral regions. As many lines as possible were measured in both
-sets. Parameters were derived from the manual measurements and from the
-automatic (using both the summer and winter set). For all three sets parameters
-were derived with and without $\log g$ fixed. The derivation follows the
-procedure presented in \citet{Andreasen2016} with removal 1 outlier iteratively
-after the minimization routine \citep{Andreasen2017a} reach convergence. The
-final results are presented in Tab.~\ref{tab:arcturus}.
+sets. The EW measurements from the different data sets and method (automatic and
+manual) can be seen in Fig.~\ref{fig:EWcomp}. Parameters were derived from the
+manual measurements and from the automatic (using both the summer and winter
+set). For all three sets parameters were derived with and without $\log g$
+fixed. The derivation follows the procedure presented in \citet{Andreasen2016}
+with removal 1 outlier iteratively after the minimization routine
+\citep{Andreasen2017a} reach convergence. The final results are presented in
+Tab.~\ref{tab:arcturus}.
+
+\begin{figure}[tpb]
+    \centering
+    \includegraphics[width=1.0\linewidth]{figures/EWcomp.pdf}
+    \caption{Top figure: compare the manuel EWs measurement between the summer
+             observations and winter observations. Bottom figure: Same as above,
+             but with automatic measurements from ARES (summer) and manuel
+             measurements (summer).}
+    \label{fig:EWcomp}
+\end{figure}
 
 
 \begin{table*}[htb!]
