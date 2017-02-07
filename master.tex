@@ -20,6 +20,9 @@
 \def\prl{Phys. Rev. Lett.}
 \def\araa{ARA\&A}
 
+\bibpunct{(}{)}{;}{a}{}{,}
+
+
 \begin{document}
 
 
@@ -97,7 +100,7 @@ is dependent on our capability to derive the radius of the star
 The derivation of precise stellar atmospheric parameters is not a simple task.
 Different approaches often lead to discrepant results
 \citep[see e.g.][]{Santos13}. Interferometry is usually considered  an accurate
-method for deriving stellar radii \citep[e.g.][]{Boyajian2012}; however, it is
+method for deriving stellar radii \citep[see e.g.][]{Boyajian2012}; however, it is
 only applicable for bright nearby stars. Asteroseismology, on the other hand,
 reveals the inner stellar structure by observing the stellar pulsations at the
 surface. From asteroseismology it is possible to measure the surface gravity and
@@ -129,8 +132,8 @@ resolution near-infrared (NIR) instruments, we will now be able to use a similar
 technique to that used in the optical part of the spectrum
 \citep[see e.g.][]{Melendez1999,Sousa2008a,Tsantaki2013,Mucciarelli2013,Bensby2014}.
 At the moment, the GIANO spectrograph installed at \emph{Telescopio Nazionale
-Galileo} (TNG) is already available \citep{GIANO}, the \emph{infrared Doppler
-instrument} (IRD) installed at the Subaru telescope \citep{IRD}, as is
+Galileo} (TNG) is already available \citep{GIANO}, as is the \emph{infrared Doppler
+instrument} (IRD) installed at the Subaru telescope \citep{IRD}, and
 \emph{Calar Alto high-Resolution search for M dwarfs with Exoearths with
 Near-infrared and optical Échelle Spectrographs} (CARMENES) for the \SI{3.5}{m}
 telescope at Calar Alto Observatory \citep{CARMENES}. Two new spectrographs are
@@ -142,24 +145,26 @@ SpectroPolarimètre Infra-Rouge A Near-InfraRed Spectropolarimeter} (SPIRou) at
 expected first light in 2017 as well. The spectral resolutions for these
 spectrographs range between $50\,000$ and $100\,000$.
 
-With the advance of NIR spectrographs, we are yet to be to ready for the
-analysis of the data arriving at the moment and in the future. The analysis of
-stellar spectra is well understood for FGK stars in the optical part of the
-spectrum, however some work still needs to be done for the NIR part.
+With the advance of NIR spectrographs, we are yet to be ready for the analysis
+of the data arriving at the moment and in the future. The analysis of stellar
+spectra is well understood for FGK stars in the optical part of the spectrum,
+however some work still needs to be done for the NIR part. Even more challenging
+are the cold M stars with a severe continuum depression and line blending in the
+optical.
 
 In this work we analyse the atlas of Arcturus (K0III) and the spectrum 10 Leo
 (K1III). The atlas of Arcturus was acquired at Kitt Peak National Observatory
 using the FTS spectrograph at the Mayall telescope \citep{Hinkle2003} and 10 Leo
 from CRIRES \citep{Nicholls2016}. For the analysis we use the iron line list
-presented in \citet{Andreasen2016}. This work serve as a continuation of our
-previous work.
+presented in \citet{Andreasen2016} (referred to as Paper I). This work is a a
+continuation of our previous work.
 
 The paper is organized as follows. In Sect.~\ref{sec:data} we present the data
 we have acquired for this work along with some information of the two stars we
 will analyse. in Sect.~\ref{sec:refining_the_line_list} we refine the iron line
 list in order to get more reliable stellar parameters. The results are presented
 in Sect.~\ref{sec:results} before we discuss our results in
-Sect.~\ref{sec:conclusion}.
+Sect.~\ref{sec:discussion}.
 
 
 
@@ -168,14 +173,14 @@ Sect.~\ref{sec:conclusion}.
 \label{sec:data}
 
 While the community is currently on the verge to access of a large amount of
-high resolution NIR spectra with e.g. the spectrographs used here, the available
-spectra at the moment are sparse. We chose to use two stars cooler than the Sun
-since we showed in \citet{Andreasen2016} that this method works for a star
-hotter than the Sun (HD20010).
+high resolution NIR spectra with especially the CARMENES spectrographs, the
+available spectra at the moment are sparse. We chose to use two stars cooler
+than the Sun since we showed in Paper I that this method works for
+a star hotter than the Sun (HD 20010).
 
 We have collected the atlas of Arcturus, one of the brightest stars on the
 Northern hemisphere. Thus it is well studied
-\citep[see e.g.][to mention a few]{Griffin1967,McWilliam1990,Ramirez2013}. We
+\citep[see e.g.][to mention just a few]{Griffin1967,McWilliam1990,Ramirez2013}. We
 use the atlas from \cite{Hinkle2003} which covers the spectral range of interest
 (YJHK bands). Strong telluric features were identified with a spectrum from the
 TAPAS web page \citep{Bertaux2014}. The atlas also comes with the telluric from
@@ -188,11 +193,12 @@ The second spectrum we have achieved is from the CRIRES-POP team
 one reason this star was the first to be fully reduced by the team. It is a
 great help to be able to compare with the atlas of Arcturus. The main difference
 is the metallicity of the two stars, where Arcturus is metal poor and 10 Leo has
-solar metallicity. due to a telluric that could not be properly removed, low
-S/N, bad pixels, etc. Rather than giving an uncertain interpolation,
-\citet{Nicholls2016} decided to leave small gaps in the data. This have very
-little affect on this analysis. However, we were unable to measure one
-\ion{Fe}{II} line, which are very important to determine the surface gravity.
+solar metallicity.  Some small gaps are present in the spectrum due to tellurics
+that could not be properly removed, low S/N, bad pixels, etc. Rather than giving
+an uncertain interpolation, \citet{Nicholls2016} decided to leave small gaps in
+the data. This have very little affect on this analysis. However, we were unable
+to measure one \ion{Fe}{II} line, which are very important to determine the
+surface gravity.
 
 A small summarise of the data is given in Tab.~\ref{tab:data}. The data is very
 similar, with similar S/N which is an approximately value measured with IRAF.
@@ -200,7 +206,7 @@ The resolutions of the two spectrographs used are the same.
 
 
 \begin{table*}[htb!]
-    \caption{The spectra and spectral type (from Simbad) of our sample with
+    \caption{The spectra and spectral type (from Simbad) of our two stars with
              the corresponding spectrograph used to acquire the data and its
              spectra resolution. In the last column we show the S/N measured
              with splot in IRAF.}
@@ -222,8 +228,8 @@ some of the iron lines used for the analysis described below.
 \begin{figure*}[tpb]
     \centering
     \includegraphics[width=1.0\linewidth]{figures/bothspectra.pdf}
-    \caption{The spectrum of the two stars, in blue is Arcturus, and green is
-             10 Leo. We mark the location of \ion{Fe}{I} lines in the region.}
+    \caption{The spectrum of the two stars, in blue is Arcturus, and red dashed
+             is 10 Leo. We mark the location of \ion{Fe}{I} lines in the region.}
     \label{fig:both}
 \end{figure*}
 
@@ -239,7 +245,7 @@ we also want to refine the line list. This includes identifying recurring
 outliers, and lines which we are not able to measure, e.g. if a line is amidst a
 forest of telluric lines. Hence, de-blending is nearly impossible. The first
 step was to go back and have a second look at the solar atlas used in
-\citet{Andreasen2016}. We removed 342 \ion{Fe}{I} lines and 13 \ion{Fe}{II}
+Paper I. We removed 342 \ion{Fe}{I} lines and 13 \ion{Fe}{II}
 lines in the process. Most of these were blended with other tellurics while a
 few were blended with other stellar absorption lines. We are down to 84
 \ion{Fe}{I} lines and 5 \ion{Fe}{II} lines. The \ion{Fe}{II} lines are used to
@@ -247,17 +253,22 @@ determine $\log g$ by imposing ionization balance with \ion{Fe}{I}. However, the
 low number of \ion{Fe}{II} lines available is a concern, since the average
 abundance of \ion{Fe}{II} is less trustworthy. One might fix $\log g$ during the
 process of obtaining stellar parameters, but this has an impact on the other
-derived parameters. It is better to leave $\log g$ free if possible, and either
-make corrections at the end or change it to a value from a more reliable source.
-This could for example be asteroseismology or from the parallaxes measured with
-Gaia.
+derived parameters. A more reliable source for $\log g$ could for example be
+asteroseismology or from the parallaxes measured with GAIA.
+
+During the second look at the Solar spectrum, the EW of the lines were measured
+by hand (this was done automatically with ARES previously). Since we re-measured
+the EWs, the $\log \mathrm{gf}$ values had to be re-calibrated again. Here we
+simply change the $\log \mathrm{gf}$ values for the measured EW until the
+abundance of a given line is equal to that of the Sun, using the same solar
+atmosphere model as in Paper I.
 
 
 \section{Results}
 \label{sec:results}
 
 We derive the stellar atmospheric parameters in the same way as described in
-\citet{Andreasen2016} using FASMA \citep{Andreasen2017a}. The EWs are measured
+Paper I using FASMA \citep{Andreasen2017a}. The EWs are measured
 for both stars automatically with ARES \citep{Sousa2015a} and by hand with splot
 in IRAF. We compare the derived stellar parameters from the two measured sets of
 EWs.
@@ -268,29 +279,28 @@ EWs.
 
 Arcturus is one of the brightest stars on the night sky with a V magnitude of
 -0.05 \citep{Ducati2002}. Hence it is a prime target for testing the line list
-by \cite{Andreasen2016} with numerous measurements as mentioned above.
+by Paper I with numerous measurements as mentioned above.
 
-Lines blended with telluric were omitted from the analysis. The equivalent width
-(EW) of rest of the lines were measured by hand using the splot function in
-IRAF. In the atlas there exist both a summer observation set and a winter
-observation set. This is in order to minimize the effect of tellurics at
-different spectral regions. As many lines as possible were measured in both
-sets. The EW measurements from the different data sets and method (automatic and
-manual) can be seen in Fig.~\ref{fig:EWcomp}. Parameters were derived from the
-manual measurements and from the automatic (using both the summer and winter
-set). For all three sets parameters were derived with and without $\log g$
-fixed. The derivation follows the procedure presented in \citet{Andreasen2016}
-with removal 1 outlier iteratively after the minimization routine
-\citep{Andreasen2017a} reach convergence. The final results are presented in
-Tab.~\ref{tab:arcturus}.
+The atlas consists of both a summer observation set and a winter observation
+set. This is in order to minimize the effect of tellurics at different spectral
+regions. As many lines as possible were measured in both sets. The EW
+measurements from the different data sets and method (automatic and manual) can
+be seen in Fig.~\ref{fig:EWcomp}. Parameters were derived from the manual
+measurements and from the automatic (using both the summer and winter set). For
+all three sets parameters were derived with and without $\log g$ fixed. The
+derivation follows the procedure presented in Paper I with removal of one
+outlier iteratively after the minimization routine \citep{Andreasen2017a} reach
+convergence. The final results are presented in Tab.~\ref{tab:arcturus}. The
+mean parameters are also presented in the same Table. It is divided regarding
+depending on whether the $\log g$ was fixed or free.
 
 \begin{figure}[tpb]
     \centering
     \includegraphics[width=1.0\linewidth]{figures/EWcomp.pdf}
-    \caption{Top figure: compare the manual EWs measurement between the summer
-             observations and winter observations. Bottom figure: Same as above,
-             but with automatic measurements from ARES (summer) and manual
-             measurements (summer).}
+    \caption{Top figure: Comparison of the manual EWs measurement between the
+             summer observations and winter observations. Bottom figure: Same as
+             above, but with automatic measurements from ARES (summer) and
+             manual measurements (summer).}
     \label{fig:EWcomp}
 \end{figure}
 
@@ -326,17 +336,19 @@ Tab.~\ref{tab:arcturus}.
 
 We generally see good agreement between the derived parameters and the values
 from the literature. The only parameter being difficult to measure is the
-surface gravity due to the lack of \ion{Fe}{II} lines in the NIR. The
+surface gravity due to the low number of \ion{Fe}{II} lines in the NIR. The
 metallicity is very important to derive accurately, and we report good results
 overall, but especially with the automatic measurements, compared to literature
 values. For visualization the parameters are plotted (except
-$\xi_\mathrm{micro}$) in Fig.~\ref{fig:arcturus}.
+$\xi_\mathrm{micro}$) in Fig.~\ref{fig:arcturus}. Here the histogram shows the
+literature values collected from Simbad while the vertical black line is our
+final value with gray shaded errorbar.
 
 \begin{figure}[tpb]
     \centering
     \includegraphics[width=1.0\linewidth]{figures/ArcturusParams.pdf}
     \caption{Histogram of the atmospheric stellar parameters of Arcturus (except
-             $\xi_\mathrm{micro}$). The black vertical lines are the derived
+             $\xi_\mathrm{micro}$). The black vertical line are the derived
              parameters, and the gray shaded area are the errors on the
              corresponding parameters.}
     \label{fig:arcturus}
@@ -353,14 +365,12 @@ bands. We use ARES on each band separately. For the small gaps in the spectrum,
 we simply set the value to 1, since the spectrum is already normalized. This
 will also prevent ARES to measure any lines in these regions. The EWs from the
 three regions are combined to one final line list used for the determination of
-the parameters. We list the result in Tab.~\ref{tab:10Leo} alongside with a mean
-of literature values taken from Simbad.
+the parameters. The EWs are also measured by hand using IRAF. We list the result
+in Tab.~\ref{tab:10Leo} alongside with a mean of literature values taken from
+Simbad.
 
 \begin{table*}[htb!]
-    \caption{Same as Tab.~\ref{tab:arcturus}. The errors on $T_\mathrm{eff}$ and
-             $\xi_\mathrm{micro}$ for the weighted mean with fixed $\log g$ are
-             mathematically lower than reported, but we chose to set a lower
-             limit. These errors are underestimated.}
+    \caption{Same as Tab.~\ref{tab:arcturus}.}
     \label{tab:10Leo}
     \centering
     \begin{tabular}{lllll}
@@ -383,18 +393,18 @@ of literature values taken from Simbad.
 
 Generally the derived parameters are in excellent agreement with the literature
 values listed here. Surprisingly we are able to derive good $\log g$ values,
-although quite large errors and consistently lower, compared to the results from
-Arcturus.
+although with quite large errors and consistently lower, compared to the results
+from the literature.
 
-A synthetic spectrum with the best parameters for both stars can be seen in
-Fig.~\ref{fig:synth}. The region is the same as in Fig.~\ref{fig:both}. This is
-for a visual representation of our solution. We did not use synthetic fitting
-to obtain the parameters.
+A synthetic spectrum of the iron lines with the best parameters for both stars
+can be seen in Fig.~\ref{fig:synth}. The region is the same as in
+Fig.~\ref{fig:both}. This is for a visual representation of our solution. We did
+not use synthetic fitting to obtain the parameters.
 
 \begin{figure}[tpb]
     \centering
     \includegraphics[width=1.0\linewidth]{figures/syntheticFit.pdf}
-    \caption{Synthetic fit, red dashed curve, of both stars, blue curve, with
+    \caption{Synthetic fit (red dashed curve) of both stars (blue curve) with
              the parameters from the weighted mean.}
     \label{fig:synth}
 \end{figure}
@@ -407,37 +417,37 @@ to obtain the parameters.
 
 One of the most difficult atmospheric stellar parameters to get from a spectrum
 is the surface gravity. Here we need the pressure sensitive ionized atoms such
-as \ion{Fe}{II}. However, they are more sparse than neutral iron, \ion{Fe}{I}.
-Hence the determination is challenging. This is true in the optical (give ref),
-and even more in the NIR \citep[see e.g.][and this work]{Andreasen2016}. We seem
-to get slightly better results when we fix the surface gravity when compared to
-literature values. With the parallaxes from Gaia (give ref) we will have access
-to accurate $\log g$, thus being able to have good $T_\mathrm{eff}$ and
-$[\ion{Fe}/\ion{H}]$. We might also see a hint that the method work less well
-for the most evolved stars (low $\log g$) as Arcturus. The weighted mean results
-for 10 Leo are overlapping within the errorbars provided, which is not the case
-for the $T_\mathrm{eff}$ of Arcturus, nor the $[\ion{Fe}/\ion{H}]$. However,
-these values are all within the errorbars from the literature values. With the
-coming spectral library from CARMENES (private comm. Amado, P.) we will have a
-dwarf stars to test this method, which is what it is intended for.
+as \ion{Fe}{II}. However, they are more sparse than neutral iron, \ion{Fe}{I},
+making the determination more challenging. This is true in the optical (give
+ref), and even more in the NIR (see e.g. Paper I and this work). The other three
+parameters seem to get slightly better when we fix the surface gravity when
+compared to literature values. With the parallaxes from GAIA (give ref) we will
+have access to accurate $\log g$, thus being able to have good $T_\mathrm{eff}$
+and $[\ion{Fe}/\ion{H}]$. We might also see a hint that the method work less
+well for the most evolved stars (low $\log g$) as Arcturus. The weighted mean
+results for 10 Leo are overlapping within the errorbars provided, which is not
+the case for the $T_\mathrm{eff}$ of Arcturus, nor the $[\ion{Fe}/\ion{H}]$.
+However, these values are all within the errorbars from the literature values.
+With the coming spectral library by CARMENES (private comm. Amado, P.) we will
+have dwarf stars to test this method, which is what it is intended for.
 
 
 \subsection{Proper data reduction}
 
 In our previous work we had problems getting reliable atmospheric stellar
-parameters. This was argued probably because of of the unfinished data reduction
-of HD20010 from CRIRES-POP (as 10 Leo). Here the wavelength calibration was done
-automatically and therefore not optimal. This meant the wavelength was stretched
-when compared to a synthetic spectrum. This is discussed in more detail by
-\citet{Nicholls2016}. The poor wavelength calibration for HD20010 most likely
+parameters. This was probably because of of the unfinished data reduction of HD
+20010 from CRIRES-POP. Here the wavelength calibration was done automatically
+and therefore not optimal. This meant the wavelength was stretched when compared
+to a synthetic spectrum, which is discussed in more detail by
+\citet{Nicholls2016}. The poor wavelength calibration for HD 20010 most likely
 caused bad EW measurements. In addition the spectrum was not corrected for
 telluric lines which also cause minor deviation from the true EW when measured.
 
-All the above problems we had with HD20010 has been solved for 10 Leo, and it is
+All the above problems we had with HD 20010 has been solved for 10 Leo, and it is
 clear the results are of much higher quality. Therefore, it may be needed that a
 telluric correction is applied to the spectrum before atmospheric stellar
 parameters can be determined. However, with our limited sample it is hard to
-make many conclusion.
+make a clear conclusion yet.
 
 \subsection{Other spectra}
 
@@ -459,7 +469,7 @@ metallicity)...
 
 Being able to successfully determine parameters for two early K giants, we are
 now making the bridge for the line list towards cooler temperatures. The obvious
-next step is the even colder M stars. Particular interesting are the M dwarfs
+next step is the even colder M stars. Particular interesting are the M dwarfs,
 known to be prone forming rocky planets. As important as cooler stars, we have
 yet to test our line list on any dwarf stars other than the Sun for which our
 line list is calibrated. While it is expected that it will work for early dwarf
@@ -487,7 +497,6 @@ This research has made use of the SIMBAD database operated at CDS, Strasbourg
 \end{acknowledgements}
 
 
-\bibpunct{(}{)}{;}{a}{}{,}
 \bibliographystyle{aa}
 \bibliography{thesis}
 
