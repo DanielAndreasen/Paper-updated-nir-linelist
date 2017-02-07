@@ -28,7 +28,7 @@ def get_ymin(center, d1, d2):
 if __name__ == '__main__':
     regions = [[10000, 10100], [10130, 10230], [12200, 12300]]
 
-    lines = np.loadtxt('/home/daniel/.plotfits/linelist.moog', usecols=(0,))
+    lines = np.loadtxt('Felines.moog', usecols=(0,))
     wArcturus = get_wavelength(fits.getheader('ArcturusSummer.fits'))
     fArcturus = fits.getdata('ArcturusSummer.fits')
 
@@ -70,8 +70,12 @@ if __name__ == '__main__':
         plt.plot(w2, f2, '--r', label='10 Leo')
         for j, line in enumerate(plines):
             if j%2 == 0:
-                dy = 0.02
+                dy = -0.02
             else:
+                dy = 0.02
+            if j == 6:
+                dy = 0.02
+            elif j == 7:
                 dy = -0.02
             ymin = get_ymin(line, (w1, f1), (w2, f2))
             plt.vlines(line, ymin, 1.04+dy, linestyles='dashed')
