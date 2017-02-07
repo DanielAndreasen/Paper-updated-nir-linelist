@@ -47,16 +47,14 @@ if __name__ == '__main__':
     w2, f2 = create_synthetic('Arcturus')
     f2 = pyasl.rotBroad(w2, f2, 0.40, 4.5)
 
-    plt.subplot(211)
+    # plt.subplot(211)
     plt.plot(warc, farc)
     plt.plot(w2, f2, '--r')
-    plt.title('Arcturus')
 
-    plt.subplot(212)
-    plt.plot(w10Leo, f10Leo)
-    plt.plot(w1, f1, '--r')
+    # plt.subplot(212)
+    plt.plot(w10Leo, f10Leo-0.4)
+    plt.plot(w1, f1-0.4, '--r')
     plt.xlabel(r'Wavelength [$\AA$]')
-    plt.title('10 Leo')
     plt.tight_layout()
 
     plt.savefig('syntheticFit.pdf')
