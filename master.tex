@@ -18,7 +18,7 @@
 \def\aaps{A\&A Supp.}
 \def\prd{Phys. Rev. D}
 \def\prl{Phys. Rev. Lett.}
-\def\araa{ARA\&A}       % Annual Review of Astron and Astrophys
+\def\araa{ARA\&A}
 
 \begin{document}
 
@@ -134,7 +134,7 @@ resolution near-infrared (NIR) instruments, we will now be able to use a similar
 technique to that used in the optical part of the spectrum
 \citep[see e.g.][]{Melendez1999,Sousa2008a,Tsantaki2013,Mucciarelli2013,Bensby2014}.
 At the moment, the GIANO spectrograph installed at \emph{Telescopio Nazionale
-Galileo} (TNG) is already available \citep{GIANO}, the \emph{infrered doppler
+Galileo} (TNG) is already available \citep{GIANO}, the \emph{infrared Doppler
 instrument} (IRD) installed at the Subaru telescope \citep{IRD}, as is
 \emph{Calar Alto high-Resolution search for M dwarfs with Exoearths with
 Near-infrared and optical Échelle Spectrographs} (CARMENES) for the \SI{3.5}{m}
@@ -153,14 +153,14 @@ stellar spectra is well understood for FGK stars in the optical part of the
 spectrum, however some work still needs to be done for the NIR part.
 
 In this work we analyse the atlas of Arcturus (K0III) and the spectrum 10 Leo
-(K1III). The atlas of Arcturus was aquired at Kitt Peak National Observatory
+(K1III). The atlas of Arcturus was acquired at Kitt Peak National Observatory
 using the FTS spectrograph at the Mayall telescope \citep{Hinkle2003} and 10 Leo
 from CRIRES \citep{Nicholls2016}. For the analysis we use the iron line list
 presented in \citet{Andreasen2016}. This work serve as a continuation of our
 previous work.
 
 The paper is organized as follows. In Sect.~\ref{sec:data} we present the data
-we have aquired for this work along with some information of the two stars we
+we have acquired for this work along with some information of the two stars we
 will analyse. in Sect.~\ref{sec:refining_the_line_list} we refine the iron line
 list in order to get more reliable stellar parameters. The results are presented
 in Sect.~\ref{sec:results} before we discuss our results in
@@ -179,7 +179,7 @@ since we showed in \citet{Andreasen2016} that this method works for a star
 hotter than the Sun (HD20010).
 
 We have collected the atlas of Arcturus, one of the brightest stars on the
-Nothern hemisphere. Thus it is well studied
+Northern hemisphere. Thus it is well studied
 \citep[see e.g.][to mention a few]{Griffin1967,McWilliam1990,Ramirez2013}. We
 use the atlas from \cite{Hinkle2003} which covers the spectral range of interest
 (YJHK bands). Strong telluric features were identified with a spectrum from the
@@ -242,7 +242,7 @@ some of the iron lines used for the analysis described below.
 Besides testing the line list at cooler effective temperatures with two K stars,
 we also want to refine the line list. This includes identifying recurring
 outliers, and lines which we are not able to measure, e.g. if a line is amidst a
-forrest of telluric lines. Hence, de-blending is nearly impossible. The first
+forest of telluric lines. Hence, de-blending is nearly impossible. The first
 step was to go back and have a second look at the solar atlas used in
 \citet{Andreasen2016}. We removed 342 \ion{Fe}{I} lines and 13 \ion{Fe}{II}
 lines in the process. Most of these were blended with other tellurics while a
@@ -292,9 +292,9 @@ Tab.~\ref{tab:arcturus}.
 \begin{figure}[tpb]
     \centering
     \includegraphics[width=1.0\linewidth]{figures/EWcomp.pdf}
-    \caption{Top figure: compare the manuel EWs measurement between the summer
+    \caption{Top figure: compare the manual EWs measurement between the summer
              observations and winter observations. Bottom figure: Same as above,
-             but with automatic measurements from ARES (summer) and manuel
+             but with automatic measurements from ARES (summer) and manual
              measurements (summer).}
     \label{fig:EWcomp}
 \end{figure}
@@ -302,10 +302,10 @@ Tab.~\ref{tab:arcturus}.
 
 \begin{table*}[htb!]
     \caption{The derived parameters for Arcturus with and without fixed surface
-             gravity after 3$\sigma$ outlier removal. The litereature values are
+             gravity after 3$\sigma$ outlier removal. The literature values are
              a simple mean of all the available parameters on Simbad with the
              corresponding standard error. There is no microturbulence
-             available, so we derived it ourself using the empirical relation
+             available, so we derived it using the empirical relation
              from \citet{Adibekyan2015} for each set of parameters.}
     \label{tab:arcturus}
     \centering
@@ -408,7 +408,19 @@ to obtain the parameters.
 \section{Discussion}
 \label{sec:discussion}
 
-
+One of the most difficult atmospheric stellar parameters to get from a spectrum
+is the surface gravity. Here we need the pressure sensitive ionized atoms such
+as \ion{Fe}{II}. However, they are more sparse than neutral iron, \ion{Fe}{I}.
+Hence the determination is challenging. This is true in the optical (give ref),
+and even more in the NIR \citep[see e.g.][and this work]{Andreasen2016}. We seem
+to get slightly better results when we fix the surface gravity when compared to
+literature values. With the parallaxes from Gaia (give ref) we will have access
+to accurate $\log g$, thus being able to have good $T_\mathrm{eff}$ and
+$[\ion{Fe}/\ion{H}]$. We might also see a hint that the method work less well
+for the most evolved stars (low $\log g$) as Arcturus. The weighted mean results
+for 10 Leo are overlapping within the errorbars provided, which is not the case
+for the $T_\mathrm{eff}$ of Arcturus, nor the $[\ion{Fe}/\ion{H}]$. However,
+these values are all within the errorbars from the literature values.
 
 
 
@@ -441,9 +453,6 @@ CAPES).
 
 This research has made use of the SIMBAD database operated at CDS, Strasbourg
 (France).
-
-This work has made use of the VALD database, operated at Uppsala University, the
-Institute of Astronomy RAS in Moscow, and the University of Vienna.
 
 \end{acknowledgements}
 
