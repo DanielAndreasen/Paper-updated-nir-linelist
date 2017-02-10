@@ -67,7 +67,7 @@ if __name__ == '__main__':
 
         plt.figure(figsize=(12, 5))
         plt.plot(w1, f1, label='Arcturus')
-        plt.plot(w2, f2, '--r', label='10 Leo')
+        plt.plot(w2, f2-0.15, label='10 Leo')
         for j, line in enumerate(plines):
             if j%2 == 0:
                 dy = -0.02
