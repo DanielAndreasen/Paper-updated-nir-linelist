@@ -469,14 +469,40 @@ have dwarf stars to test this method, which is what it is intended for.
 \subsection{Proper data reduction}
 
 In our previous work we had problems getting reliable atmospheric stellar
-parameters for HD 20010. This was probably because of the unfinished data
-reduction of from CRIRES-POP at the time. Here the wavelength calibration was
-done automatically and therefore not optimal. This meant the wavelength was
-stretched when compared to a synthetic spectrum, which is discussed in more
-detail by \citet{Nicholls2016}. The poor wavelength calibration for HD 20010
-most likely caused bad EW measurements. In addition the spectrum was not
-corrected for telluric lines which also cause minor deviation from the true EW
-when measured.
+parameters for HD 20010. This was partially due to the unfinished data reduction
+of from CRIRES-POP used at the time. Here the wavelength calibration was done
+automatically and therefore not optimal. This meant the wavelength was stretched
+when compared to a synthetic spectrum, which is discussed in more detail by
+\citet{Nicholls2016}. The poor wavelength calibration for HD 20010 most likely
+caused bad EW measurements. In addition the spectrum was not corrected for
+telluric lines which also cause minor deviation from the true EW when measured.
+Another reason was the non-refined line list used, which we have attempted to
+correct for here. As a test we re-derived atmospheric stellar parameters for HD
+20010 using the shorted line list, updated oscillator strenghts, but the same
+EWs as in Paper I. The results are presented in Tab.~\ref{tab:hd20010} along
+with the combined literature values (see Paper I and references therein). We see
+both better agreement with literature values (especially $[\ion{Fe}/\ion{H}]$
+and $\log g$), and smaller errors with the updated results.
+
+\begin{table*}[htb!]
+    \caption{Updated results for HD 20010 using the shorter line list and new
+             oscillator strengths.}
+    \label{tab:hd20010}
+    \centering
+    \begin{tabular}{lllll}
+      \hline\hline
+                      & $T_\mathrm{eff}$ (K) &  $\log g$ (dex)  &   $\xi_\mathrm{micro}$ (km/s)   & [Fe/H] (dex)     \\
+      \hline
+        Literature    & $6131 \pm 255$       &  $4.01 \pm 0.60$ &    $1.90 \pm 1.08$              & $-0.23 \pm 0.14$ \\
+      \hline
+        This work     & $6157 \pm 180$       &  $4.06 \pm 0.76$ &    $1.62 \pm 0.44$              & $-0.18 \pm 0.11$ \\
+        This work     & $6153 \pm 176$       &   4.01 (fixed)   &    $1.68 \pm 0.40$              & $-0.18 \pm 0.11$ \\
+      \hline
+        Paper I       & $6116 \pm 224$       &  $4.21 \pm 0.58$ &    $2.45 \pm 0.45$              & $-0.14 \pm 0.14$ \\
+        Paper I       & $6144 \pm 212$       &   4.01 (fixed)   &    $2.66 \pm 0.42$              & $-0.13 \pm 0.29$ \\
+      \hline
+    \end{tabular}
+\end{table*}
 
 All the above problems we had with HD 20010 have been solved for 10 Leo, and it
 is clear the results are of much higher quality. This can be seen by the smaller
