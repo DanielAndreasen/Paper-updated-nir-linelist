@@ -46,7 +46,7 @@
   Departamento de F\'isica e Astronomia, Faculdade de Ci\^encias, Universidade
   do Porto, Rua Campo Alegre, 4169-007 Porto, Portugal
 \and
-  Institute for Astrophysics, University of Vienna, Türkenschanzstrasse 17, 1180
+  Institute for Astrophysics, University of Vienna, T\"urkenschanzstrasse 17, 1180
   Vienna, Austria
 \and
   Dipartimento di Fisica e Astronomia, Universita' degli Studi di Bologna, Viale
@@ -177,7 +177,7 @@ of Arcturus (K0III) and the spectrum of 10 Leo (K1III). The atlas of Arcturus
 was acquired at Kitt Peak National Observatory using the FTS spectrograph at the
 Mayall telescope \citep{Hinkle2003}, meanwhile the spectrum of 10 Leo was taken
 from CRIRES \citep{Nicholls2016}. For the analysis we use the iron line list
-presented in \citet{Andreasen2016} (referred to as Paper I). This work is a a
+presented in \citet{Andreasen2016} (referred to as Paper I). This work is a
 continuation of our previous work. In Paper I we successfully tested our method
 on a slightly hotter star than the Sun, while in this work we aim to test the
 method on cooler stars.
@@ -228,10 +228,9 @@ the two spectrographs used are the same at $100\;000$.
 
 
 \begin{table}[htb!]
-    \caption{The star of our two stars with
-             the corresponding spectrograph used to acquire the data and its
-             spectra resolution. In the last column we show the S/N measured
-             with splot in IRAF.}
+    \caption{The spectra of our two stars with the corresponding spectrograph
+             used to acquire the data and its spectra resolution. In the last
+             column we show the S/N measured with splot in IRAF.}
     \label{tab:data}
     \centering
     \begin{tabular}{lrrrr}
@@ -267,12 +266,21 @@ Besides testing the line list from Paper I at cooler effective temperatures with
 two K stars, we also want to refine the line list. This includes identifying
 recurring outliers (both from the work done in Paper I and in this work), and
 lines which we are not able to measure, e.g. if a line is amidst a forest of
-telluric lines. The first step was revisiting the solar atlas used in Paper I.
-Here 211 \ion{Fe}{I} lines and 8 \ion{Fe}{II} lines were removed in the process.
-Most of these were blended with other tellurics while a few were blended with
-other stellar absorption lines. This procedure leaves us with 84 \ion{Fe}{I}
-lines and 5 \ion{Fe}{II} lines. This lines should be the best for deploying our
-technique of determining atmospheric stellar parameters.
+telluric lines. To identify bad lines the solar atlas used in Paper I was
+revisited. In total 211 \ion{Fe}{I} lines and 8 \ion{Fe}{II} lines were removed
+in the process. Most of these were blended lines with either tellurics or other
+stellar lines. This procedure leaves us with 84 \ion{Fe}{I} lines and 5
+\ion{Fe}{II} lines. This lines should be the best for deploying our technique of
+determining atmospheric stellar parameters.
+
+During the second look at the Solar spectrum, the EW of the lines were measured
+by hand (this was previously done automatically with ARES). Since we re-measured
+the EWs, the $\log \mathrm{gf}$ values had to be re-calibrated again. Here we
+simply change the $\log \mathrm{gf}$ values for the measured EW until the
+abundance of a given line is equal to that of the Sun, using the same solar
+atmosphere model as in Paper I. The mean change in $\log \mathrm{gf}$ for common
+lines is $-0.09 \pm 0.16$. The line list with the updated $\log \mathrm{gf}$ is
+presented here in Appendix~\ref{app:linelist}.
 
 The \ion{Fe}{II} lines are used to determine $\log g$ by imposing ionization
 balance with \ion{Fe}{I}. However, the low number of \ion{Fe}{II} lines
@@ -283,51 +291,85 @@ this has an impact on the other derived parameters. A more reliable source for
 $\log g$ could for example be asteroseismology or from the parallaxes measured
 with GAIA.
 
-During the second look at the Solar spectrum, the EW of the lines were measured
-by hand (this was done automatically with ARES previously). Since we re-measured
-the EWs, the $\log \mathrm{gf}$ values had to be re-calibrated again. Here we
-simply change the $\log \mathrm{gf}$ values for the measured EW until the
-abundance of a given line is equal to that of the Sun, using the same solar
-atmosphere model as in Paper I. The line list presented here in
-Appendix~\ref{app:linelist} is an updated version from Paper I.
 
 
 \section{Results}
 \label{sec:results}
 
 We derive the stellar atmospheric parameters in the same way as described in
-Paper I using FASMA \citep{Andreasen2017a}. The EWs are measured
-for both stars automatically with ARES \citep{Sousa2015a} and by hand with splot
-in IRAF. We compare the derived stellar parameters from the two measured sets of
-EWs.
+Paper I using FASMA \citep{Andreasen2017a}. We use ATLAS9 atmosphere models
+during the derivation \citep{Kurucz1993}. The EWs are measured for both stars
+automatically with ARES \citep{Sousa2015a} and by hand with splot in IRAF. We
+compare the derived stellar parameters from the two measured sets of EWs.
+
+
+\subsection{Revisiting HD 20010}
+\label{sec:hd20010}
+
+We revisit HD 20010 for which we derived atmospheric stellar parameters in Paper I.
+This time we remove previously measured lines, which no longer is included in our
+line list. For the rest of the lines the $\log \mathrm{gf}$ values are updated.
+The results are presented in Tab.~\ref{tab:hd20010} along with the combined
+literature values (see Paper I and references therein). We see both better
+agreement with literature values (especially $[\ion{Fe}/\ion{H}]$ and $\log g$),
+and smaller errors with the updated results.
+
+\begin{table*}[htb!]
+    \caption{Updated results for HD 20010 using the shorter line list and new
+             oscillator strengths.}
+    \label{tab:hd20010}
+    \centering
+    \begin{tabular}{lllll}
+      \hline\hline
+                      & $T_\mathrm{eff}$ (K) &  $\log g$ (dex)  &   $\xi_\mathrm{micro}$ (km/s)   & [Fe/H] (dex)     \\
+      \hline
+        Literature    & $6131 \pm 255$       &  $4.01 \pm 0.60$ &    $1.90 \pm 1.08$              & $-0.23 \pm 0.14$ \\
+      \hline
+        This work     & $6157 \pm 180$       &  $4.06 \pm 0.76$ &    $1.62 \pm 0.44$              & $-0.18 \pm 0.11$ \\
+        This work     & $6153 \pm 176$       &   4.01 (fixed)   &    $1.68 \pm 0.40$              & $-0.18 \pm 0.11$ \\
+      \hline
+        Paper I       & $6116 \pm 224$       &  $4.21 \pm 0.58$ &    $2.45 \pm 0.45$              & $-0.14 \pm 0.14$ \\
+        Paper I       & $6144 \pm 212$       &   4.01 (fixed)   &    $2.66 \pm 0.42$              & $-0.13 \pm 0.29$ \\
+      \hline
+    \end{tabular}
+\end{table*}
+
+
 
 
 \subsection{Arcturus}
 \label{sec:arcturus}
 
 Arcturus is one of the brightest stars on the night sky with a V magnitude of
--0.05 \citep{Ducati2002}. Hence it is a prime target for testing the line list
-by Paper I with numerous measurements as mentioned above.
+-0.05 \citep{Ducati2002}. Hence it is a prime target for testing the updated
+line list with numerous measurements as mentioned above.
 
 The atlas consists of both a summer observation set and a winter observation
 set. This is in order to minimize the effect of tellurics at different spectral
-regions. As many lines as possible were measured in both sets. The EW
-measurements from the different data sets and measurement method (automatic and
-manual) can be seen in Fig.~\ref{fig:EWcomp}. Parameters were derived from the
-manual measurements and from the automatic (using both the summer and winter
-set). For all three sets, parameters were derived with and without $\log g$
-fixed. The derivation follows the procedure presented in Paper I with removal of
-one outlier iteratively after the minimization routine \citep{Andreasen2017a}
-reach convergence. The final results are presented in Tab.~\ref{tab:arcturus}
-with mean parameters from the literature.
+regions. A comparison between the measured EWs in the two set is shown in
+Fig.~\ref{fig:EWcomp}, both manual measurements using IRAF and automatic
+measurements using ARES. We see that the EW measurements done automatically with
+ARES agree well between the two data sets, hence we decided to only measure
+manually for the summer data set since this is more time consuming. We did,
+however, measure a few lines from the winter data set to verify the agreement.
+For both the automatically and manually measured EWs, we discard all lines with
+an EW below $\SI{5}{m}$\AA{} and above $\SI{150}{m}$\AA{} before continuing the
+analysis. Lines outside this range are either too weak to be reliable measured
+or are so strong that the we start to see non-LTE effects, which we do not take
+into account. For all three, sets parameters were derived with and without $\log
+g$ fixed. The derivation of the parameters follow the procedure presented in
+Paper I. We use the minimization routine from \citep{Andreasen2017a}, where one
+outlier in the abundance is removed iteratively. The final results are presented
+in Tab.~\ref{tab:arcturus} with mean parameters from the literature.
+
 
 \begin{figure}[htpb!]
     \centering
     \includegraphics[width=1.0\linewidth]{figures/EWcomp.pdf}
-    \caption{Top figure: Comparison of the manual EWs measurement between the
+    \caption{Top figure: Difference of the automatic EW measurements between the
              summer observations and winter observations from the Arcturus
-             spectra. Bottom figure: Same as above, but with automatic
-             measurements from ARES (summer) and manual measurements (summer).}
+             spectra. Bottom figure: Same as above, but with manual
+             measurements from ARES (summer) and automatic measurements (summer).}
     \label{fig:EWcomp}
 \end{figure}
 
@@ -366,10 +408,11 @@ from the literature. The only parameter being difficult to measure is the
 surface gravity due to the low number of \ion{Fe}{II} lines in the NIR. The
 metallicity is very important to derive accurately, and we report good results
 overall, but especially with the automatic measurements, compared to literature
-values. For visualization the parameters are plotted (except
-$\xi_\mathrm{micro}$) in Fig.~\ref{fig:arcturus}. Here the histogram shows the
-literature values collected from Simbad while the vertical black line is our
-final value with gray shaded errorbar.
+values. When measuring this by hand, we might have systematically overestimated
+the continuum, resulting in higher $[\ion{Fe}/\ion{H}]$. For visualization the
+parameters are plotted (except $\xi_\mathrm{micro}$) in Fig.~\ref{fig:arcturus}.
+Here the histogram shows the literature values collected from Simbad while the
+vertical black line is our final value with gray shaded errorbar.
 
 \begin{figure}[htpb!]
     \centering
@@ -399,7 +442,7 @@ Fig.~\ref{fig:10leo}.
 
 \begin{table*}[htb!]
     \caption{Results from 10 Leo presented in the same way as for
-             Tab.~\ref{tab:arcturus} but for 10 Leo.}
+             Tab.~\ref{tab:arcturus}.}
     \label{tab:10Leo}
     \centering
     \begin{tabular}{lllll}
@@ -421,9 +464,8 @@ Fig.~\ref{fig:10leo}.
 \end{table*}
 
 Generally the derived parameters are in excellent agreement with the literature
-values listed here. Surprisingly we are able to derive good $\log g$ values,
-although with quite large errors and consistently lower, compared to the results
-from the literature.
+values listed here. We are able to derive good $\log g$ values, although with
+larger errors compared to the results from the literature.
 
 \begin{figure}[htpb!!]
     \centering
@@ -453,18 +495,28 @@ from the literature.
 One of the most difficult atmospheric stellar parameters to get from a spectrum
 is the surface gravity. Here we need the pressure sensitive ionized atoms such
 as \ion{Fe}{II}. However, they are more sparse than neutral iron, \ion{Fe}{I},
-making the determination more challenging. This is true in the optical (give
-ref), and even more in the NIR (see e.g. Paper I and this work). The other three
-parameters seem to get slightly better when we fix the surface gravity when
-compared to literature values. With the parallaxes from GAIA (give ref) we will
-have access to accurate $\log g$, thus being able to have good $T_\mathrm{eff}$
-and $[\ion{Fe}/\ion{H}]$. We might also see a hint that the method work less
-well for the most evolved stars (low $\log g$) as Arcturus. The results for 10
-Leo, with and without fixed $\log g$, are in agreement within the errorbars.
-This is not the case for Arcturus for $T_\mathrm{eff}$ and $[\ion{Fe}/\ion{H}]$.
-However, these values are all within the errorbars from the literature values.
-With the coming spectral library by CARMENES (private comm. Amado, P.) we will
-have dwarf stars to test this method, which is what it is intended for.
+making the determination more challenging. This is true in the optical
+\citep[see e.g. the discussion by][]{Mortier2013c}, and even more in the NIR
+(see e.g. Paper I). One solution to this problem is to fix an estimated value of
+the surface gravity and derive the other parameters. With the parallaxes from
+GAIA \citep{GAIA} we will have access to accurate $\log g$, thus being able to
+have good $T_\mathrm{eff}$ and $[\ion{Fe}/\ion{H}]$. Without the final
+parallaxes from GAIA we may yet only rely on literature values for logg. As seen
+from Fig.~\ref{fig:arcturus}, the distribution of $\log g$ values from the
+literature are rather disperse. Since there is still a dependence of the other
+parameters with $\log g$, simply using a mean value as a reference value, can
+lead to different parameters. This is most likely the cause of the small
+discrepancies seen for the parameters of Arcturus when the $\log g$ is fixed and
+free. With this in mind, the derived parameters are roughly within the
+errorbars.
+
+To add to the problem of low number of ionized iron lines is the fact that these
+lines are rather weak. Note that the lowest measured EW for an \ion{Fe}{II} line
+is $\SI{7.8}{m}$\AA{} for Arcturus, while the highest measure value is
+$\SI{20.7}{m}$\AA{} (measured in 10 Leo). This means that the error on these EWs
+are relatively high, and become even more problematic for lower S/N spectra.
+However, with the upcoming high quality spectra for the NIR, the community
+should still be able to see these \ion{Fe}{II} lines.
 
 
 \subsection{Proper data reduction}
@@ -478,32 +530,12 @@ when compared to a synthetic spectrum, which is discussed in more detail by
 caused bad EW measurements. In addition the spectrum was not corrected for
 telluric lines which also cause minor deviation from the true EW when measured.
 Another reason was the non-refined line list used, which we have attempted to
-correct for here. As a test we re-derived atmospheric stellar parameters for HD
-20010 using the shorted line list, updated oscillator strengths, but the same
-EWs as in Paper I. The results are presented in Tab.~\ref{tab:hd20010} along
-with the combined literature values (see Paper I and references therein). We see
-both better agreement with literature values (especially $[\ion{Fe}/\ion{H}]$
-and $\log g$), and smaller errors with the updated results.
-
-\begin{table*}[htb!]
-    \caption{Updated results for HD 20010 using the shorter line list and new
-             oscillator strengths.}
-    \label{tab:hd20010}
-    \centering
-    \begin{tabular}{lllll}
-      \hline\hline
-                      & $T_\mathrm{eff}$ (K) &  $\log g$ (dex)  &   $\xi_\mathrm{micro}$ (km/s)   & [Fe/H] (dex)     \\
-      \hline
-        Literature    & $6131 \pm 255$       &  $4.01 \pm 0.60$ &    $1.90 \pm 1.08$              & $-0.23 \pm 0.14$ \\
-      \hline
-        This work     & $6157 \pm 180$       &  $4.06 \pm 0.76$ &    $1.62 \pm 0.44$              & $-0.18 \pm 0.11$ \\
-        This work     & $6153 \pm 176$       &   4.01 (fixed)   &    $1.68 \pm 0.40$              & $-0.18 \pm 0.11$ \\
-      \hline
-        Paper I       & $6116 \pm 224$       &  $4.21 \pm 0.58$ &    $2.45 \pm 0.45$              & $-0.14 \pm 0.14$ \\
-        Paper I       & $6144 \pm 212$       &   4.01 (fixed)   &    $2.66 \pm 0.42$              & $-0.13 \pm 0.29$ \\
-      \hline
-    \end{tabular}
-\end{table*}
+correct for here. The refined line list has made the derivation of the
+metallicity more reliable compared with the literature as it is demonstrated in
+Sec.~\ref{sec:hd20010}. It is expected similar results will be obtained for this
+star once the final spectrum is presented, however the results should be more
+precise as it will not suffer for a bad wavelength calibration and telluric
+contamination.
 
 All the above problems we had with HD 20010 have been solved for 10 Leo, and it
 is clear the results are of much higher quality. This can be seen by the smaller
@@ -515,18 +547,29 @@ clear conclusion yet.
 
 
 
-
-
 \section{Conclusion}
 \label{sec:conclusion}
 
-Being able to successfully determine parameters for two early K giants, we are
-now making the bridge for the line list towards cooler temperatures. The obvious
-next step is the even colder M stars. Particular interesting are the M dwarfs,
-known to be prone forming rocky planets. As important as cooler stars, we have
-yet to test our line list on any dwarf stars other than the Sun for which our
-line list is calibrated. While it is expected that it will work for early dwarf
-K type stars, it will still be an important accomplishment.
+After acquiring data for two early K giants (Arcturus and 10 Leo) we measured
+the EWs of a set of \ion{Fe}{I} and \ion{Fe}{II} lines. With these measurements
+and a second look at the solar spectrum, we refined the line list presented in
+Paper I. The EWs were manually measured for the Sun and the $\log \mathrm{gf}$
+values were calibrated afterwards. This allowed us to successfully determine
+parameters for the two early K giants, thus we are now making the bridge for the
+line list towards cooler temperatures. We revisited the F subgiant from Paper I
+(HD 20010) with the refined line list. Here we see an overall improvement
+compared to our previous results, confirming the refinement has worked. With the
+updated results for HD 20010, and the results for Arcturus and 10 Leo, we are
+now reaching the same precision as has been reached in the optical for similar
+spectral types using the same methodology. The obvious next step is the even
+cooler M stars. Particular interesting are the M dwarf stars, known to be prone
+forming rocky planets. As important as cooler stars, we have yet to test our
+line list on any dwarf stars other than the Sun for which our line list is
+calibrated. While it is expected that it will work for early K dwarf stars, it
+will still be an important accomplishment. The upcoming spectral library from
+CARMENES (priv. comm. with P. Amado) will feed the community with high quality
+spectra and allow us to extend our test to many different spectral types of
+interest.
 
 
 
@@ -534,15 +577,19 @@ K type stars, it will still be an important accomplishment.
 
 \begin{acknowledgements}
 
-This work was supported by Funda\c{c}\~ao para a Ci\^encia e a Tecnologia (FCT)
-through the research grants UID/FIS/04434/2013 and PTDC/FIS-AST/1526/2014.
-N.C.S., and S.G.S. acknowledge the support from FCT through Investigador FCT
-contracts of reference IF/00169/2012, and IF/00028/2014, respectively, and
-POPH/FSE (EC) by FEDER funding through the program “Programa Operacional de
-Factores de Competitividade - COMPETE”. E.D.M. acknowledge the support from FCT
-in form of the fellowship SFRH/BPD/76606/2011. This work also benefit from the
-collaboration of a cooperation project FCT/CAPES - 2014/2015 (FCT Proc 4.4.1.00
-CAPES).
+We thank Jos\'e Caballero for many useful for comments during the process which
+led to this paper. He has been most kind providing help whenever needed.
+
+This work was supported by Funda\c{c}\~ao para a Ci\^encia e a Tecnologia, FCT,
+(ref. UID/FIS/04434/2013, PTDC/FIS-AST/1526/2014, and PTDC/FIS-AST/7073/2014)
+through national funds and by FEDER through COMPETE2020 (ref.
+POCI-01-0145-FEDER-007672, POCI-01-0145-FEDER-016886, and
+POCI-01-0145-FEDER-016880). N.C.S., and S.G.S. acknowledge the support from FCT
+through Investigador FCT contracts of reference IF/00169/2012, and
+IF/00028/2014, respectively, and POPH/FSE (EC) by FEDER funding through the
+program “Programa Operacional de Factores de Competitividade - COMPETE”. E.D.M
+acknowledge the support from the FCT in the form of the grants
+SFRH/BPD/76606/2011.
 
 This research has made use of the SIMBAD database operated at CDS, Strasbourg
 (France).
@@ -557,109 +604,114 @@ This research has made use of the SIMBAD database operated at CDS, Strasbourg
 
 \section{Complete refined line list}
 \label{app:linelist}
+The complete refined line list with Solar EWs measured by hand using IRAF.
 
-\begin{table*}[htb!]
-    \caption{Refined line list with all \ion{Fe}{I} and \ion{Fe}{II} lines and
-             corresponding atomic data, including the updated oscillator
-             strengths.}
-    \label{tab:linelist}
-    \centering
-    \begin{tabular}{lllll}
-      \hline\hline
-        Wavelength (\AA) & Element        & Excitation potential (eV)  & Oscillator strength  &  Solar EW (m\AA)    \\
-      \hline
-        10065.05         &  \ion{Fe}{I}   &           4.83             &        -0.279        &     94.0            \\
-        10080.42         &  \ion{Fe}{I}   &           5.10             &        -1.964        &      5.9            \\
-        10081.39         &  \ion{Fe}{I}   &           2.42             &        -4.512        &      6.9            \\
-        10086.24         &  \ion{Fe}{I}   &           2.95             &        -3.978        &      7.0            \\
-        10137.10         &  \ion{Fe}{I}   &           5.09             &        -1.736        &      9.8            \\
-        10142.84         &  \ion{Fe}{I}   &           5.06             &        -1.554        &     14.9            \\
-        10145.56         &  \ion{Fe}{I}   &           4.80             &        -0.118        &    109.0            \\
-        10155.16         &  \ion{Fe}{I}   &           2.18             &        -4.336        &     16.2            \\
-        10156.51         &  \ion{Fe}{I}   &           4.59             &        -2.109        &     12.2            \\
-        10167.47         &  \ion{Fe}{I}   &           2.20             &        -2.319        &    125.7            \\
-        10195.11         &  \ion{Fe}{I}   &           2.73             &        -3.608        &     22.6            \\
-        10216.31         &  \ion{Fe}{I}   &           4.73             &         0.047        &    129.9            \\
-        10218.41         &  \ion{Fe}{I}   &           3.07             &        -2.893        &     40.9            \\
-        10265.22         &  \ion{Fe}{I}   &           2.22             &        -4.648        &      8.1            \\
-        10307.45         &  \ion{Fe}{I}   &           4.59             &        -2.432        &      6.4            \\
-        10332.33         &  \ion{Fe}{I}   &           3.63             &        -3.131        &     10.5            \\
-        10340.89         &  \ion{Fe}{I}   &           2.20             &        -3.665        &     46.6            \\
-        10347.97         &  \ion{Fe}{I}   &           5.39             &        -0.717        &     37.0            \\
-        10353.81         &  \ion{Fe}{I}   &           5.39             &        -0.989        &     24.2            \\
-        10364.06         &  \ion{Fe}{I}   &           5.45             &        -1.100        &     18.0            \\
-        10379.00         &  \ion{Fe}{I}   &           2.22             &        -4.236        &     18.7            \\
-        10388.75         &  \ion{Fe}{I}   &           5.45             &        -1.471        &      8.7            \\
-        10395.80         &  \ion{Fe}{I}   &           2.18             &        -3.435        &     61.3            \\
-        10423.03         &  \ion{Fe}{I}   &           2.69             &        -3.658        &     22.9            \\
-        10423.74         &  \ion{Fe}{I}   &           3.07             &        -3.119        &     29.9            \\
-        10469.65         &  \ion{Fe}{I}   &           3.88             &        -1.277        &     89.3            \\
-        10532.24         &  \ion{Fe}{I}   &           3.93             &        -1.650        &     64.4            \\
-        10555.65         &  \ion{Fe}{I}   &           5.45             &        -1.282        &     13.1            \\
-        10577.14         &  \ion{Fe}{I}   &           3.30             &        -3.222        &     17.2            \\
-        10616.72         &  \ion{Fe}{I}   &           3.27             &        -3.306        &     15.6            \\
-        10725.19         &  \ion{Fe}{I}   &           3.64             &        -2.948        &     15.7            \\
-        10753.00         &  \ion{Fe}{I}   &           3.96             &        -2.077        &     39.7            \\
-        10780.69         &  \ion{Fe}{I}   &           3.24             &        -3.553        &     10.4            \\
-        10783.05         &  \ion{Fe}{I}   &           3.11             &        -2.786        &     47.0            \\
-        10818.28         &  \ion{Fe}{I}   &           3.96             &        -2.160        &     35.6            \\
-        10863.52         &  \ion{Fe}{I}   &           4.73             &        -0.877        &     67.1            \\
-        10884.26         &  \ion{Fe}{I}   &           3.93             &        -2.129        &     39.1            \\
-        10896.30         &  \ion{Fe}{I}   &           3.07             &        -2.911        &     42.9            \\
-        11013.24         &  \ion{Fe}{I}   &           4.80             &        -1.240        &     42.4            \\
-        11026.79         &  \ion{Fe}{I}   &           3.94             &        -2.517        &     21.2            \\
-        11119.80         &  \ion{Fe}{I}   &           2.85             &        -2.452        &     84.8            \\
-        11641.80         &  \ion{Fe}{I}   &           4.58             &        -2.116        &     15.6            \\
-        11778.42         &  \ion{Fe}{I}   &           5.34             &        -1.708        &      8.4            \\
-        12053.08         &  \ion{Fe}{I}   &           4.56             &        -1.602        &     41.3            \\
-        12119.50         &  \ion{Fe}{I}   &           4.59             &        -1.897        &     25.0            \\
-        12213.34         &  \ion{Fe}{I}   &           4.64             &        -2.006        &     19.1            \\
-        12227.11         &  \ion{Fe}{I}   &           4.61             &        -1.408        &     51.5            \\
-        12244.92         &  \ion{Fe}{I}   &           3.64             &        -3.222        &     11.8            \\
-        12340.48         &  \ion{Fe}{I}   &           2.28             &        -4.680        &      9.4            \\
-        12342.92         &  \ion{Fe}{I}   &           4.64             &        -1.545        &     42.1            \\
-        12510.52         &  \ion{Fe}{I}   &           4.96             &        -1.930        &     12.9            \\
-        12557.00         &  \ion{Fe}{I}   &           2.28             &        -4.026        &     33.8            \\
-        12615.93         &  \ion{Fe}{I}   &           4.64             &        -1.686        &     35.7            \\
-        12638.70         &  \ion{Fe}{I}   &           4.56             &        -0.679        &    112.3            \\
-        12807.15         &  \ion{Fe}{I}   &           3.64             &        -2.649        &     37.1            \\
-        12808.24         &  \ion{Fe}{I}   &           4.99             &        -1.811        &     16.4            \\
-        12824.86         &  \ion{Fe}{I}   &           3.02             &        -3.612        &     20.1            \\
-        12840.57         &  \ion{Fe}{I}   &           4.96             &        -1.612        &     25.3            \\
-        12879.77         &  \ion{Fe}{I}   &           2.28             &        -3.525        &     68.7            \\
-        12896.12         &  \ion{Fe}{I}   &           4.91             &        -1.713        &     23.2            \\
-        12933.01         &  \ion{Fe}{I}   &           5.02             &        -1.879        &     13.9            \\
-        12934.67         &  \ion{Fe}{I}   &           5.39             &        -1.103        &     30.9            \\
-        13014.84         &  \ion{Fe}{I}   &           5.45             &        -1.542        &     12.3            \\
-        13352.17         &  \ion{Fe}{I}   &           5.31             &        -0.355        &     94.4            \\
-        13392.10         &  \ion{Fe}{I}   &           5.35             &        -0.105        &    115.1            \\
-        15194.49         &  \ion{Fe}{I}   &           2.22             &        -4.808        &     14.1            \\
-        15201.57         &  \ion{Fe}{I}   &           5.49             &        -1.315        &     29.0            \\
-        15207.53         &  \ion{Fe}{I}   &           5.38             &         0.311        &    215.9            \\
-        15335.38         &  \ion{Fe}{I}   &           5.41             &         0.252        &    205.2            \\
-        15490.34         &  \ion{Fe}{I}   &           2.20             &        -4.787        &     16.1            \\
-        15593.74         &  \ion{Fe}{I}   &           5.03             &        -1.796        &     28.0            \\
-        15611.15         &  \ion{Fe}{I}   &           3.42             &        -2.966        &     51.6            \\
-        15631.95         &  \ion{Fe}{I}   &           5.35             &         0.171        &    207.0            \\
-        15648.51         &  \ion{Fe}{I}   &           5.43             &        -0.633        &     93.8            \\
-        15676.58         &  \ion{Fe}{I}   &           5.11             &        -1.848        &     22.3            \\
-        16198.50         &  \ion{Fe}{I}   &           5.41             &        -0.376        &    131.4            \\
-        17420.83         &  \ion{Fe}{I}   &           3.88             &        -3.628        &      6.7            \\
-        19923.34         &  \ion{Fe}{I}   &           5.02             &        -1.536        &     49.7            \\
-        21851.38         &  \ion{Fe}{I}   &           3.64             &        -3.578        &     12.7            \\
-        22257.11         &  \ion{Fe}{I}   &           5.06             &        -0.704        &    132.5            \\
-        22380.80         &  \ion{Fe}{I}   &           5.03             &        -0.377        &    179.4            \\
-        22392.88         &  \ion{Fe}{I}   &           5.10             &        -1.330        &     60.8            \\
-        22619.84         &  \ion{Fe}{I}   &           4.99             &        -0.564        &    158.2            \\
-        23308.48         &  \ion{Fe}{I}   &           4.08             &        -2.705        &     31.3            \\
-        10427.31         &  \ion{Fe}{II}  &           6.08             &        -1.575        &     13.7            \\
-        10501.50         &  \ion{Fe}{II}  &           5.55             &        -1.861        &     19.5            \\
-        10862.64         &  \ion{Fe}{II}  &           5.59             &        -2.006        &     15.3            \\
-        11125.58         &  \ion{Fe}{II}  &           5.62             &        -2.213        &     10.5            \\
-        13251.14         &  \ion{Fe}{II}  &           9.41             &         0.768        &     13.4            \\
-      \hline
-    \end{tabular}
-\end{table*}
+\begin{onecolumn}
+  \begin{longtable}{cclrr}
+      \caption{\label{tab:linelist} Refined line list with all \ion{Fe}{I} and
+               \ion{Fe}{II} lines and corresponding atomic data, including the
+               updated oscillator strengths.}\\
+        \hline\hline
+          Wavelength (\AA) & Element        & EP                   (eV)  &  $\log \mathrm{gf}$  &  Solar EW (m\AA)    \\
+        \hline
+        \endfirsthead
+        \caption{continued.}\\
+        \hline\hline
+          Wavelength (\AA) & Element        & EP                   (eV)  &  $\log \mathrm{gf}$  &  Solar EW (m\AA)    \\
+        \hline
+        \endhead
+          10065.05         &  \ion{Fe}{I}   &           4.83             &        -0.279        &     94.0            \\
+          10080.42         &  \ion{Fe}{I}   &           5.10             &        -1.964        &      5.9            \\
+          10081.39         &  \ion{Fe}{I}   &           2.42             &        -4.512        &      6.9            \\
+          10086.24         &  \ion{Fe}{I}   &           2.95             &        -3.978        &      7.0            \\
+          10137.10         &  \ion{Fe}{I}   &           5.09             &        -1.736        &      9.8            \\
+          10142.84         &  \ion{Fe}{I}   &           5.06             &        -1.554        &     14.9            \\
+          10145.56         &  \ion{Fe}{I}   &           4.80             &        -0.118        &    109.0            \\
+          10155.16         &  \ion{Fe}{I}   &           2.18             &        -4.336        &     16.2            \\
+          10156.51         &  \ion{Fe}{I}   &           4.59             &        -2.109        &     12.2            \\
+          10167.47         &  \ion{Fe}{I}   &           2.20             &        -2.319        &    125.7            \\
+          10195.11         &  \ion{Fe}{I}   &           2.73             &        -3.608        &     22.6            \\
+          10216.31         &  \ion{Fe}{I}   &           4.73             &         0.047        &    129.9            \\
+          10218.41         &  \ion{Fe}{I}   &           3.07             &        -2.893        &     40.9            \\
+          10265.22         &  \ion{Fe}{I}   &           2.22             &        -4.648        &      8.1            \\
+          10307.45         &  \ion{Fe}{I}   &           4.59             &        -2.432        &      6.4            \\
+          10332.33         &  \ion{Fe}{I}   &           3.63             &        -3.131        &     10.5            \\
+          10340.89         &  \ion{Fe}{I}   &           2.20             &        -3.665        &     46.6            \\
+          10347.97         &  \ion{Fe}{I}   &           5.39             &        -0.717        &     37.0            \\
+          10353.81         &  \ion{Fe}{I}   &           5.39             &        -0.989        &     24.2            \\
+          10364.06         &  \ion{Fe}{I}   &           5.45             &        -1.100        &     18.0            \\
+          10379.00         &  \ion{Fe}{I}   &           2.22             &        -4.236        &     18.7            \\
+          10388.75         &  \ion{Fe}{I}   &           5.45             &        -1.471        &      8.7            \\
+          10395.80         &  \ion{Fe}{I}   &           2.18             &        -3.435        &     61.3            \\
+          10423.03         &  \ion{Fe}{I}   &           2.69             &        -3.658        &     22.9            \\
+          10423.74         &  \ion{Fe}{I}   &           3.07             &        -3.119        &     29.9            \\
+          10469.65         &  \ion{Fe}{I}   &           3.88             &        -1.277        &     89.3            \\
+          10532.24         &  \ion{Fe}{I}   &           3.93             &        -1.650        &     64.4            \\
+          10555.65         &  \ion{Fe}{I}   &           5.45             &        -1.282        &     13.1            \\
+          10577.14         &  \ion{Fe}{I}   &           3.30             &        -3.222        &     17.2            \\
+          10616.72         &  \ion{Fe}{I}   &           3.27             &        -3.306        &     15.6            \\
+          10725.19         &  \ion{Fe}{I}   &           3.64             &        -2.948        &     15.7            \\
+          10753.00         &  \ion{Fe}{I}   &           3.96             &        -2.077        &     39.7            \\
+          10780.69         &  \ion{Fe}{I}   &           3.24             &        -3.553        &     10.4            \\
+          10783.05         &  \ion{Fe}{I}   &           3.11             &        -2.786        &     47.0            \\
+          10818.28         &  \ion{Fe}{I}   &           3.96             &        -2.160        &     35.6            \\
+          10863.52         &  \ion{Fe}{I}   &           4.73             &        -0.877        &     67.1            \\
+          10884.26         &  \ion{Fe}{I}   &           3.93             &        -2.129        &     39.1            \\
+          10896.30         &  \ion{Fe}{I}   &           3.07             &        -2.911        &     42.9            \\
+          11013.24         &  \ion{Fe}{I}   &           4.80             &        -1.240        &     42.4            \\
+          11026.79         &  \ion{Fe}{I}   &           3.94             &        -2.517        &     21.2            \\
+          11119.80         &  \ion{Fe}{I}   &           2.85             &        -2.452        &     84.8            \\
+          11641.80         &  \ion{Fe}{I}   &           4.58             &        -2.116        &     15.6            \\
+          11778.42         &  \ion{Fe}{I}   &           5.34             &        -1.708        &      8.4            \\
+          12053.08         &  \ion{Fe}{I}   &           4.56             &        -1.602        &     41.3            \\
+          12119.50         &  \ion{Fe}{I}   &           4.59             &        -1.897        &     25.0            \\
+          12213.34         &  \ion{Fe}{I}   &           4.64             &        -2.006        &     19.1            \\
+          12227.11         &  \ion{Fe}{I}   &           4.61             &        -1.408        &     51.5            \\
+          12244.92         &  \ion{Fe}{I}   &           3.64             &        -3.222        &     11.8            \\
+          12340.48         &  \ion{Fe}{I}   &           2.28             &        -4.680        &      9.4            \\
+          12342.92         &  \ion{Fe}{I}   &           4.64             &        -1.545        &     42.1            \\
+          12510.52         &  \ion{Fe}{I}   &           4.96             &        -1.930        &     12.9            \\
+          12557.00         &  \ion{Fe}{I}   &           2.28             &        -4.026        &     33.8            \\
+          12615.93         &  \ion{Fe}{I}   &           4.64             &        -1.686        &     35.7            \\
+          12638.70         &  \ion{Fe}{I}   &           4.56             &        -0.679        &    112.3            \\
+          12807.15         &  \ion{Fe}{I}   &           3.64             &        -2.649        &     37.1            \\
+          12808.24         &  \ion{Fe}{I}   &           4.99             &        -1.811        &     16.4            \\
+          12824.86         &  \ion{Fe}{I}   &           3.02             &        -3.612        &     20.1            \\
+          12840.57         &  \ion{Fe}{I}   &           4.96             &        -1.612        &     25.3            \\
+          12879.77         &  \ion{Fe}{I}   &           2.28             &        -3.525        &     68.7            \\
+          12896.12         &  \ion{Fe}{I}   &           4.91             &        -1.713        &     23.2            \\
+          12933.01         &  \ion{Fe}{I}   &           5.02             &        -1.879        &     13.9            \\
+          12934.67         &  \ion{Fe}{I}   &           5.39             &        -1.103        &     30.9            \\
+          13014.84         &  \ion{Fe}{I}   &           5.45             &        -1.542        &     12.3            \\
+          13352.17         &  \ion{Fe}{I}   &           5.31             &        -0.355        &     94.4            \\
+          13392.10         &  \ion{Fe}{I}   &           5.35             &        -0.105        &    115.1            \\
+          15194.49         &  \ion{Fe}{I}   &           2.22             &        -4.808        &     14.1            \\
+          15201.57         &  \ion{Fe}{I}   &           5.49             &        -1.315        &     29.0            \\
+          15207.53         &  \ion{Fe}{I}   &           5.38             &         0.311        &    215.9            \\
+          15335.38         &  \ion{Fe}{I}   &           5.41             &         0.252        &    205.2            \\
+          15490.34         &  \ion{Fe}{I}   &           2.20             &        -4.787        &     16.1            \\
+          15593.74         &  \ion{Fe}{I}   &           5.03             &        -1.796        &     28.0            \\
+          15611.15         &  \ion{Fe}{I}   &           3.42             &        -2.966        &     51.6            \\
+          15631.95         &  \ion{Fe}{I}   &           5.35             &         0.171        &    207.0            \\
+          15648.51         &  \ion{Fe}{I}   &           5.43             &        -0.633        &     93.8            \\
+          15676.58         &  \ion{Fe}{I}   &           5.11             &        -1.848        &     22.3            \\
+          16198.50         &  \ion{Fe}{I}   &           5.41             &        -0.376        &    131.4            \\
+          17420.83         &  \ion{Fe}{I}   &           3.88             &        -3.628        &      6.7            \\
+          19923.34         &  \ion{Fe}{I}   &           5.02             &        -1.536        &     49.7            \\
+          21851.38         &  \ion{Fe}{I}   &           3.64             &        -3.578        &     12.7            \\
+          22257.11         &  \ion{Fe}{I}   &           5.06             &        -0.704        &    132.5            \\
+          22380.80         &  \ion{Fe}{I}   &           5.03             &        -0.377        &    179.4            \\
+          22392.88         &  \ion{Fe}{I}   &           5.10             &        -1.330        &     60.8            \\
+          22619.84         &  \ion{Fe}{I}   &           4.99             &        -0.564        &    158.2            \\
+          23308.48         &  \ion{Fe}{I}   &           4.08             &        -2.705        &     31.3            \\
+          10427.31         &  \ion{Fe}{II}  &           6.08             &        -1.575        &     13.7            \\
+          10501.50         &  \ion{Fe}{II}  &           5.55             &        -1.861        &     19.5            \\
+          10862.64         &  \ion{Fe}{II}  &           5.59             &        -2.006        &     15.3            \\
+          11125.58         &  \ion{Fe}{II}  &           5.62             &        -2.213        &     10.5            \\
+          13251.14         &  \ion{Fe}{II}  &           9.41             &         0.768        &     13.4            \\
+        \hline
+  \end{longtable}
+\end{onecolumn}
 
 \end{appendix}
 
