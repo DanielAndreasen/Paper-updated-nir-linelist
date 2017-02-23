@@ -22,7 +22,7 @@ def get_ymin(center, d1, d2):
     i2 = np.argmin(abs(w2-center))
     v2 = f2[i2]
 
-    return min([v1, v2])
+    return min([v1])
 
 
 if __name__ == '__main__':
