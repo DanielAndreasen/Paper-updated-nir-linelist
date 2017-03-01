@@ -45,7 +45,10 @@ def make_scatter(lit, df, parameter):
 
     N = len(lit)
     plt.errorbar(range(N), values, yerr=errors, fmt='.')
-    plt.errorbar([N+0, N+1], [v1, v2], yerr=[e1, e2], fmt='o')
+    if parameter == 'logg':
+        plt.errorbar([N+0, N+1], [v1, v2], yerr=[0, e2], fmt='o')
+    else:
+        plt.errorbar([N+0, N+1], [v1, v2], yerr=[e1, e2], fmt='o')
     _, y = plt.ylim()
     return y
 
@@ -74,5 +77,5 @@ if __name__ == '__main__':
     plt.xticks(range(len(ref)+2), xtext, rotation=45)
 
     plt.tight_layout()
-    plt.savefig('10LeoParams.pdf')
-    # plt.show()
+    # plt.savefig('10LeoParams.pdf')
+    plt.show()
