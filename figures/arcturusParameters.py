@@ -42,7 +42,7 @@ def make_histogram(lit, val, err):
     plt.vlines(value, 0, height)
     x1, x2 = value-error, value+error
     y1, y2 = 0, height
-    plt.fill([x1, x1, x2, x2], [y1, y2, y2, y1], 'k', alpha=0.3)
+    plt.fill([x1, x1, x2, x2], [y1, y2, y2, y1], 'k', alpha=0.7)
     return y
 
 
@@ -68,7 +68,8 @@ if __name__ == '__main__':
     plt.text(3800, 0.6*y, r'T$_\mathrm{eff}$', fontsize=20)
     plt.subplot(312)
     y = make_histogram(lit.logg.values, df.logg, df.loggerr)
-    plt.text(0.88, 0.6*y, r'$\log(g)$', fontsize=20)
+    plt.text(0.80, 0.6*y, r'$\log(g)$', fontsize=20)
+    plt.xlim(0.78, 2.25)
     plt.subplot(313)
     y = make_histogram(lit.feh.values, df.feh, df.feherr)
     plt.text(-0.82, 0.6*y, '[Fe/H]', fontsize=20)
