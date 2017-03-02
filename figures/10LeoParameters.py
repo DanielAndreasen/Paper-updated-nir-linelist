@@ -57,24 +57,34 @@ def make_scatter(lit, df, parameter):
 if __name__ == '__main__':
     lit = pd.read_csv('10Leo_lit.csv')
     ref = ['Ref [%i]'%(i+1) for i in range(len(lit))]
+    N = len(ref) + 2
     df = pd.read_csv('10Leo.csv', delimiter=r'\s+')
 
 
     plt.subplot(311)
+    plt.hlines(4720, 0, N, alpha=0.6)
+    plt.hlines(4720-42, 0, N, linestyle='--', alpha=0.6)
+    plt.hlines(4720+42, 0, N, linestyle='--', alpha=0.6)
     y = make_scatter(lit, df, 'teff')
     plt.ylabel(r'T$_\mathrm{eff}$')
-    plt.xticks(range(len(ref)+2), [''*7])
+    plt.xticks(range(N), [''*7])
 
     plt.subplot(312)
+    plt.hlines(2.54, 0, N, alpha=0.6)
+    plt.hlines(2.54-0.11, 0, N, linestyle='--', alpha=0.6)
+    plt.hlines(2.54+0.11, 0, N, linestyle='--', alpha=0.6)
     y = make_scatter(lit, df, 'logg')
     plt.ylabel(r'$\log(g)$')
-    plt.xticks(range(len(ref)+2), [''*7])
+    plt.xticks(range(N), [''*7])
 
     plt.subplot(313)
+    plt.hlines(0.00, 0, N, alpha=0.6)
+    plt.hlines(0.00-0.03, 0, N, linestyle='--', alpha=0.6)
+    plt.hlines(0.00+0.03, 0, N, linestyle='--', alpha=0.6)
     y = make_scatter(lit, df, 'feh')
     plt.ylabel('[Fe/H]')
     xtext = ref + ['fix logg', 'free logg']
-    plt.xticks(range(len(ref)+2), xtext, rotation=45)
+    plt.xticks(range(N), xtext, rotation=45)
 
     plt.tight_layout()
     plt.savefig('10LeoParams.pdf')
