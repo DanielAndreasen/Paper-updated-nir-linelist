@@ -64,23 +64,21 @@
 
 \abstract
 % Context
-{Effective temperature, surface gravity, and metallicity are basic
-spectroscopic stellar parameters necessary to characterise
-a star or a planetary system. Reliable atmospheric parameters for
-FGK stars have been obtained mostly from methods that rely on high
-resolution and high signal-to-noise optical spectroscopy. The
-advent of a new generation of high resolution near-IR spectrographs
-opens the possibility of using classic spectroscopic methods with
+{Reliable stellar atmospheric parameters for FGK stars have been obtained mostly
+from methods that rely on high resolution and high signal-to-noise optical
+spectroscopy. The advent of a new generation of high resolution near-IR
+spectrographs opens the possibility of using classic spectroscopic methods with
 high resolution and high signal-to-noise in the NIR spectral window.}
 % Aims
 {We aim to obtain precise and accurate atmospheric stellar parameters using
 high quality spectra of two early type K giant stars.}
 % Methods
 {Our spectroscopic analysis is based on the iron excitation and ionization
-balance done in LTE and a line list \ion{Fe}{I} and \ion{Fe}{II} lines in the
+balance done in LTE and a line list of \ion{Fe}{I} and \ion{Fe}{II} lines in the
 NIR domain.}
 % Results
-{We get good results!}
+{We successfully obtain atmospheric parameters for the two early K giants in
+agreement with literature values.}
 % Conclusions
 {}
 
@@ -137,10 +135,10 @@ procedure depends on the quality of the spectra, their resolution, and
 wavelength region. A fit to the overall spectrum can be applied for all spectral
 resolutions, but are often time consuming \citep[see e.g.][]{Recio2006}. For
 resolutions higher than $\lambda/\Delta\lambda < 20\,000$ we can apply the
-equivalent width (EW) method \citep[see e.g.][for
-details]{Tsantaki2013,Andreasen2017a}. However, while the latter approach is
-often faster than the synthetic fitting, it requires higher quality spectra, and
-the star to be a slow rotating (below $\SI{10}{km/s}$ to $\SI{15}{km/s}$).
+equivalent width (EW) method \citep[see e.g.][for details]{Tsantaki2014,Andreasen2017a}.
+However, while the latter approach is often faster than the synthetic fitting,
+it requires higher quality spectra, and the star to be a slow rotating (below
+$\SI{10}{km/s}$ to $\SI{15}{km/s}$).
 
 Standard procedures are often used to derive stellar atmospheric parameters from
 high quality spectra in the optical \citep[see e.g.][]{Valenti2005,Sousa2008a}.
@@ -209,15 +207,15 @@ of the two spectra in order to correct for the tellurics. The telluric spectrum
 from TAPAS is only used for telluric line identification. We use both the
 telluric corrected and non-corrected.
 
-The second spectrum is from the CRIRES-POP team \citep{Nicholls2016}. 10 Leo is
-very similar to Arcturus, which is also one reason this star was the first to be
-fully reduced by the CRIRES-POP team. The spectrum is divided into each band YJ
-(only together), H, K, L, and M. We use only the first three. Some small gaps
+The spectrum for 10 Leo is from the CRIRES-POP team \citep{Nicholls2016}. 10 Leo
+is very similar to Arcturus, which is also one reason this star was the first to
+be fully reduced by the CRIRES-POP team. The spectrum is divided into each band
+YJ (only together), H, K, L, and M. We use only the first three. Some small gaps
 are present in the spectrum due to tellurics that could not be properly removed,
 low S/N, bad pixels, etc. Rather than giving an uncertain interpolation,
 \citet{Nicholls2016} decided to leave small gaps in the data. This has very
 little effect on our line by line analysis. However, we were unable to measure
-one \ion{Fe}{II} line due to the gaps, which are generally very important to
+one \ion{Fe}{II} line due to the gaps, which are generally important to
 determine the surface gravity.
 
 The data for the two stars are very similar in terms of S/N (around 300 as
@@ -265,11 +263,11 @@ common lines is $-0.09 \pm 0.16$. The line list with the updated $\log
 The \ion{Fe}{II} lines are used to determine $\log g$ by imposing ionization
 balance with \ion{Fe}{I}. However, the low number of \ion{Fe}{II} lines
 available is a concern, since the average abundance of \ion{Fe}{II} is affected
-more by errors, both random and systematic, compared to the \ion{Fe}{I} lines.
-One might fix $\log g$ during the process of obtaining stellar parameters, but
-this has an impact on the other derived parameters. A more reliable source for
-$\log g$ could for example be asteroseismology \citep[see e.g.][]{Aerts2010} or
-from the parallaxes measured with Gaia \citep{GAIA}.
+more by outliers compared to the \ion{Fe}{I} lines. One might fix $\log g$ to
+one value from the literature during the process of obtaining stellar
+parameters, but this has an impact on the other derived parameters. A reliable
+source for $\log g$ could for example be asteroseismology \citep[see
+e.g.][]{Aerts2010} or from the parallaxes measured with Gaia \citep{GAIA}.
 
 
 
@@ -286,13 +284,14 @@ compare the derived stellar parameters from the two measured sets of EWs.
 \subsection{Revisiting HD 20010}
 \label{sec:hd20010}
 
-We revisit HD 20010 for which we derived atmospheric stellar parameters in Paper
-I. This time we remove previously measured lines, which are no longer included
-in our revised line list. For the rest of the lines the $\log \mathrm{gf}$
-values are updated. The results are presented in Tab.~\ref{tab:hd20010} along
-with the combined literature values (see Paper I and references therein). We see
-both better agreement with literature values (especially $[\ion{Fe}/\ion{H}]$
-and $\log g$), and smaller errors with the updated results.
+As a first step we revisit HD 20010 for which we derived atmospheric stellar
+parameters in Paper I. This time we remove previously measured lines, which are
+no longer included in our revised line list. For the rest of the lines the $\log
+\mathrm{gf}$ values were updated. The results are presented in
+Tab.~\ref{tab:hd20010} along with the combined literature values (see Paper I
+and references therein). We see better agreement with literature values
+(especially $[\ion{Fe}/\ion{H}]$ and $\log g$), and smaller errors with the
+updated results.
 
 \begin{table*}[htb!]
     \caption{Updated results for HD 20010 using the shorter line list and new
@@ -322,7 +321,8 @@ and $\log g$), and smaller errors with the updated results.
 
 Arcturus is one of the brightest stars on the night sky with a V magnitude of
 -0.05 \citep{Ducati2002}. Hence it is a prime target for testing the updated
-line list with numerous measurements as mentioned above.
+line list with numerous measurements of the atmospheric parameters as mentioned
+above.
 
 The atlas consists of both a summer observation set and a winter observation
 set. This is in order to minimize the effect of tellurics at different spectral
@@ -413,12 +413,12 @@ vertical black line is our final value with gray shaded errorbar.
 The approach for determining the atmospheric stellar parameters for 10 Leo is
 identical to Arcturus. We use ARES on each band (YJ, H, K-band) separately. For
 the small gaps in the spectrum, we simply set the flux to 1, since the spectrum
-is already normalized. This will also prevent ARES to measure any lines in these
-regions. The EWs from the three regions are combined to one final line list used
-for the determination of the parameters. The EWs were also measured by hand
-using IRAF. We list the results in Tab.~\ref{tab:10Leo} alongside with a mean of
-literature values taken from Simbad. The final results and five collected
-literature values are presented in Fig.~\ref{fig:10leo}.
+is already normalized. This will also prevent ARES to identify and measure any
+lines in these regions. The EWs from the three regions are combined to one final
+line list used for the determination of the parameters. The EWs were also
+measured by hand using IRAF. We list the results in Tab.~\ref{tab:10Leo}
+alongside with a mean of literature values taken from Simbad. The final results
+and five collected literature values are presented in Fig.~\ref{fig:10leo}.
 
 \begin{table*}[htb!]
     \caption{Results from 10 Leo presented in the same way as for
@@ -452,7 +452,7 @@ larger errors compared to the results from the literature.
     \includegraphics[width=1.0\linewidth]{figures/10LeoParams.pdf}
     \caption{Literature values (blue) and the two results from this work (green)
              with and without $\log g$ fixed. The errorbars on the literature
-             values are wither does presented in the corresponding paper, or in
+             values are either does presented in the corresponding paper, or in
              the cases none were presented we give an error of $\SI{100}{K}$ for
              $T_\mathrm{eff}$, 0.10 dex for $\log g$, and 0.05 for
              $[\ion{Fe}/\ion{H}]$.
@@ -473,53 +473,48 @@ larger errors compared to the results from the literature.
 \subsection{The role of $\log g$}
 
 One of the most difficult atmospheric stellar parameters to get from a spectrum
-is the surface gravity. Here we need the pressure sensitive ionized atoms such
-as \ion{Fe}{II}. However, they are more sparse than neutral iron, \ion{Fe}{I},
-making the determination more challenging. This is true in the optical
-\citep[see e.g. the discussion by][]{Mortier2013c}, and even more in the NIR
-(see e.g. Paper I). One solution to this problem is to fix an estimated value of
-the surface gravity and derive the other parameters. With the parallaxes from
-Gaia \citep{GAIA} we will have access to accurate $\log g$, thus being able to
-have good $T_\mathrm{eff}$ and $[\ion{Fe}/\ion{H}]$. Without the final
-parallaxes from Gaia we may yet only rely on literature values for $\log g$. As
-seen from Fig.~\ref{fig:arcturus}, the distribution of $\log g$ values from the
-literature are rather disperse. Since there is still a dependence of the other
-parameters with $\log g$, simply using a mean value as a reference value, can
-lead to different parameters. This is most likely the cause of the small
-discrepancies seen for the parameters of Arcturus when the $\log g$ is fixed and
-free. With this in mind, the derived parameters are roughly within the
-errorbars.
+is the surface gravity. For this we need the lines of pressure sensitive ionized
+atoms such as \ion{Fe}{II}. However, they are more sparse than neutral iron,
+\ion{Fe}{I}, making the determination more challenging. This is true in the
+optical \citep[see e.g. the discussion by][]{Mortier2013c}, and even more in the
+NIR (see e.g. Paper I). One solution to this problem is to fix the value of
+surface gravity and derive the other parameters. With the parallaxes from Gaia
+\citep{GAIA} we will have access to accurate $\log g$, thus being able to have
+good $T_\mathrm{eff}$ and $[\ion{Fe}/\ion{H}]$. Without the final parallaxes
+from Gaia we may yet only rely on literature values for $\log g$. As seen from
+Fig.~\ref{fig:arcturus}, the distribution of $\log g$ values from the literature
+are rather disperse. Since there is a dependence between the other parameters
+with $\log g$, simply using a mean value as a reference value can lead to
+different parameters. This is most likely the origin of the small discrepancies
+seen for the parameters of Arcturus when the $\log g$ is fixed and free.
 
-To add to the problem of low number of ionized iron lines is the fact that these
-lines are rather weak. Note that the lowest measured EW for an \ion{Fe}{II} line
-is $\SI{7.8}{m}$\AA{} for Arcturus, while the highest measure value is
-$\SI{20.7}{m}$\AA{} (measured in 10 Leo). This means that the error on these EWs
-are relatively high, and become even more problematic for lower S/N spectra.
-However, with the upcoming high quality spectra for the NIR, the community
-should still be able to see these \ion{Fe}{II} lines.
+The ionized iron lines are not only sparse, they are also rather weak. The
+lowest measured EW for an \ion{Fe}{II} line is $\SI{7.8}{m}$\AA{} (in Arcturus),
+while the highest measured value is $\SI{20.7}{m}$\AA{} (in 10 Leo). However,
+with the upcoming high quality spectra for the NIR, the community should still
+be able to see these \ion{Fe}{II} lines.
 
 
 \subsection{Proper data reduction}
 
-In our previous work we had problems getting reliable atmospheric stellar
-parameters for HD 20010. This was partially due to the unfinished data reduction
-of from CRIRES-POP used at the time. Here the wavelength calibration was done
-automatically and therefore not optimal. This meant the wavelength was stretched
-when compared to a synthetic spectrum, which is discussed in more detail by
-\citet{Nicholls2016}. The poor wavelength calibration for HD 20010 most likely
-caused bad EW measurements. In addition the spectrum was not corrected for
-telluric lines which also cause minor deviation from the true EW when measured.
-Another reason was the non-refined line list used, which we have attempted to
-correct for here. The refined line list has made the derivation of the
-metallicity more reliable compared with the literature as it is demonstrated in
-Sec.~\ref{sec:hd20010}. It is expected similar results will be obtained for this
-star once the final spectrum is presented, however the results should be more
-precise as it will not suffer for a bad wavelength calibration and telluric
-contamination.
+In Paper I we had problems getting reliable atmospheric stellar parameters for
+HD 20010. This was partly due to the unfinished data reduction of from
+CRIRES-POP spectrum used at the time, where the wavelength calibration was done
+automatically and thus not in an optimum way \citep[see][]{Nicholls2016}. This
+meant the wavelength was stretched when compared to a synthetic spectrum, which
+is discussed in more detail by \citet{Nicholls2016}. The poor wavelength
+calibration for HD 20010 most likely caused bad EW measurements. In addition,
+the spectrum was not corrected for telluric lines which also caused minor
+deviation from the true EW when measured. Another reason was the non-refined
+line list used, which we have attempted to correct for here. The refined line
+list has made the derivation of the metallicity more reliable compared with the
+literature as it is demonstrated in Sec.~\ref{sec:hd20010}. It is expected that
+similar results will be obtained for this star once the final spectrum is
+presented by the CRIRES-POP team.
 
 All the above problems we had with HD 20010 have been solved for 10 Leo, and it
 is clear the results are of much higher quality. This can be seen by the smaller
-errors we have on our parameters, and the good agreement with all parameters
+errors we have on our parameters, and the good agreement of all parameters
 compared with the literature. Therefore, it may be needed that a telluric
 correction is applied to the spectrum before atmospheric stellar parameters can
 be determined reliably. However, with our limited sample it is hard to make a
@@ -530,26 +525,26 @@ clear conclusion yet.
 \section{Conclusion}
 \label{sec:conclusion}
 
-After acquiring data for two early K giants (Arcturus and 10 Leo) we measured
+After obtaining data for two early K giants (Arcturus and 10 Leo) we measured
 the EWs of a set of \ion{Fe}{I} and \ion{Fe}{II} lines. With these measurements
 and a second look at the solar spectrum, we refined the line list presented in
 Paper I. The EWs were manually measured for the Sun and the $\log \mathrm{gf}$
 values were calibrated afterwards. This allowed us to successfully determine
-parameters for the two early K giants, thus we are now making the bridge for the
-line list towards cooler temperatures. We revisited the F subgiant from Paper I
-(HD 20010) with the refined line list. Here we see an overall improvement
-compared to our previous results, confirming the refinement has worked. With the
-updated results for HD 20010, and the results for Arcturus and 10 Leo, we are
-now reaching the same precision as has been reached in the optical for similar
-spectral types using the same methodology. The obvious next step is the even
-cooler M stars. Particular interesting are the M dwarf stars, known to be prone
-forming rocky planets. As important as cooler stars, we have yet to test our
-line list on any dwarf stars other than the Sun for which our line list is
-calibrated. While it is expected that it will work for early K dwarf stars, it
-will still be an important accomplishment. The upcoming spectral library from
-CARMENES (priv. comm. with P. Amado) will feed the community with high quality
-spectra and allow us to extend our test to many different spectral types of
-interest.
+parameters for the two early K giants, thus we are now extending the line list
+towards cooler temperatures. We revisited the F subgiant from Paper I (HD 20010)
+with the refined line list. Here we see an overall improvement compared to our
+previous results, confirming the refinement has worked. With the updated results
+for HD 20010, and the results for Arcturus and 10 Leo, we are now reaching the
+same precision that has been reached in the optical for similar spectral types
+using the same methodology. The obvious next step is to approach the even cooler
+M stars. Particular interesting are the M dwarf stars, known to be prone forming
+rocky planets.  As important as cooler stars, we have yet to test our line list
+on any dwarf stars other than the Sun for which our line list is calibrated.
+While it is expected that it will work for late F to early K dwarf stars, it is
+still important to test the line list on these stars. The upcoming spectral
+library from CARMENES (priv. comm. with P. Amado) will provide the community
+with high quality spectra and allow us to extend our test to many different
+spectral types of interest.
 
 
 
@@ -590,7 +585,7 @@ The complete refined line list with Solar EWs measured by hand using IRAF.
   \begin{longtable}{cclrr}
       \caption{\label{tab:linelist} Refined line list with all \ion{Fe}{I} and
                \ion{Fe}{II} lines and corresponding atomic data, including the
-               updated oscillator strengths.}\\
+               updated oscillator strengths. This table is available online.}\\
         \hline\hline
           Wavelength (\AA) & Element        & EP                   (eV)  &  $\log \mathrm{gf}$  &  Solar EW (m\AA)    \\
         \hline
