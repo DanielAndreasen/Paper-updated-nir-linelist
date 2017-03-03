@@ -31,7 +31,7 @@ if __name__ == '__main__':
     plt.hlines(0, 0, 1.1*max(df2.ew_x), linestyle='--')
     plt.ylim(-40, 40)
     plt.xlabel(r'Summer observation, EW [m$\AA$]')
-    plt.title(r'Automatic vs. summer, EW [m$\AA$]')
+    plt.title(r'Automatic vs. manual, EW [m$\AA$]')
 
     plt.tight_layout()
     plt.savefig('EWcomp.pdf')
