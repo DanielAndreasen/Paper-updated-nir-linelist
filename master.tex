@@ -78,11 +78,11 @@ balance done in LTE and a line list of \ion{Fe}{I} and \ion{Fe}{II} lines in the
 NIR domain. The line list is being refined from our previous study, allowing us
 to obtain more reliable parameters.}
 % Results
-{We successfully obtain atmospheric parameters for the two early K giants in
-agreement with average literature values adopted.}
+{We successfully obtain atmospheric parameters for two K giants in agreement
+with average literature values adopted.}
 % Conclusions
-{With these results we are now extending the line list towards cooler stars.
-Thus allowing us to explorer the M dwarf stars in the future, known to form
+{With these results we are now extending the line list towards cooler stars,
+thus allowing us to explorer the M dwarf stars in the future, known to form
 Earth-like planets.}
 
 
@@ -493,31 +493,39 @@ atoms such as \ion{Fe}{II}. However, they are more sparse than neutral iron,
 optical \citep[see e.g. the discussion by][]{Mortier2013c}, and even more in the
 NIR (see e.g. Paper I). One solution to this problem is to fix the value of
 surface gravity and derive the other parameters. With the parallaxes from Gaia
-\citep{GAIA} we will have access to accurate $\log g$, thus being able to have
-good $T_\mathrm{eff}$ and $[\ion{Fe}/\ion{H}]$. Without the final parallaxes
-from Gaia we may yet only rely on literature values for $\log g$. As seen from
-Fig.~\ref{fig:arcturus}, the distribution of $\log g$ values from the literature
-are rather disperse. Since there is a dependence between the other derived
-parameters with $\log g$, simply using a mean value as a reference value can
-lead to misleading parameters. This is most likely the origin of the small
+\citep{GAIA} we will have access to accurate $\log g$. However, this requires a
+prior knowledge of the mass from e.g. isochrones, and $T_\mathrm{eff}$. By
+iteratively obtaining the $T_\mathrm{eff}$ from spectroscopy and the
+corresponding $\log g$ from the parallaxes, we can obtain reliable
+$T_\mathrm{eff}$, $\log g$, and $[\ion{Fe}/\ion{H}]$. Without the final
+parallaxes from Gaia we may yet only rely on literature values for $\log g$. As
+seen from Fig.~\ref{fig:arcturus}, the distribution of $\log g$ values from the
+literature are rather disperse. Since there is a dependence between the other
+derived parameters with $\log g$, simply using a mean value as a reference value
+can lead to misleading parameters. To verify the impact of using the wrong $\log
+g$ as baseline, we tested what was the $T_\mathrm{eff}$ and $[\ion{Fe}/\ion{H}]$
+that we derive by setting $\log g$ fixed to values between 0.9\,dex and
+2.2\,dex, i.e., in the range of the literature values found. The results show
+that $T_\mathrm{eff}$ and $[\ion{Fe}/\ion{H}]$ can change by $\SI{200}{K}$ and
+0.21\,dex, respectively. This is most likely the origin of the small
 discrepancies seen for the parameters of Arcturus when the $\log g$ is fixed and
 free.
 
-The ionized iron lines are not only sparse, they are also rather weak. The
-lowest measured EW for an \ion{Fe}{II} line is $\SI{7.8}{m}$\AA{} (in Arcturus),
-while the highest measured value is $\SI{20.7}{m}$\AA{} (in 10 Leo). However,
-with the upcoming high quality spectra for the NIR, the community should still
-be able to measure these \ion{Fe}{II} lines.
+Note that the ionized iron lines are not only sparse, they are also rather weak.
+The lowest measured EW for an \ion{Fe}{II} line is $\SI{7.8}{m}$\AA{} (in
+Arcturus), while the highest measured value is $\SI{20.7}{m}$\AA{} (in 10 Leo).
+However, with the upcoming high quality spectra for the NIR, the community
+should still be able to measure these \ion{Fe}{II} lines.
 
 
 \subsection{Proper data reduction}
 
-In Paper I we had problems getting reliable atmospheric stellar parameters for
-HD 20010. This was partly due to the unfinished data reduction from the
-CRIRES-POP spectrum used at the time, where the wavelength calibration was done
-automatically and thus not in an optimum way \citep[see][]{Nicholls2016}. This
-meant the wavelength was stretched when compared to a synthetic spectrum, which
-is discussed in more detail by \citet{Nicholls2016}. The poor wavelength
+The relative novelty of NIR high resolution spectroscopy is reflected on a
+number of problems regarding the available spectra that made our analysis
+particularly difficult. For instance, in Paper I we had to deal with a less
+reliable wavelength calibration for the spectrum of HD 20010. This meant the
+wavelength was stretched when compared to a synthetic spectrum, which is
+discussed in more detail by \citet{Nicholls2016}. The poor wavelength
 calibration for HD 20010 most likely caused bad EW measurements. In addition,
 the spectrum was not corrected for telluric lines which also caused minor
 deviation from the true EW when measured. Another reason was the non-refined
@@ -540,26 +548,21 @@ clear conclusion yet.
 \section{Conclusion}
 \label{sec:conclusion}
 
-After obtaining data for two early K giants (Arcturus and 10 Leo) we measured
-the EWs of a set of \ion{Fe}{I} and \ion{Fe}{II} lines. With these measurements
-and a second look at the solar spectrum, we refined the line list presented in
-Paper I. The EWs were manually measured for the Sun and the $\log \mathrm{gf}$
-values were calibrated afterwards. This allowed us to successfully determine
-parameters for the two early K giants, thus we are now extending the line list
-towards cooler temperatures. We revisited the F subgiant from Paper I (HD 20010)
-with the refined line list. Here we see an overall improvement compared to our
-previous results, confirming the refinement has worked. With the updated results
-for HD 20010, and the results for Arcturus and 10 Leo, we are now reaching the
-same precision that has been reached in the optical for similar spectral types
-using the same methodology. The obvious next step is to approach the even cooler
-M stars. Particular interesting are the M dwarf stars, known to be prone forming
+In this paper we present a refined \ion{Fe}{I} and \ion{Fe}{II} line list in the
+near-IR domain. This line list has been used to derive new parameters for the
+late F-star HD 20010, as well as for two K-giants (Arcturus and 10 Leo). The
+results show that the stellar atmospheric parameters derived using our line list
+are perfectly compatible with the literature values. We are thus now extending
+the line list towards cooler temperatures. With the updated results for HD
+20010, and the results for Arcturus and 10 Leo, we are now reaching the same
+precision that has been reached in the optical for similar spectral types using
+the same methodology. The obvious next step is to approach the even cooler M
+stars. Particular interesting are the M dwarf stars, known to be prone forming
 rocky planets. As important as cooler stars, we have yet to test our line list
-on any dwarf stars other than the Sun for which our line list is calibrated.
-While it is expected that it will work for late F to early K dwarf stars, it is
-still important to test the line list on these stars. The upcoming spectral
-library from CARMENES (priv. comm. with P. Amado) will provide the community
-with high quality spectra and allow us to extend our test to many different
-spectral types of interest.
+on any dwarf stars other than the Sun for which our line list is calibrated. The
+upcoming spectral library from CARMENES (priv. comm. with P. Amado) will provide
+the community with high quality spectra and allow us to extend our test to many
+different spectral types of interest.
 
 
 
