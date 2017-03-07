@@ -36,7 +36,7 @@
     \and N.~C.~Santos\inst{1,2}
     \and T.~Lebzelter\inst{3}
     \and A.~Mucciarelli\inst{4,5}
-    \and J.~Neal\inst{1,2}}
+    \and J.J.~Neal\inst{1,2}}
 
 
 \institute{
@@ -47,8 +47,8 @@
   Departamento de F\'isica e Astronomia, Faculdade de Ci\^encias, Universidade
   do Porto, Rua Campo Alegre, 4169-007 Porto, Portugal
 \and
-  Institute for Astrophysics, University of Vienna, T\"urkenschanzstrasse 17, 1180
-  Vienna, Austria
+  Institute for Astrophysics, University of Vienna, T\"urkenschanzstrasse 17,
+  1180 Vienna, Austria
 \and
   Dipartimento di Fisica e Astronomia, Universita' degli Studi di Bologna, Viale
   Berti Pichat, 6/2, 40126, Bologna, Italy
@@ -83,7 +83,7 @@ to obtain more reliable parameters.}
 with average literature values adopted.}
 % Conclusions
 {With these results we are now extending the line list towards cooler stars,
-thus allowing us to explorer the M dwarf stars in the future, known to form
+thus allowing us to explore the M dwarf stars in the future, known to form
 Earth-like planets.}
 
 
@@ -141,7 +141,7 @@ fundamental parameters of a star \citep[see e.g.][]{Valenti2005,Santos13}. The
 procedure depends on the quality of the spectra, their resolution, and
 wavelength region. A fit to the overall spectrum can be applied for all spectral
 resolutions, but are often time consuming \citep[see e.g.][]{Recio2006,Tsantaki2014}.
-For resolutions higher than $\lambda/\Delta\lambda < 20\,000$ we can apply the
+For resolutions higher than $\lambda/\Delta\lambda \sim 20\,000$ we can apply the
 equivalent width (EW) method \citep[see e.g.][for details]{Tsantaki2013,Andreasen2017a}.
 However, while the latter approach is often faster than the synthetic fitting,
 it requires higher quality spectra, and the star to be slow rotating (below
@@ -164,9 +164,10 @@ Echelle Spectrograph Upgrade Project} (CRIRES+) at the \emph{Very Large
 Telescope} (VLT) \citep{CRIRESp} with expected first light in 2017, 2) \emph{un
 SpectroPolarimètre Infra-Rouge A Near-InfraRed Spectropolarimeter} (SPIRou) at
 \emph{The Canada-France-Hawaii Telescope} (CFHT) \citep{SPIROU1,SPIROU2} with
-expected first light in 2017 as well, and 3) NIRPS at the ESO 3.6m telescope in
-La Silla \citep{NIRPS}. The spectral resolutions for these spectrographs range
-between $50\,000$ and $100\,000$.
+expected first light in 2017 as well, and 3) \emph{Near Infrared Planet
+Searcher} NIRPS at the ESO 3.6m telescope in La Silla \citep{NIRPS}. The
+spectral resolutions for these spectrographs range between $50\,000$ and
+$100\,000$.
 
 With the advance of the next generation NIR spectrographs, we are still
 preparing the data analysis of stellar spectra, in particular how to get
@@ -194,8 +195,8 @@ obtain the majority of the flux here.
 While the community is currently on the verge to access large amount of high
 resolution NIR spectra, the available spectra at the moment are sparse. We chose
 to use two stars cooler than the Sun since we used a hotter star (HD 20010) than
-the Sun in Paper I. The method used in Paper I and here is determining the iron
-abundances on a number of lines from their measured EWs. Then we impose
+the Sun in Paper I. The method used both in Paper I and here is determining the
+iron abundances on a number of lines from their measured EWs. Then we impose
 ionization balance between \ion{Fe}{I} and \ion{Fe}{II} lines, and excitation
 balance for all \ion{Fe}{I} lines, by changing the atmospheric parameters for
 the model atmosphere \citep[][is used here]{Kurucz1993}.
@@ -253,20 +254,20 @@ primary goal of this work to refine the line list. This includes identifying
 recurring outliers (both from the work done in Paper I and in this work), and
 lines which we are not able to measure, e.g. if a line is amidst a forest of
 telluric lines. To identify these lines the solar atlas used in Paper I was
-revisited. In total 211/295 \ion{Fe}{I} lines and 8/13 \ion{Fe}{II} lines were
-removed in the process. Most of these were blended lines with either tellurics
-or other stellar lines. This procedure leaves us with 84 \ion{Fe}{I} lines and 5
-\ion{Fe}{II} lines. These lines should be the best for deploying our technique
-of determining atmospheric stellar parameters.
+revisited. In total 211/ out of 295 \ion{Fe}{I} lines and 8 out of 13
+\ion{Fe}{II} lines were removed in the process. Most of these were blended lines
+with either tellurics or other stellar lines. This procedure leaves us with 84
+\ion{Fe}{I} lines and 5 \ion{Fe}{II} lines. These lines should be the best for
+deploying our technique of determining atmospheric stellar parameters.
 
 During a second look at the Solar spectrum, the EW of the lines were measured by
 hand (this had previously been done automatically with ARES). Since we
-re-measured the EWs, the $\log \mathrm{gf}$ values had to be re-calibrated
-again. Here we simply change the $\log \mathrm{gf}$ values for the measured EW
-until the abundance of a given line is equal to that of the Sun, using the same
-solar atmosphere model as in Paper I. The mean change in $\log \mathrm{gf}$ for
-common lines is $-0.09 \pm 0.16$. The line list with the updated $\log
-\mathrm{gf}$ is presented in Appendix~\ref{app:linelist}.
+re-measured the EWs, the oscillator strengths, $\log \mathit{gf}$, had to be
+re-calibrated again. Here we simply change the $\log \mathit{gf}$ values for the
+measured EW until the abundance of a given line is equal to that of the Sun,
+using the same solar atmosphere model as in Paper I. The mean change in $\log
+\mathit{gf}$ for common lines is $-0.09 \pm 0.16$. The line list with the
+updated $\log \mathit{gf}$ is presented in Appendix~\ref{app:linelist}.
 
 The \ion{Fe}{II} lines are used to determine $\log g$ by imposing ionization
 balance with the average \ion{Fe}{I} abundance. However, the low number of
@@ -283,8 +284,9 @@ We derive the stellar atmospheric parameters in the same way as described in
 Paper I using the new minimization tool, FASMA \citep{Andreasen2017a}. We use
 ATLAS9 atmosphere models during the derivation \citep{Kurucz1993}. The EWs are
 measured for both stars automatically with ARES \citep{Sousa2015a} and by hand
-with splot in IRAF. We compare the derived stellar parameters from the two
-measured sets of EWs, and with average adopted literature values.
+with splot in IRAF, fitting Gaussian(s) to the absorption line. We compare the
+derived stellar parameters from the two measured sets of EWs, and with average
+adopted literature values.
 
 
 \subsection{Revisiting HD 20010}
@@ -292,7 +294,7 @@ measured sets of EWs, and with average adopted literature values.
 
 As a first step we revisit HD 20010 for which we derived atmospheric stellar
 parameters in Paper I using the newly revised line list presented in this paper.
-The results are presented in Tab.~\ref{tab:hd20010} along with the average
+The results are presented in Table \ref{tab:hd20010} along with the average
 literature values (see Paper I and references therein). We see better agreement
 with the average literature values adopted (especially $[\ion{Fe}/\ion{H}]$ and
 $\log g$), and smaller errors with the updated results. This suggest that the
@@ -300,7 +302,7 @@ new line list is more reliable.
 
 \begin{table*}[htb!]
     \caption{Updated results for HD 20010 using the shorter line list and new
-             oscillator strengths.}
+             $\log \mathit{gf}$.}
     \label{tab:hd20010}
     \centering
     \begin{tabular}{lllll}
@@ -340,18 +342,18 @@ did, however, measure a few lines from the winter data set to verify the
 agreement. For both the automatically and manually measured EWs, we discard all
 lines with an EW below $\SI{5}{m}$\AA{} and above $\SI{150}{m}$\AA{} before
 continuing the analysis. Lines outside this range are either too weak to be
-reliable measured or are so strong that the we are not able to fit a Gaussian to
+reliably measured or are so strong that the we are not able to fit a Gaussian to
 the profile. Especially the wings of the absorption lines are a problem for
 strong lines. For all three sets of measured EWs (summer and winter observations
 automatically, and summer manually), parameters were derived with and without
 $\log g$ set to a fixed value (1.69\,dex, the average literature value adopted).
-The derivation of the parameters follow the procedure presented in Paper I. We
-use the minimization routine from \citet{Andreasen2017a}. After we reach
-convergence using all the iron lines we were able to measure, one outlier above
-$3\sigma$ in abundance were removed, and the minimization routine was restarted.
-This process was done iteratively until there were no more outliers. The final
-results are presented in Tab.~\ref{tab:arcturus} together with mean parameters
-from the literature.
+The derivation of the parameters follow the procedure presented in Paper I,
+although we use the minimization routine from \citet{Andreasen2017a}. After we
+reach convergence using all the iron lines we were able to measure, one outlier
+above $3\sigma$ in abundance were removed, and the minimization routine was
+restarted. This process was done iteratively until there were no more outliers.
+The final results are presented in Table \ref{tab:arcturus} together with mean
+parameters from the literature.
 
 
 \begin{figure}[htpb!]
@@ -380,8 +382,8 @@ from the literature.
       \hline
         Literature    & $4306 \pm 100$       &  $1.69 \pm 0.32$ &    $1.92 \pm 0.15$              & $-0.54 \pm 0.11$ \\
       \hline
-        IRAF          & $4380 \pm  79$       &  $0.64 \pm 0.33$ &    $1.14 \pm 0.09$              & $-0.49 \pm 0.07$ \\
-        IRAF          & $4212 \pm  77$       &   1.69 (fixed)   &    $1.25 \pm 0.08$              & $-0.37 \pm 0.03$ \\
+        IRAF (summer) & $4380 \pm  79$       &  $0.64 \pm 0.33$ &    $1.14 \pm 0.09$              & $-0.49 \pm 0.07$ \\
+        IRAF (summer) & $4212 \pm  77$       &   1.69 (fixed)   &    $1.25 \pm 0.08$              & $-0.37 \pm 0.03$ \\
       \hline
         ARES (summer) & $4439 \pm  63$       &  $1.20 \pm 0.20$ &    $1.55 \pm 0.10$              & $-0.58 \pm 0.06$ \\
         ARES (summer) & $4348 \pm  75$       &   1.69 (fixed)   &    $1.58 \pm 0.09$              & $-0.53 \pm 0.03$ \\
@@ -398,7 +400,7 @@ We generally see good agreement between the derived parameters and the average
 values from the literature adopted. The only parameter being difficult to
 measure is the surface gravity due to the low number of \ion{Fe}{II} lines in
 the NIR. It is very important to derive the metallicity accurately, and we
-report good results overall, but especially with the automatic measurements,
+report good results overall, especially with the automatic measurements,
 compared to literature values. When measuring the EWs by hand, we might have
 systematically overestimated the continuum, resulting in higher
 $[\ion{Fe}/\ion{H}]$. For visualization the parameters are plotted (except
@@ -430,13 +432,13 @@ spectrum is already normalized. This will also prevent ARES to identify and
 measure any lines in these regions. The EWs from the three regions are combined
 to one final line list used for the determination of the parameters. The EWs
 were also measured by hand using IRAF. We list the results in
-Tab.~\ref{tab:10Leo} alongside with an average of literature values taken from
+Table \ref{tab:10Leo} alongside with an average of literature values taken from
 Simbad. The final results and five collected literature values are presented in
 Fig.~\ref{fig:10leo}.
 
 \begin{table*}[htb!]
     \caption{Results from 10 Leo presented in the same way as for
-             Tab.~\ref{tab:arcturus}.}
+             Table \ref{tab:arcturus}.}
     \label{tab:10Leo}
     \centering
     \begin{tabular}{lllll}
@@ -573,8 +575,8 @@ extend our test to many different spectral types of interest.
 
 \begin{acknowledgements}
 
-We thank Jos\'e Caballero for many useful for comments during the process which
-led to this paper. He has been most kind providing help whenever needed.
+We thank Jos\'e Caballero for many useful comments during the process which
+led to this paper.
 
 This work was supported by Funda\c{c}\~ao para a Ci\^encia e a Tecnologia, FCT,
 (ref. UID/FIS/04434/2013, PTDC/FIS-AST/1526/2014, and PTDC/FIS-AST/7073/2014)
@@ -585,7 +587,10 @@ through Investigador FCT contracts of reference IF/00169/2012, and
 IF/00028/2014, respectively, and POPH/FSE (EC) by FEDER funding through the
 program “Programa Operacional de Factores de Competitividade - COMPETE”. E.D.M
 acknowledge the support from the FCT in the form of the grants
-SFRH/BPD/76606/2011.
+IF/00849/2015/CP1273/CT0003. JJN acknowledges support from FCT in the form of a
+“PhD::Space” (PD/00040/2012) network doc- toral grant, of reference
+PD/BD/52700/2014.
+
 
 This research has made use of the SIMBAD database operated at CDS, Strasbourg
 (France).
@@ -606,14 +611,14 @@ The complete refined line list with Solar EWs measured by hand using IRAF.
   \begin{longtable}{cclrr}
       \caption{\label{tab:linelist} Refined line list with all \ion{Fe}{I} and
                \ion{Fe}{II} lines and corresponding atomic data, including the
-               updated oscillator strengths. This table is available online.}\\
+               updated $\log \mathit{gf}$. This table is available online.}\\
         \hline\hline
-          Wavelength (\AA) & Element        & EP                   (eV)  &  $\log \mathrm{gf}$  &  Solar EW (m\AA)    \\
+          Wavelength (\AA) & Element        & EP                   (eV)  &  $\log \mathit{gf}$  &  Solar EW (m\AA)    \\
         \hline
         \endfirsthead
         \caption{continued.}\\
         \hline\hline
-          Wavelength (\AA) & Element        & EP                   (eV)  &  $\log \mathrm{gf}$  &  Solar EW (m\AA)    \\
+          Wavelength (\AA) & Element        & EP                   (eV)  &  $\log \mathit{gf}$  &  Solar EW (m\AA)    \\
         \hline
         \endhead
           10065.05         &  \ion{Fe}{I}   &           4.83             &        -0.279        &     94.0            \\
