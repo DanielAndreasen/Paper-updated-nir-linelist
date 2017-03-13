@@ -11,6 +11,7 @@
 *.out
 *.toc
 *.llt
+*.obj
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
