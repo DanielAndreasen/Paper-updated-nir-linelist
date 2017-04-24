@@ -65,9 +65,9 @@
 
 \abstract
 % Context
-{Reliable stellar atmospheric parameters for FGK stars have been obtained mostly
-from methods that rely on high resolution and high signal-to-noise optical
-spectroscopy. The advent of a new generation of high resolution near-IR
+{Reliable stellar atmospheric parameters for FGK stars have been {\bf commonly}
+obtained from methods that rely on high resolution and high signal-to-noise
+optical spectroscopy. The advent of a new generation of high resolution near-IR
 spectrographs opens the possibility of using classic spectroscopic methods with
 high resolution and high signal-to-noise in the NIR spectral window.}
 % Aims
@@ -137,15 +137,18 @@ gravity, and stellar metallicity
 
 Finally, the use of high resolution spectroscopy along with stellar atmospheric
 models is an extensively tested method that allows the derivation of the
-fundamental parameters of a star \citep[see e.g.][]{Valenti2005,Santos13}. The
-procedure depends on the quality of the spectra, their resolution, and
-wavelength region. A fit to the overall spectrum can be applied for all spectral
-resolutions, but is often time consuming \citep[see e.g.][]{Recio2006,Tsantaki2014}.
-For resolutions larger than $\lambda/\Delta\lambda > 20\,000$ we can apply the
-equivalent width (EW) method \citep[see e.g.][for details]{Tsantaki2013,Andreasen2017a}.
-However, while the latter approach is often faster than the synthetic fitting,
-it requires high quality spectra, and the star to be a slow rotator (below
-$\SI{10}{km/s}$ to $\SI{15}{km/s}$).
+fundamental parameters of a star \citep[see e.g.][]{Valenti2005,Santos13}. {\bf
+The procedure depends on the quality of the spectra, their resolution,
+wavelength region, and the set of software used. The latter includes the
+atmosphere models, radiative transfer code, and atomic data used.} A fit to the
+overall spectrum can be applied for all spectral resolutions, but is often time
+consuming \citep[see e.g.][]{Recio2006,Tsantaki2014}. For resolutions larger
+than $\lambda/\Delta\lambda > 20\,000$ we can apply the equivalent width (EW)
+method \citep[see e.g.][for details]{Tsantaki2013,Andreasen2017a}. However,
+while the latter approach is often faster than the synthetic fitting, it
+requires high quality spectra, and the star to be a slow rotator (below
+$\SI{10}{km/s}$ to $\SI{15}{km/s}$). {\bf It also fails for cool stars due to
+severe continuum depression.}
 
 Standard procedures are often used to derive stellar atmospheric parameters from
 high quality spectra in the optical \citep[see e.g.][]{Valenti2005,Sousa2008a}.
@@ -159,10 +162,11 @@ Galileo} (TNG) is already available \citep{GIANO}, as is the \emph{infrared
 Doppler instrument} (IRD) installed at the Subaru telescope \citep{IRD},
 \emph{Calar Alto high-Resolution search for M dwarfs with Exoearths with
 Near-infrared and optical Échelle Spectrographs} (CARMENES) for the \SI{3.5}{m}
-telescope at Calar Alto Observatory \citep{CARMENES}, and iShell at the
-\emph{InfraRed Telescope Facility} \citep{ishell1,ishell2}. Three new
-spectrographs are planned for the near future: 1) The \emph{CRyogenic InfraRed
-Echelle Spectrograph Upgrade Project} (CRIRES+) at the \emph{Very Large
+telescope at Calar Alto Observatory \citep{CARMENES}, iShell at the
+\emph{InfraRed Telescope Facility} \citep{ishell1,ishell2}, {\bf and \emph{The
+Apache Point Observatory Galactic Evolution Experiment} (APOGEE) \citep{APOGEE}}.
+Three new spectrographs are planned for the near future: 1) The \emph{CRyogenic
+InfraRed Echelle Spectrograph Upgrade Project} (CRIRES+) at the \emph{Very Large
 Telescope} (VLT) \citep{CRIRESp} with expected first light in 2017, 2) \emph{un
 SpectroPolarimètre Infra-Rouge A Near-InfraRed Spectropolarimeter} (SPIRou) at
 \emph{The Canada-France-Hawaii Telescope} (CFHT) \citep{SPIROU1,SPIROU2} with
@@ -197,18 +201,20 @@ obtain the majority of the flux here.
 While the community is currently on the verge to access large amounts of high
 resolution NIR spectra, the available spectra at the moment are sparse. We chose
 to use two stars cooler than the Sun since we used a star hotter than the Sun
-(HD 20010) in Paper I. The method used both in Paper I and here is determining
-the iron abundances on a number of lines from their measured EWs. Then we impose
-ionization balance between \ion{Fe}{I} and \ion{Fe}{II} lines, and excitation
-balance for all \ion{Fe}{I} lines, by changing the atmospheric parameters for
-the model atmosphere \citep[][is used here]{Kurucz1993}. While this is a well
-tested method for getting atmospheric parameters utilising the optical part of
-the spectrum, it is a novel approach in the NIR.
+(HD 20010) in Paper I. {\bf We will however use all four stars in this work for
+various reasons. The solar spectrum will be used for inspecting the line list
+presented in Paper I. This spectrum was obtained from the Kitt Peak telescope by
+\citet{Hinkle1995}. The spectrum of HD 20010 will be reused from Paper I as
+well. This spectrum was obtained by the CRIRES spectrograph by
+\citet{Lebzelter2012} as part of the CRIRES-POP. HD 20010 will be reanalysed as
+to confirm the improvement of the refined line list which will be presented
+here. The two stars which we have not analysed before are Arcturus and 10 Leo.}
 
-We have used the atlas of Arcturus (acquired at Kitt Peak National Observatory
-using the FTS spectrograph at the Mayall telescope), one of the brightest stars
-on the Northern hemisphere. Thus it is well studied \citep[see e.g.][to mention
-just a few]{Griffin1967,McWilliam1990,Ramirez2013}. We use the atlas from
+The atlas of Arcturus (acquired at Kitt Peak National Observatory using the FTS
+spectrograph at the Mayall telescope), one of the brightest stars on the
+Northern hemisphere. Thus it is well studied \citep[see e.g.][to mention just a
+few]{Griffin1967,McWilliam1990,Ramirez2013} and a benchmark star in current
+spectroscopic surveys such as GAIA-ESO \citep{}. We use the atlas from
 \cite{Hinkle1995a} which covers the spectral range of interest (YJHK bands).
 Strong telluric features were identified with a spectrum from the TAPAS web page
 \citep{Bertaux2014}. The atlas also comes with a telluric standard and the ratio
@@ -237,8 +243,9 @@ used for the analysis described below.
     \centering
     \includegraphics[width=1.0\linewidth]{figures/bothspectra.pdf}
     \caption{Sample spectra of the two stars, in blue is Arcturus, and green is
-             10 Leo with an 0.15 offset. We mark the location of \ion{Fe}{I}
-             lines in the region.}
+             10 Leo with an offset. We mark the location of \ion{Fe}{I} lines in
+             the region. {\bf The red curve in the bottom is the difference in
+             flux between the two stars, indicating they are very similar.}}
     \label{fig:both}
 \end{figure*}
 
@@ -410,7 +417,7 @@ systematically overestimated the continuum, resulting in higher
 $[\ion{Fe}/\ion{H}]$. For visualization the parameters are plotted (except
 $\xi_\mathrm{micro}$) in Fig.~\ref{fig:arcturus}. Here the histogram shows the
 literature values collected from Simbad while the vertical black line is our
-final value with gray shaded errorbar. The plot shows that our values are in
+final value with grey shaded errorbar. The plot shows that our values are in
 very good agreement with the literature results, supporting the quality and
 reliability of our analysis.
 
@@ -419,7 +426,7 @@ reliability of our analysis.
     \includegraphics[width=1.0\linewidth]{figures/ArcturusParams.pdf}
     \caption{Histogram of the different sets of literature parameters of
              Arcturus (except $\xi_\mathrm{micro}$). The black vertical line are
-             our derived parameters, and the gray shaded area are the errors on
+             our derived parameters, and the grey shaded area are the errors on
              the corresponding parameters.}
     \label{fig:arcturus}
 \end{figure}
@@ -559,8 +566,8 @@ correction is not necessary for obtaining atmospheric parameters.
 \section{Conclusion}
 \label{sec:conclusion}
 
-In this paper we presened a refined \ion{Fe}{I} and \ion{Fe}{II} line list in the
-NIR domain. The method should work in all spectral ranges, however, it is
+In this paper we presented a refined \ion{Fe}{I} and \ion{Fe}{II} line list in
+the NIR domain. The method should work in all spectral ranges, however, it is
 important to locate the appropriate iron lines. For the NIR we need a relative
 large coverage (YJHK, although few lines are in the K band). The method used
 here which is usually adopted in the optical domain to derive parameters is now
