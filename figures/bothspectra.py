@@ -5,6 +5,8 @@ import seaborn as sns
 sns.set_style('ticks')
 sns.set_context('paper', font_scale=1.7)
 from plot_fits import get_wavelength, dopplerShift
+from scipy.interpolate import interp1d
+plt.rcParams['xtick.direction'] = 'in'
 
 """
 Compare the spectrum of Arcturus with 10 Leo, plus have some Fe lines
@@ -65,9 +67,24 @@ if __name__ == '__main__':
         w2, f2 = w10Leo[i2], f10Leo[i2]
         plines = lines[i3]
 
-        plt.figure(figsize=(12, 5))
-        plt.plot(w1, f1, label='Arcturus')
-        plt.plot(w2, f2-0.15, label='10 Leo')
+        w0 = w1[0] if w1[0] != min((w1[0], w2[0])) else w2[0]
+        wn = w1[-1] if w1[-1] != max((w1[-1], w2[-1])) else w2[-1]
+
+        interp1 = interp1d(w1, f1, kind='linear')
+        interp2 = interp1d(w2, f2, kind='linear')
+        w = np.linspace(w0, wn, len(w1))
+        f1 = interp1(w)
+        f2 = interp2(w)
+
+        fig = plt.figure(figsize=(12, 5))
+        ax = fig.add_subplot(111)
+        ax.tick_params('y', labelcolor='w', left='off')
+        ax.spines['right'].set_color('none')
+        ax.spines['top'].set_color('none')
+
+        ax.plot(w, f1, label='Arcturus')
+        ax.plot(w, f2-0.15, label='10 Leo')
+        ax.plot(w, f1-f2+0.15, label='Difference')
         for j, line in enumerate(plines):
             if j%2 == 0:
                 dy = -0.02
@@ -80,11 +97,12 @@ if __name__ == '__main__':
             ymin = get_ymin(line, (w1, f1), (w2, f2))
             plt.vlines(line, ymin, 1.04+dy, linestyles='dashed')
             plt.text(line, 1.04+dy, 'Fe')
-        plt.xlabel(r'Wavelength [$\AA$]')
-        plt.ylabel('Normalized flux')
+        ax.set_xlabel(r'Wavelength [$\AA$]')
+        ax.set_ylabel('Normalized flux')
+
         y1, _ = plt.ylim()
         plt.ylim(y1, 1.15)
-        plt.legend(loc='lower left', frameon=False)
+        plt.legend(loc='best', frameon=False)
         plt.tight_layout()
-    plt.savefig('bothspectra.pdf')
-    # plt.show()
+    # plt.savefig('bothspectra.pdf')
+    plt.show()
