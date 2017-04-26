@@ -198,6 +198,8 @@ obtain the majority of the flux here.
 \section{Data}
 \label{sec:data}
 
+\subsection{The stars}
+
 While the community is currently on the verge to access large amounts of high
 resolution NIR spectra, the available spectra at the moment are sparse. We chose
 to use two stars cooler than the Sun since we used a star hotter than the Sun
@@ -207,15 +209,16 @@ presented in Paper I. This spectrum was obtained from the Kitt Peak telescope by
 \citet{Hinkle1995}. The spectrum of HD 20010 will be reused from Paper I as
 well. This spectrum was obtained by the CRIRES spectrograph by
 \citet{Lebzelter2012} as part of the CRIRES-POP. HD 20010 will be reanalysed as
-to confirm the improvement of the refined line list which will be presented
-here. The two stars which we have not analysed before are Arcturus and 10 Leo.}
+to confirm the improvement of the refined line list which will be presented in
+the section below. The two stars which we have not analysed before are Arcturus
+and 10 Leo.}
 
 The atlas of Arcturus (acquired at Kitt Peak National Observatory using the FTS
 spectrograph at the Mayall telescope), one of the brightest stars on the
 Northern hemisphere. Thus it is well studied \citep[see e.g.][to mention just a
-few]{Griffin1967,McWilliam1990,Ramirez2013} and a benchmark star in current
-spectroscopic surveys such as GAIA-ESO \citep{}. We use the atlas from
-\cite{Hinkle1995a} which covers the spectral range of interest (YJHK bands).
+few]{Griffin1967,McWilliam1990,Ramirez2013} {\bf and a benchmark star in current
+spectroscopic surveys such as GAIA-ESO \citep{}}. We use the atlas from
+\citet{Hinkle1995a} which covers the spectral range of interest (YJHK bands).
 Strong telluric features were identified with a spectrum from the TAPAS web page
 \citep{Bertaux2014}. The atlas also comes with a telluric standard and the ratio
 of the two spectra in order to correct for the tellurics. The telluric spectrum
@@ -237,7 +240,9 @@ The data for the two stars are very similar in terms of S/N (around 300 as
 measured by IRAF in a continuum region in the YJ band), resolution
 (approximately $100\;000$), and spectral coverage. In Fig.~\ref{fig:both} we
 compare the spectra of the two stars in a region with some of the iron lines
-used for the analysis described below.
+used for the analysis described below. {\bf The two stars have very similar
+spectral type as seen from the two spectra. The difference is shown in the
+bottom of the figure in red.}
 
 \begin{figure*}[htpb!]
     \centering
@@ -249,27 +254,65 @@ used for the analysis described below.
     \label{fig:both}
 \end{figure*}
 
+A summary of the four stars used can be seen in Table~\ref{tab:stars}. The
+parameters are obtained from the PASTEL catalogue \citep{Soubiran2016} which is
+a compilation of stellar atmospheric parameters from the literature obtained
+mostly from high resolution and high S/N spectra. The parameters are the median
+values of all measurements for a given star, where the errors reported are the
+standard deviation of this. $\xi_\mathrm{micro}$ is estimated using the
+empirical relation by \citet{Tsantaki2013} for dwarf stars, i.e. $\log
+g\ge3.95$, and \citet{Adibekyan2015} for the rest. This is done for each
+literature value in the catalogue. The value presented in the Table here is
+calculated on the same way as the rest of the parameters.
+\begin{table*}[htb!]
+    \caption{Summary of the four stars used in this work. The stellar parameters
+             are from the PASTEL catalogue \citep{Soubiran2016} (see text for
+             details), except the parameters for the Sun.}
+    \label{tab:stars}
+    \centering
+    \begin{tabular}{lllllll}
+      \hline\hline
+        Star        & Spectrographs  & Resolution  & $T_\mathrm{eff}$ (K) &  $\log g$ (dex)  &   $\xi_\mathrm{micro}$ (km/s)   & [Fe/H] (dex)      \\
+      \hline
+        Sun         & FTS            & 600\,000    & $5777$               &  $4.44$          &    $1.00$                       & $ 0.00$          \\
+        Arcturus    & FTS            & 100\,000    & $4300 \pm 111$       &  $1.60 \pm 0.29$ &    $1.93 \pm 0.17$              & $-0.54 \pm 0.11$ \\
+        HD 20010    & CRIRES         & 100\,000    & $6152 \pm  95$       &  $3.96 \pm 0.11$ &    $1.17 \pm 0.24$              & $-0.27 \pm 0.06$ \\
+        10 Leo      & CRIRES         & 100\,000    & $4742 \pm  61$       &  $2.76 \pm 0.17$ &    $1.45 \pm 0.08$              & $-0.03 \pm 0.02$ \\
+      \hline
+    \end{tabular}
+\end{table*}
 
+\subsection{The line list}
 
+In Paper I we prepared a \ion{Fe}{I} and \ion{Fe}{II} line list in the NIR
+domain. {\bf The atomic data from the lines were obtained from the VALD3
+database \citep{VALD1,VALD2} in a wavelength region ranging from
+\SIrange{10000}{25000}{\AA}, covering the YJHK bands. EWs were measured for all
+iron lines with ARES \citep{Sousa2015a}, discarding any line with EW below
+\SI{5}{m\AA} or above \SI{200}{m\AA}. The oscillator strengths of the line list
+was calibrated using the solar spectrum, and the solar iron abundance from
+\citet{Gonzalez2000} at 7.47. This was done using the radiative transfer code
+MOOG \citep{Sneden1973} for obtaining the abundances of individual iron lines
+and an atmosphere model provided by \citet{Kurucz1993}.} The line list was
+successfully used to derive atmospheric parameters for a late F star, {\bf
+HD20010}.
 
 
 \section{Refining the NIR line list}
 \label{sec:refining_the_line_list}
 
-In Paper I we prepared a \ion{Fe}{I} and \ion{Fe}{II} line list in the NIR
-domain. This line list was calibrated using a solar spectrum, and successfully
-used to derive atmospheric parameters for a late F star. Here we will go one
-step forward, and test this line list for K type stars. Besides testing the line
-list from Paper I at cooler effective temperatures with two K stars, it is a
-primary goal of this work to refine the line list. This includes identifying
-recurring outliers (both from the work done in Paper I and in this work), and
-lines which we are not able to measure, e.g. if a line is amidst a forest of
-telluric lines. To identify these lines the solar atlas used in Paper I was
-revisited. In total 211/ out of 295 \ion{Fe}{I} lines and 8 out of 13
-\ion{Fe}{II} lines were removed in the process. Most of these were blended lines
-with either tellurics or other stellar lines. This procedure leaves us with 84
-\ion{Fe}{I} lines and 5 \ion{Fe}{II} lines. These lines should be the best for
-deploying our technique of determining atmospheric stellar parameters.
+{\bf In this work} we will go one step forward, and test this line list for {\bf
+two} K type stars. {\bf Before} testing the line list from Paper I at cooler
+effective temperatures with two K stars, it is a primary goal of this work to
+refine the line list. This includes identifying recurring outliers (both from
+the work done in Paper I and in this work), and lines which we are not able to
+measure, e.g. if a line is amidst a forest of telluric lines. To identify these
+lines the solar atlas used in Paper I was revisited. In total 211 out of 295
+\ion{Fe}{I} lines and 8 out of 13 \ion{Fe}{II} lines were removed in the
+process. Most of these were blended lines with either tellurics or other stellar
+lines. This procedure leaves us with 84 \ion{Fe}{I} lines and 5 \ion{Fe}{II}
+lines. These lines should be the best for deploying our technique of determining
+atmospheric stellar parameters.
 
 During a second look at the Solar spectrum, the EW of the lines were measured by
 hand (this had previously been done automatically with ARES). Since we
@@ -342,7 +385,7 @@ Arcturus is one of the brightest stars on the night sky with a V magnitude of
 numerous measurements of the atmospheric parameters as mentioned above.
 
 The atlas consists of both a summer observation set and a winter observation
-set. The two data sets have been obtained in order to minimize the effect of
+set. The two data sets have been obtained in order to minimise the effect of
 tellurics at different spectral regions. A comparison between the two sets of
 measured EWs - both the manual measurements using IRAF and the automatic
 measurements using ARES - are shown in Fig.~\ref{fig:EWcomp}. The automatic EW
@@ -380,11 +423,7 @@ literature.
 
 \begin{table*}[htb!]
     \caption{The derived parameters for Arcturus with and without fixed surface
-             gravity. The literature values are a simple mean of all the
-             available parameters on Simbad with the corresponding standard
-             error. There is no microturbulence available, so we derived it
-             using the empirical relation from \citet{Adibekyan2015} for each
-             set of parameters.}
+             gravity.}
     \label{tab:arcturus}
     \centering
     \begin{tabular}{lllll}
@@ -414,7 +453,7 @@ the NIR. It is very important to derive the metallicity accurately, and we
 report consistent results overall, especially with the automatic measurements,
 compared to literature values. When measuring the EWs by hand, we might have
 systematically overestimated the continuum, resulting in higher
-$[\ion{Fe}/\ion{H}]$. For visualization the parameters are plotted (except
+$[\ion{Fe}/\ion{H}]$. For visualisation the parameters are plotted (except
 $\xi_\mathrm{micro}$) in Fig.~\ref{fig:arcturus}. Here the histogram shows the
 literature values collected from Simbad while the vertical black line is our
 final value with grey shaded errorbar. The plot shows that our values are in
@@ -439,7 +478,7 @@ reliability of our analysis.
 The approach for determining the atmospheric stellar parameters for 10 Leo is
 identical to Arcturus. We use ARES on each band (YJ, H, and K-band) separately.
 For the small gaps in the spectrum, we simply set the flux to 1, since the
-spectrum is already normalized. This will also prevent ARES to identify and
+spectrum is already normalised. This will also prevent ARES to identify and
 measure any lines in these regions. The EWs from the three regions are combined
 to one final line list used for the determination of the parameters. The EWs
 were also measured by hand using IRAF. We list the results in
@@ -605,7 +644,6 @@ acknowledge the support from the FCT in the form of the grants
 IF/00849/2015/CP1273/CT0003. JJN acknowledges support from FCT in the form of a
 “PhD::Space” (PD/00040/2012) network doc- toral grant, of reference
 PD/BD/52700/2014.
-
 
 This research has made use of the SIMBAD database operated at CDS, Strasbourg
 (France).
