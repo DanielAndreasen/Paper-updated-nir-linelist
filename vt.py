@@ -1,4 +1,4 @@
-def _getMic(teff, logg, feh):
+def vt(teff, logg, feh):
     if logg >= 3.95:  # Dwarfs Tsantaki 2013
         mic = 6.932 * teff * (10**(-4)) - 0.348 * logg - 1.437
         return round(mic, 2)
