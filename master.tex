@@ -403,7 +403,24 @@ new line list is more reliable.
     \end{tabular}
 \end{table*}
 
+{\bf The parameters for the three stars, omitting the Sun since the derived
+parameters are trivial with a calibrated line list, are presented in
+Fig.~\ref{fig:parameters}. We show the literature values (blue), derived
+parameters with $\log g$ fixed to the literature value (orange), and derived
+parameters when $\log g$ is free during the minimization procedure (green
+points).}
 
+\begin{figure}[htpb!]
+    \centering
+    \includegraphics[width=1.0\linewidth]{figures/parameters.pdf}
+    \caption{Parameters for Arcturus, 10 Leo, and HD 20010 (revisited in this
+             paper). The blue points show the literature values from the PASTEL
+             database as discussed in the text. The orange points are the
+             derived values with $\log g$ fixed to the literature value, and the
+             green points show the derived parameters when $\log g$ is also
+             derived.}
+    \label{fig:parameters}
+\end{figure}
 
 
 \subsection{Arcturus}
@@ -476,22 +493,9 @@ the NIR. It is very important to derive the metallicity accurately, and we
 report consistent results overall, especially with the automatic measurements,
 compared to literature values. When measuring the EWs by hand, we might have
 systematically overestimated the continuum, resulting in higher
-$[\ion{Fe}/\ion{H}]$. For visualisation the parameters are plotted (except
-$\xi_\mathrm{micro}$) in Fig.~\ref{fig:arcturus}. Here the histogram shows the
-literature values collected from Simbad while the vertical black line is our
-final value with grey shaded errorbar. The plot shows that our values are in
-very good agreement with the literature results, supporting the quality and
-reliability of our analysis.
+$[\ion{Fe}/\ion{H}]$.
 
-\begin{figure}[htpb!]
-    \centering
-    \includegraphics[width=1.0\linewidth]{figures/ArcturusParams.pdf}
-    \caption{Histogram of the different sets of literature parameters of
-             Arcturus (except $\xi_\mathrm{micro}$). The black vertical line are
-             our derived parameters, and the grey shaded area are the errors on
-             the corresponding parameters.}
-    \label{fig:arcturus}
-\end{figure}
+
 
 
 
@@ -506,8 +510,7 @@ measure any lines in these regions. The EWs from the three regions are combined
 to one final line list used for the determination of the parameters. The EWs
 were also measured by hand using IRAF. We list the results in
 Table \ref{tab:10Leo} alongside with an average of literature values taken from
-Simbad. The final results and five collected literature values are presented in
-Fig.~\ref{fig:10leo}.
+Simbad.
 
 \begin{table*}[htb!]
     \caption{Results from 10 Leo presented in the same way as for
@@ -535,25 +538,6 @@ Fig.~\ref{fig:10leo}.
 Generally the derived parameters are in excellent agreement with the literature
 values listed here. We were able to derive good $\log g$ values, although with
 larger errors compared to the results from the literature.
-
-\begin{figure}[htpb!!]
-    \centering
-    \includegraphics[width=1.0\linewidth]{figures/10LeoParams.pdf}
-    \caption{Literature values (blue) and the two results from this work (green)
-             with and without $\log g$ fixed. The errorbars on the literature
-             values are either those presented in the corresponding paper, or in
-             the cases none were presented we give an error of $\SI{100}{K}$ for
-             $T_\mathrm{eff}$, 0.10\,dex for $\log g$, and 0.05\,dex for
-             $[\ion{Fe}/\ion{H}]$. The horizontal lines are the average
-             literature values adopted.
-             References:
-             Ref [1]: \citet{Luck2015},
-             Ref [2]: \citet{Park2013},
-             Ref [3]: \citet{Massarotti2008},
-             Ref [4]: \citet{Soubiran2008}, and
-             Ref [5]: \cite{daSilva2011}.}
-    \label{fig:10leo}
-\end{figure}
 
 
 
