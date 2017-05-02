@@ -49,11 +49,11 @@ if __name__ == '__main__':
 
             df.loc[idx, parameter] = v1
             df.loc[idx, parameter+'err'] = e1
-            df.loc[idx, 'fixlogg'] = False
+            df.loc[idx, 'fixlogg'] = True
 
             df.loc[idx+1, parameter] = v2
             df.loc[idx+1, parameter+'err'] = e2
-            df.loc[idx+1, 'fixlogg'] = True
+            df.loc[idx+1, 'fixlogg'] = False
 
         idx += 2
     df.to_csv('stellar_parameters.csv', index=False)
