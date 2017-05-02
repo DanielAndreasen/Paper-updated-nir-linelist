@@ -1,7 +1,3 @@
-linelist,teff,tefferr,logg,loggerr,feh,feherr,vt,vterr,l1,el1,l2,el2,convergence,fixteff,fixlogg,fixfeh,fixvt,outlier,weights,model,refine,EPcrit,RWcrit,ABdiffcrit
-arcturus1,4380,79,0.64,0.33,-0.49,0.07,1.14,0.09,1.04,0.33,1.23,0.33,True,False,False,False,False,1Iter,null,kurucz95,True,0.0003,0.001,0.0033
-arcturus2,4212,77,1.69,0.16,-0.37,0.03,1.25,0.08,2.15,0.16,2.36,0.16,True,False,True,False,False,1Iter,null,kurucz95,True,0.0003,0.001,0.0033
-ArcturusSummer1,4439,63,1.20,0.20,-0.58,0.06,1.55,0.10,1.57,0.20,1.76,0.20,True,False,False,False,False,1Iter,null,kurucz95,True,0.0003,0.001,0.0033
-ArcturusSummer2,4348,75,1.69,0.18,-0.53,0.03,1.58,0.09,2.10,0.18,2.29,0.18,True,False,True,False,False,1Iter,null,kurucz95,True,0.0003,0.001,0.0033
-ArcturusWinter1,4436,67,0.55,1.77,-0.56,0.07,1.35,0.09,0.92,1.77,1.11,1.77,True,False,False,False,False,1Iter,null,kurucz95,True,0.0003,0.001,0.0033
-ArcturusWinter2,4233,109,1.69,0.26,-0.49,0.04,1.43,0.09,2.14,0.26,2.35,0.26,True,False,True,False,False,1Iter,null,kurucz95,True,0.0003,0.001,0.0033
+linelist,teff,tefferr,logg,loggerr,feh,feherr,vt,vterr,loggastero,dloggastero,loggLC,dloggLC,convergence,fixteff,fixlogg,fixfeh,fixvt,outlier,weights,model,refine,EPcrit,RWcrit,ABdiffcrit
+ArcturusSummer_outlier.moog,4357,74,1.60,0.14,-0.55,0.04,1.55,0.10,2.01,0.14,2.20,0.14,True,False,True,False,False,1Iter,null,kurucz95,True,0.0003,0.001,0.0033
+ArcturusSummer_outlier.moog,4439,62,1.20,0.20,-0.58,0.06,1.55,0.10,1.57,0.20,1.76,0.20,True,False,False,False,False,1Iter,null,kurucz95,True,0.0003,0.001,0.0033

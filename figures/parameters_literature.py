@@ -71,5 +71,5 @@ if __name__ == '__main__':
     ax4.set_ylabel(r'$\xi_\mathrm{micro}$ [km/s]')
 
     plt.tight_layout()
-    # plt.savefig('parameters.pdf')
+    plt.savefig('parameters.pdf')
     plt.show()
