@@ -21,6 +21,6 @@ summary_out  'out2'
 smoothed_out 'synth.asc'
 model_in     'out.atm'
 lines_in     'Felines.moog'
-observed_in  'noise.dat'
+observed_in  'noise.tsv'
 abundances 1 1
     26  0.00
