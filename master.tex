@@ -377,40 +377,43 @@ K stars are presented here.}
 
 As a first step we revisit HD 20010 for which we derived atmospheric stellar
 parameters in Paper I using the newly revised line list presented in this paper.
-The results are shown in Table \ref{tab:results} along with the average
-literature values (see Paper I and references therein). We see better agreement
-with the average literature values adopted (especially $[\ion{Fe}/\ion{H}]$ and
-$\log g$), and smaller errors with the updated results. This suggests that the
-new line list is more reliable.
+The results are shown in Table \ref{tab:results} along with the {\bf results for
+the two other stars analysed in this work}. We see better agreement with the
+average literature values adopted (especially $[\ion{Fe}/\ion{H}]$ and $\log g$),
+and smaller errors with the updated results. This suggests that the new line
+list is more reliable.
 
 \begin{table}[htb!]
-    \caption{Results for the three stars with first the literature values as
-             presented in Table.~\ref{tab:stars}, second line are results with
-             $\log g$ set to the same value during the minimization procedure
-             as found in the literature (fixed), and last line is with all
-             parameters free during the minimization procedure.}
+    \caption{Results for the three stars with first set of parameters are the
+             literature values as presented in Table.~\ref{tab:stars}, second
+             set of parameters are results with $\log g$ set to the same value
+             during the minimization procedure as found in the literature
+             (fixed), and last set of parameters are with all parameters free
+             during the minimization procedure.}
     \label{tab:results}
     \centering
     \begin{tabular}{llll}
       \hline\hline
                                     & HD 20010          &  10 Leo           &  Arcturus        \\
       \hline
+        Literature                  &                   &                   &                  \\
         $T_\mathrm{eff}$ (lit.)     & $6152 \pm  95$    &  $4741 \pm  60$   & $4300 \pm 110$   \\
-        $T_\mathrm{eff}$            & $6161 \pm 164$    &  $4761 \pm 118$   & $4357 \pm  74$   \\
-        $T_\mathrm{eff}$            & $6162 \pm 184$    &  $4805 \pm  98$   & $4439 \pm  62$   \\
-      \hline
         $\log g$ (lit.)             & $3.96 \pm 0.19$   &  $2.76 \pm 0.17$  & $1.60 \pm 0.29$  \\
-        $\log g$                    & 3.96 (fixed)      &  2.76 (fixed)     & 1.60 (fixed)     \\
-        $\log g$                    & $4.08 \pm 0.77$   &  $2.42 \pm 0.61$  & $1.20 \pm 0.20$  \\
-      \hline
         $[\ion{Fe}/\ion{H}]$ (lit.) & $-0.27 \pm 0.06$  &  $-0.03 \pm 0.02$ & $-0.54 \pm 0.11$ \\
-        $[\ion{Fe}/\ion{H}]$        & $-0.18 \pm 0.11$  &  $ 0.01 \pm 0.07$ & $-0.55 \pm 0.04$ \\
-        $[\ion{Fe}/\ion{H}]$        & $-0.18 \pm 0.11$  &  $-0.01 \pm 0.07$ & $-0.58 \pm 0.06$ \\
-      \hline
         $\xi_\mathrm{micro}$ (lit.) & $1.17 \pm 0.24$   &  $1.45 \pm 0.08$  & $1.93 \pm 0.13$  \\
-        $\xi_\mathrm{micro}$        & $1.72 \pm 0.44$   &  $1.25 \pm 0.11$  & $1.55 \pm 0.10$  \\
-        $\xi_\mathrm{micro}$        & $1.59 \pm 0.49$   &  $1.23 \pm 0.10$  & $1.55 \pm 0.10$  \\
       \hline
+        $\log g$ fixed              &                   &                   &                  \\
+        $T_\mathrm{eff}$            & $6161 \pm 164$    &  $4761 \pm 118$   & $4357 \pm  74$   \\
+        $\log g$                    & 3.96 (fixed)      &  2.76 (fixed)     & 1.60 (fixed)     \\
+        $[\ion{Fe}/\ion{H}]$        & $-0.18 \pm 0.11$  &  $ 0.01 \pm 0.07$ & $-0.55 \pm 0.04$ \\
+        $\xi_\mathrm{micro}$        & $1.72 \pm 0.44$   &  $1.25 \pm 0.11$  & $1.55 \pm 0.10$  \\
+      \hline
+        All free                    &                   &                   &                  \\
+        $T_\mathrm{eff}$            & $6162 \pm 184$    &  $4805 \pm  98$   & $4439 \pm  62$   \\
+        $\log g$                    & $4.08 \pm 0.77$   &  $2.42 \pm 0.61$  & $1.20 \pm 0.20$  \\
+        $[\ion{Fe}/\ion{H}]$        & $-0.18 \pm 0.11$  &  $-0.01 \pm 0.07$ & $-0.58 \pm 0.06$ \\
+        $\xi_\mathrm{micro}$        & $1.59 \pm 0.49$   &  $1.23 \pm 0.10$  & $1.55 \pm 0.10$  \\
+        \hline\hline
     \end{tabular}
 \end{table}
 
@@ -484,9 +487,6 @@ systematically overestimated the continuum, resulting in higher
 $[\ion{Fe}/\ion{H}]$.
 
 
-
-
-
 \subsection{10 Leo}
 \label{sec:10Leo}
 
@@ -495,12 +495,13 @@ identical to Arcturus. We use ARES on each band (YJ, H, and K-band) separately.
 For the small gaps in the spectrum, we simply set the flux to 1, since the
 spectrum is already normalised. This will also prevent ARES to identify and
 measure any lines in these regions. The EWs from the three regions are combined
-to one final line list used for the determination of the parameters. The EWs
-were also measured by hand using IRAF.
+to one final line list used for the determination of the parameters. {\bf The
+final results can be seen in Fig.~\ref{fig:parameters} and
+Table~\ref{tab:results}.}
 
 Generally the derived parameters are in excellent agreement with the literature
 values listed here. We were able to derive good $\log g$ values, although with
-larger errors compared to the results from the literature.
+larger errors compared to the results from the literature. {}
 
 
 
@@ -527,18 +528,15 @@ This has previously been done in the APOGEE+\emph{Kepler} (APOKASC) context by
 asteroseismic $\log g$ in turn is dependent on $T_\mathrm{eff}$ through the
 scaling relations \citep[see e.g.][]{Kjeldsen1995}.}
 
-  As
-seen from Fig.~\ref{fig:arcturus}, the distribution of $\log g$ values from the
-literature are rather disperse. Since there is a dependence between the other
-derived parameters with $\log g$, simply using a mean value as a reference value
-can lead to misleading parameters. To verify the impact of using the wrong $\log
-g$ as baseline, we tested what was the $T_\mathrm{eff}$ and $[\ion{Fe}/\ion{H}]$
-that we derive by setting $\log g$ fixed to values between 0.9\,dex and
-2.2\,dex, i.e., in the range of the literature values found. The results show
-that $T_\mathrm{eff}$ and $[\ion{Fe}/\ion{H}]$ can change by $\SI{200}{K}$ and
-0.21\,dex, respectively. This is most likely the origin of the small
-discrepancies seen for the parameters of Arcturus when the $\log g$ is fixed and
-free.
+Since there is a dependence between the other derived parameters with $\log g$,
+simply using a mean value as a reference value can lead to misleading
+parameters. To verify the impact of using the wrong $\log g$ as baseline, we
+tested what was the $T_\mathrm{eff}$ and $[\ion{Fe}/\ion{H}]$ that we derive by
+setting $\log g$ fixed to values between 0.9\,dex and 2.2\,dex, i.e., in the
+range of the literature values found. The results show that $T_\mathrm{eff}$ and
+$[\ion{Fe}/\ion{H}]$ can change by $\SI{200}{K}$ and 0.21\,dex, respectively.
+This is most likely the origin of the small discrepancies seen for the
+parameters of Arcturus when the $\log g$ is fixed and free.
 
 Note that the ionized iron lines are not only sparse, they are also rather weak.
 The lowest measured EW for an \ion{Fe}{II} line is $\SI{7.8}{m}$\AA{} (in
@@ -575,6 +573,33 @@ correction is applied to the spectrum before atmospheric stellar parameters can
 be determined reliably. However, with our limited sample it is difficult to make
 a clear conclusion yet. Note that this is unlike the optical where a telluric
 correction is not necessary for obtaining atmospheric parameters.
+
+
+\subsection{The refined line list}
+
+{\bf The line list from Paper I has been refined, i.e. several blended or
+otherwise unreliable measured lines has been removed. This was done using the
+same solar spectrum as in Paper I. In order to test this new line list it was
+first used to re-derive parameters for HD 20010, which was the test case in
+Paper I. Using the refined line list we were able to reduce the error, and
+derive parameters closer to the literature values. Especially important are the
+derived metallicity which were previously over-estimated with $\sim0.1$ dex. It
+is important to note that the reference metallicity in Paper I is $-0.23$ dex,
+and not $-0.27$ dex as presented here. With the refined line list the
+metallicity went from $-0.14\pm0.14$ dex to $-0.18\pm0.11$, so an overall
+improvement.
+
+Furthermore, the refined line list was tested on the two K giants, Arcturus and
+10 Leo. We see a good agreement between the derived parameters and the
+literature values used for comparison.
+
+While this line list, and in particular this method for obtaining stellar
+atmospheric parameters, will fail at higher $T_\mathrm{eff}$\footnote{Due to the
+low number of absorption lines and non-LTE effects.} it should still work at
+lower $T_\mathrm{eff}$. The biggest challenge in this regime is continuum
+depression by molecular lines, however this is a smaller effect compared with
+the optical part of the spectrum. Hence it will still be interesting to see how
+far this line list might work in terms of $T_\mathrm{eff}$.}
 
 
 
