@@ -4,6 +4,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from glob import glob
 from vt import vt
+import seaborn as sns
+sns.set_style('ticks')
+sns.set_context('paper', font_scale=1.7)
 plt.rcParams['xtick.direction'] = 'in'
 plt.rcParams['ytick.direction'] = 'in'
 
@@ -46,21 +49,21 @@ if __name__ == '__main__':
         print u'feh = %.2f\u00B1%.2f' % (d1.feh, d2.feh)
         print u'vt = %.2f\u00B1%.2f\n' % (d1.vt, d2.vt)
 
-        ax1.errorbar(number-0.1, d1.teff,       yerr=d2.teff*3,     fmt='o', color='C0', ms=3)
-        ax1.errorbar(number,     df_star1.teff, yerr=df_star1.tefferr, fmt='o', color='C1', ms=3)
-        ax1.errorbar(number+0.1, df_star2.teff, yerr=df_star2.tefferr, fmt='o', color='C2', ms=3)
+        ax1.errorbar(number-0.1, d1.teff,       yerr=d2.teff*3,     fmt='o', color='C0')
+        ax1.errorbar(number,     df_star1.teff, yerr=df_star1.tefferr, fmt='o', color='C1')
+        ax1.errorbar(number+0.1, df_star2.teff, yerr=df_star2.tefferr, fmt='o', color='C2')
 
-        ax2.errorbar(number-0.1, d1.logg,       yerr=d2.logg*3,     fmt='o', color='C0', ms=3)
-        ax2.errorbar(number,     df_star1.logg, yerr=df_star1.loggerr, fmt='o', color='C1', ms=3)
-        ax2.errorbar(number+0.1, df_star2.logg, yerr=df_star2.loggerr, fmt='o', color='C2', ms=3)
+        ax2.errorbar(number-0.1, d1.logg,       yerr=d2.logg*3,     fmt='o', color='C0')
+        ax2.errorbar(number,     df_star1.logg, yerr=df_star1.loggerr, fmt='o', color='C1')
+        ax2.errorbar(number+0.1, df_star2.logg, yerr=df_star2.loggerr, fmt='o', color='C2')
 
-        ax3.errorbar(number-0.1, d1.feh,       yerr=d2.feh*3,     fmt='o', color='C0', ms=3)
-        ax3.errorbar(number,     df_star1.feh, yerr=df_star1.feherr, fmt='o', color='C1', ms=3)
-        ax3.errorbar(number+0.1, df_star2.feh, yerr=df_star2.feherr, fmt='o', color='C2', ms=3)
+        ax3.errorbar(number-0.1, d1.feh,       yerr=d2.feh*3,     fmt='o', color='C0')
+        ax3.errorbar(number,     df_star1.feh, yerr=df_star1.feherr, fmt='o', color='C1')
+        ax3.errorbar(number+0.1, df_star2.feh, yerr=df_star2.feherr, fmt='o', color='C2')
 
-        ax4.errorbar(number-0.1, d1.vt,       yerr=d2.vt*3,     fmt='o', color='C0', ms=3)
-        ax4.errorbar(number,     df_star1.vt, yerr=df_star1.vterr, fmt='o', color='C1', ms=3)
-        ax4.errorbar(number+0.1, df_star2.vt, yerr=df_star2.vterr, fmt='o', color='C2', ms=3)
+        ax4.errorbar(number-0.1, d1.vt,       yerr=d2.vt*3,     fmt='o', color='C0')
+        ax4.errorbar(number,     df_star1.vt, yerr=df_star1.vterr, fmt='o', color='C1')
+        ax4.errorbar(number+0.1, df_star2.vt, yerr=df_star2.vterr, fmt='o', color='C2')
 
     # Labels
     ax4.set_xticks(range(len(stars)))
@@ -71,5 +74,5 @@ if __name__ == '__main__':
     ax4.set_ylabel(r'$\xi_\mathrm{micro}$ [km/s]')
 
     plt.tight_layout()
-    plt.savefig('parameters.pdf')
+    # plt.savefig('parameters.pdf')
     plt.show()
