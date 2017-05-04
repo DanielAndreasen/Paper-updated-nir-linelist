@@ -16,7 +16,7 @@ if __name__ == '__main__':
     df_all = pd.read_csv('stellar_parameters.csv')
     df_all['star'] = map(lambda x: x.lower(), df_all['star'])
 
-    fig, (ax1, ax2, ax3, ax4) = plt.subplots(nrows=4, ncols=1, sharex=True)
+    fig, (ax1, ax2, ax3, ax4) = plt.subplots(nrows=4, ncols=1, sharex=True, figsize=(6, 8))
     ax1.tick_params('x', labelcolor='w')
     ax2.tick_params('x', labelcolor='w')
     ax3.tick_params('x', labelcolor='w')
