@@ -211,19 +211,21 @@ well. This spectrum was obtained by the CRIRES spectrograph by
 \citet{Lebzelter2012} as part of the CRIRES-POP. HD 20010 will be reanalysed as
 to confirm the improvement of the refined line list which will be presented in
 the section below. The two stars which we have not analysed before are Arcturus
-and 10 Leo.}
+and 10 Leo. These two extra stars will increase the range of spectral type for
+the test of the line list, allowing to test cool giant stars with different
+metallicities regimes.}
 
 The atlas of Arcturus (acquired at Kitt Peak National Observatory using the FTS
 spectrograph at the Mayall telescope), one of the brightest stars on the
 Northern hemisphere. Thus it is well studied \citep[see e.g.][to mention just a
 few]{Griffin1967,McWilliam1990,Ramirez2013} {\bf and a benchmark star in current
-spectroscopic surveys such as GAIA-ESO \citep{}}. We use the atlas from
-\citet{Hinkle1995a} which covers the spectral range of interest (YJHK bands).
-Strong telluric features were identified with a spectrum from the TAPAS web page
-\citep{Bertaux2014}. The atlas also comes with a telluric standard and the ratio
-of the two spectra in order to correct for the tellurics. The telluric spectrum
-from TAPAS is only used for telluric line identification. We use both the
-telluric corrected and non-corrected spectrum.
+spectroscopic surveys such as GAIA-ESO \citep{Jofre2014,Smiljanic2014}}. We use
+the atlas from \citet{Hinkle1995a} which covers the spectral range of interest
+(YJHK bands). Strong telluric features were identified with a spectrum from the
+TAPAS web page \citep{Bertaux2014}. The atlas also comes with a telluric
+standard and the ratio of the two spectra in order to correct for the tellurics.
+The telluric spectrum from TAPAS is only used for telluric line identification.
+We use both the telluric corrected and non-corrected spectrum.
 
 The spectrum for 10 Leo is from the CRIRES-POP team \citep{Nicholls2017}. 10 Leo
 is very similar to Arcturus, which is also one reason this star was the first to
@@ -354,14 +356,16 @@ lines is imposed, by changing the atmospheric parameters for the model
 atmosphere \citep[][is used here]{Kurucz1993}. While this is a well tested
 method for getting atmospheric parameters utilising the optical part of the
 spectrum, it is a novel approach in the NIR. Due to its novelty, the
-measurements of EWs are done with both hand (IRAF) and manually (ARES) as a
-quality check. For both the automatically and manually measured EWs, we discard
-all lines with an EW below $\SI{5}{m}$\AA{} and above $\SI{150}{m}$\AA{} before
-continuing the analysis. Lines outside this range are either too weak to be
-reliably measured or saturated and does no longer contain information about the
-abundance. The entire procedure of obtaining the stellar parameters is done with
-the software FASMA \citep{Andreasen2017a} which does the minimization when
-imposing ionization end excitation balance.}
+measurements of EWs are done with both manually (IRAF) and automatically (ARES)
+as a quality check. For both the automatically and manually measured EWs, we
+discard all lines with an EW below $\SI{5}{m}$\AA{} and above $\SI{150}{m}$\AA{}
+before continuing the analysis. We decided to be a bit more constrained in the
+upper limit for the line strength decreasing it to $\SI{150}{m}$\AA{} to be sure
+that the Gaussian fit is a good approximation. Lines outside this range are
+either too weak to be reliably measured or saturated and does no longer contain
+information about the abundance. The entire procedure of obtaining the stellar
+parameters is done with the software FASMA \citep{Andreasen2017a} which does the
+minimization when imposing ionization end excitation balance.}
 
 
 
@@ -418,10 +422,12 @@ list is more reliable.
 \end{table}
 
 {\bf The parameters for the three stars, omitting the Sun since the derived
-parameters are trivial with a calibrated line list, are presented in
-Fig.~\ref{fig:parameters}. We show the literature values (blue), derived
-parameters with $\log g$ fixed to the literature value (green), and derived
-parameters when $\log g$ is free during the minimization procedure (red
+parameters are trivial with a calibrated line list\footnote{The solar parameters
+used were: $T_\mathrm{eff}=\SI{5777}{K}$, $\log g=4.44\,$dex,
+$[\ion{Fe}/\ion{H}]=0.00\,$dex, and $\xi_\mathrm{micro}=\SI{1.00}{km/s}$.}, are
+presented in Fig.~\ref{fig:parameters}. We show the literature values (blue),
+derived parameters with $\log g$ fixed to the literature value (green), and
+derived parameters when $\log g$ is free during the minimization procedure (red
 points).}
 
 \begin{figure}[htpb!]
@@ -583,11 +589,9 @@ same solar spectrum as in Paper I. In order to test this new line list it was
 first used to re-derive parameters for HD 20010, which was the test case in
 Paper I. Using the refined line list we were able to reduce the error, and
 derive parameters closer to the literature values. Especially important are the
-derived metallicity which were previously over-estimated with $\sim0.1$ dex. It
-is important to note that the reference metallicity in Paper I is $-0.23$ dex,
-and not $-0.27$ dex as presented here. With the refined line list the
-metallicity went from $-0.14\pm0.14$ dex to $-0.18\pm0.11$, so an overall
-improvement.
+derived metallicity which were previously over-estimated with $\sim0.1$ dex.
+With the refined line list the metallicity went from $-0.14\pm0.14$ dex to
+$-0.18\pm0.11$, so an overall improvement.
 
 Furthermore, the refined line list was tested on the two K giants, Arcturus and
 10 Leo. We see a good agreement between the derived parameters and the
