@@ -100,83 +100,70 @@ of stars.}}
 \section{Introduction}
 \label{sec:introduction}
 
-{\bf The stellar atmospheric parameters such as the effective temperature ($T_\mathrm{eff}$),
-surface gravity ($\log g$), and metallicity ([M/H], where iron is normally used as a proxy) are
-fundamental to determine in order to characterise a single star}, and to indirectly determine other
-fundamental parameters such as mass, radius, and age from stellar evolution models \citep[see
-e.g.][]{Girardi2000,Dotter2008,Baraffe2015}. {\bf These parameters are crucial to know with high
-precision and accuracy when deriving planetary masses and radii of exoplanets which are directly
-related to its stellar host} \citep[see e.g.][]{Torres2008,Ammler2009,Torres2012}.
+{\bf
+The study of stellar atmospheric parameters have always been important in astronomy. These
+parameters consists of e.g. the effective temperature, the surface gravity, the chemical composition
+of the stellar atmosphere, and the overall metallicity (where $[\ion{Fe}/\ion{H}]$ is often used as
+a proxy). These can be derived with many different methods such as, but not limited to, the infrared
+flux method (IRFM) \citep{Blackwell1977}, temperature-metallicity-colour correlations \citep[see
+e.g.][]{Ramirez2005b}, asteroseismology \citep[see][for a classic example]{Kjeldsen1995}, and
+different spectroscopic approaches such as synthetic fitting \citep[see
+e.g.][]{Onehag2012,Tsantaki2017} and curve-of-growth analysis.
 
+Not all the methods provide the same information, e.g. can asteroseismology not derive
+$T_\mathrm{eff}$ but is in turn dependent on this parameter. On the other hand it is also well known
+that the surface gravities provided by asteroseismology are more reliable than those from
+spectroscopy \citep[see e.g. the discussion by][]{Mortier2014}.
 
-The derivation of precise stellar atmospheric parameters is not a simple task. Different approaches
-often lead to discrepant results \citep[see e.g.][]{Torres2010,Lebzelter2012b,Santos13}.
-Interferometry is usually considered an accurate method for deriving stellar radii \citep[see
-e.g.][]{Boyajian2012}; however, it is only applicable for bright nearby stars. Asteroseismology {\bf
-can be used to reveal the inner structure of stars by carefully observing the pulsations of the
-stellar surface. Oscillations patterns make it possible to derive the surface gravity and mean
-density, thus allowing calculations of the stellar mass and radius with high precision} \citep[see
-e.g.][for scaling relation of dwarf stars]{Kjeldsen1995}. {\bf It is important to note that
-asteroseismology of solar-like oscillations are only applicable for FGK stars. We have yet to detect
-oscillations in the low-luminosity M stars} \citep{Rodriguez2016,Berdinas2017}. Moreover,
-$T_\mathrm{eff}$ is needed when applying asteroseismology in order to obtain the surface gravity and
-the mean density.
+The derivation of stellar atmospheric parameters can be used to benchmark stellar evolutionary
+models, the study of different galactic populations and the galactic chemical evolution, and in
+recent years to study star-planet correlations. With the advance of high precision instruments, we
+have open entire new windows into the study of stellar astrophysics with e.g. the \emph{Kepler} and
+\emph{CoRoT} space missions \citep[see e.g.][]{Christensen-Dalsgaard2010,Chaplin2011,Huber2014}, and
+spectrographs like HARPS for searching new exoplanets \citep{HARPS} and UVES \citep{UVES}.
 
-A crucial parameter for the indirect determination of stellar bulk properties is $T_\mathrm{eff}$.
-In that respect, the infrared flux method (IRFM) has proven to be reliable for FGK dwarf and
-subgiant stars. For higher accuracy the IRFM needs a priori knowledge of the bolometric flux,
-reddening, surface gravity, and stellar metallicity
-\citep{Blackwell1977,Ramirez2005b,Casagrande2010}. Finally, the use of high resolution spectroscopy
-along with stellar atmospheric models is an extensively tested method that allows the derivation of
-the fundamental parameters of a star \citep[see e.g.][]{Valenti2005,Santos13,Worley2016}. {\bf The
-procedure depends on the quality of the spectra, their resolution, wavelength region, and the set of
-software used. The latter includes the atmosphere models, radiative transfer code, and the atomic
-data used.} A fit to the overall spectrum can be applied for all spectral resolutions, but is often
-time consuming \citep[see e.g.][]{Recio2006,Tsantaki2017}. For resolutions larger than
-$\lambda/\Delta\lambda > 50\,000$ we can apply the equivalent width (EW) method \citep[see e.g.][for
-details]{Tsantaki2013,Andreasen2017a}. However, while the latter approach is often faster than the
-synthetic fitting, it requires high quality spectra, and the star to be a slow rotator (below
-$\SI{10}{km/s}$ to $\SI{15}{km/s}$). {\bf It also fails for cool stars due to severe continuum
-depression.}
+In recent years there has been an emphasis on exploring the near-IR (NIR) domain of the spectrum
+with high-resolution spectrographs ($R\ge50\,000$). These includes the GIANO spectrograph installed
+at \emph{Telescopio Nazionale Galileo} (TNG) is already available \citep{GIANO}, as is the
+\emph{infrered doppler instrument} (IRD) installed at the Subaru telescope \citep{IRD} and
+\emph{Calar Alto high-Resolution search for M dwarfs with Exoearths with Near-infrared and optical
+Échelle Spectrographs} (CARMENES) at the \SI{3.5}{m} telescope at Calar Alto Observatory
+\citep{CARMENES}. Two new spectrographs are planned for the near future: 1) The \emph{CRyogenic
+InfraRed Echelle Spectrograph Upgrade Project} (CRIRES+) at the \emph{Very Large Telescope} (VLT)
+\citep{CRIRESp} with expected first light in 2017, and 2) \emph{un SpectroPolarimètre Infra-Rouge A
+Near-InfraRed Spectropolarimeter} (SPIRou) at \emph{The Canada-France-Hawaii Telescope} (CFHT)
+\citep{SPIROU1,SPIROU2} with expected first light in 2017 as well. The spectral resolutions for
+these spectrographs range between $50\,000$ and $100\,000$.
 
-Standard procedures are often used to derive stellar atmospheric parameters from high quality
-spectra in the optical \citep[see e.g.][]{Valenti2005,Sousa2008a}. With the advancement of high
-resolution near-infrared (NIR) instruments, that is resolution higher than approximately $50\,000$,
-we will now be able to use a similar technique to that used in the optical part of the spectrum
-\citep[see e.g.][]{Melendez1999,Sousa2008a,Tsantaki2013,Mucciarelli2013,Bensby2014,Andreasen2017a}.
-Such an effort seems very timely because of the growing number of observing facilities offering a
-high-resolution access to the near infrared range. {\bf For a quick description of
-up-comming/installed high resolution spectrographs see the introduction in} \citet{Andreasen2016}
-(referred to as Paper I).
-
-With the advance of the next generation {\bf high resolution} NIR spectrographs, we are still
-preparing the data analysis of stellar spectra, in particular how to get reliable atmospheric
-parameters \citep[see e.g.][]{Onehag2012,Lindgren2016,Andreasen2016}. The analysis of stellar
+With the advance of the next generation high resolution NIR spectrographs, we are still preparing
+the data analysis of stellar spectra, in particular how to get reliable atmospheric parameters
+\citep[see e.g.][]{Onehag2012,Lindgren2016,Andreasen2016,Passegger2016}. The analysis of stellar
 spectra is well understood for FGK stars in the optical part of the spectrum, however some work
 still needs to be done for the NIR part.
 
-We continue our series of studies to explore the use of the NIR domain to derive stellar parameters
-for FGK and M stars. Here we analyse the atlas of Arcturus and the spectrum of 10 Leo. For the
-analysis we use the iron line list presented in Paper I {\bf which is improved and updated in this
-work}. In Paper I we successfully tested our method on a slightly hotter star than the Sun, while in
-this work we aim to test the method on cooler stars. The strength of the NIR domain over the optical
-becomes clear when we move towards the cooler stars. Here we see less continuum depression and line
-blending due to in particular molecular features {\bf which are more prominent in the optical part
-for cool stars}. Moreover, the coolest stars emit more light in the NIR domain than the optical, and
-with the stars with the lowest masses being intrinsically faint, we thus obtain the majority of the
-flux here.
+We continue our study to explore the use of the NIR domain to derive stellar parameters for FGK and
+M stars using the curve-of-growth analysis with an iron line list, which was initiated in
+\citet{Andreasen2016} (referred to as Paper I). Here we analyse the atlas of Arcturus and the
+spectrum of 10 Leo. For the analysis we use the iron line list presented in Paper I which is
+improved and updated in this work. In Paper I we successfully tested our method on a slightly hotter
+star than the Sun, while in this work we aim to test the method on cooler stars. The strength of the
+NIR domain over the optical becomes clear when we move towards the cooler stars. Here we see less
+continuum depression and line blending due to in particular molecular features which are more
+prominent in the optical part for cool stars. Moreover, the coolest stars emit more light in the NIR
+domain than the optical, and with the stars with the lowest masses being intrinsically faint, we
+thus obtain the majority of the flux here.
+}
 
 
 
-\section{Data}
+
+\section{Stellar spectra}
 \label{sec:data}
-
-\subsection{The stars}
 
 While the community is currently on the verge to access large amounts of high resolution NIR
 spectra, the available spectra at the moment are sparse. We chose to use two stars cooler than the
 Sun since we used a star hotter than the Sun (the subgiant HD 20010) in Paper I {\bf as it was one
-of the stars with stellar atmospheric parameters closet to that of the Sun, thus making it a good
+of the stars with stellar atmospheric parameters closest to that of the Sun, thus making it a good
 test at the time}. We will however use all four stars in this work for various reasons. The
 solar spectrum will be used for inspecting the line list presented in Paper I. This spectrum was
 obtained from the Kitt Peak telescope by \citet{Hinkle1995}. The spectrum of HD 20010 will be reused
