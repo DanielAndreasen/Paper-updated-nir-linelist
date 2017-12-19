@@ -164,15 +164,15 @@ While the community is currently on the verge to access large amounts of high re
 spectra, the available spectra at the moment are sparse. We chose to use two stars cooler than the
 Sun since we used a star hotter than the Sun (the subgiant HD 20010) in Paper I {\bf as it was one
 of the stars with stellar atmospheric parameters closest to that of the Sun, thus making it a good
-test at the time}. We will however use all four stars in this work for various reasons. The
-solar spectrum will be used for inspecting the line list presented in Paper I. This spectrum was
-obtained from the Kitt Peak telescope by \citet{Hinkle1995}. The spectrum of HD 20010 will be reused
-from Paper I as well. This spectrum was obtained with the CRIRES spectrograph by
-\citet{Lebzelter2012} as part of the CRIRES-POP. HD 20010 will be reanalysed as to confirm the
-improvement of the refined line list which will be presented in the section below. The two stars
-which we have not analysed before are Arcturus and 10 Leo. These two extra stars will increase the
-range of spectral type for the test of the line list, allowing to test cool giant stars with
-different metallicities regimes.
+test at the time}. We will however use all four stars in this work for various reasons. The solar
+spectrum will be used for inspecting the line list presented in Paper I. This spectrum was obtained
+from the Kitt Peak telescope by \citet{Hinkle1995}. The spectrum of HD 20010 will be reused from
+Paper I as well {\bf in order to check that the line list works well for hotter stars after our
+modifications}. This spectrum was obtained with the CRIRES spectrograph by \citet{Lebzelter2012} as
+part of the CRIRES-POP. HD 20010 will be reanalysed as to confirm the improvement of the refined
+line list which will be presented in the section below. The two stars which we have not analysed
+before are Arcturus and 10 Leo. These two extra stars will increase the range of spectral type for
+the test of the line list, allowing to test cool giant stars with different metallicities regimes.
 
 
 Arcturus is one of the brightest stars on the Northern hemisphere, and is well
@@ -210,11 +210,14 @@ parameters from the literature obtained mostly from high resolution and high S/N
 Specifically for Arcturus, we use the same parameters as reported in Table 1 in} \citet{Jofre2014}.
 {\bf These parameters are a mean from the PASTEL catalogue between 2000 and 2012.} The parameters
 are the median values of all measurements for a given star, where the errors reported are the
-standard deviation of those values. $\xi_\mathrm{micro}$ is estimated using the empirical relation
-by \citet{Tsantaki2013} for {\bf HD 20010}, and \citet{Adibekyan2015} for the {\bf 10 Leo. For
-Arcturus the value is a mean of the derived microturbulence from different groups as explained in}
-\citet{Jofre2014}. This is done for each literature value in the catalogue. The value presented in
-the Table here is calculated on the same way as the rest of the parameters.
+standard deviation of those values. {\bf This also explains the slightly higher errors than what is
+usually possible with a single measurement.} $\xi_\mathrm{micro}$ is estimated using the empirical
+relation by \citet{Tsantaki2013} for {\bf HD 20010}, and \citet{Adibekyan2015} for the {\bf 10 Leo.
+The first relation by \citet{Tsantaki2013} is only valid for $\log g\ge3.85$, while the other
+relation is for giant stars. For Arcturus the value is a mean of the derived microturbulence from
+different groups as explained in} \citet{Jofre2014}. This is done for each literature value in the
+catalogue. The value presented in the Table here is calculated on the same way as the rest of the
+parameters.
 
 \begin{table*}[htb!]
     \caption{Summary of the four stars used in this work. The stellar parameters
@@ -234,50 +237,55 @@ the Table here is calculated on the same way as the rest of the parameters.
     \end{tabular}
 \end{table*}
 
-\subsection{The line list}
+\section{The line list}
 
 There have been different recent studies compiling line lists for high resolution NIR spectra. For M
-dwarfs there is the line list by \citet{Onehag2012,Lindgren2016}, which has been tested extensively
-on CRIRES spectra ($R\sim100\,000$) using the spectral synthesis method.
+dwarfs there is the line list by \citet{Onehag2012,Lindgren2016} {\bf which covers the J band},
+which has been tested extensively on CRIRES spectra ($R\sim100\,000$) using the spectral synthesis
+method. {\bf Then there is the work by \citet{Shetrone2015} for deriving parameters of giant stars
+using the H band in APOGEE spectra.}
 
-Since we wanted to compile a line list for FGK, and possible M dwarf stars, suitable for the EW
-method, we decided to start from the VALD3 database \citep{VALD1,VALD2}. This has not been done for
-the NIR previously. In Paper I we prepared a \ion{Fe}{I} and \ion{Fe}{II} line list in the NIR
-domain. The atomic data from the lines were in a wavelength region ranging from
-\SIrange{10000}{25000}{\AA}, covering the YJHK bands. EWs were measured for all iron lines with ARES
-\citep{Sousa2015a}, discarding any line with EW below \SI{5}{m\AA} or above \SI{200}{m\AA}. The
-oscillator strengths of the line list was calibrated using the solar spectrum, and the solar iron
-abundance from \citet{Gonzalez2000} at 7.47 dex {\bf which is used in our group as a reference and
-we chose to continue with this value for consistency with previous works performed by our group.}.
-The abundances of individual iron lines were obtained with the radiative transfer code MOOG
+Since we wanted to compile an iron line list (i.e. only \ion{Fe}{I} and \ion{Fe}{II}) for FGK, and
+possible M dwarf stars, suitable for the EW method, we decided to start from the VALD3 database
+\citep{VALD1,VALD2}. This was initially done in Paper I as we prepared a \ion{Fe}{I} and
+\ion{Fe}{II} line list in the NIR domain. The atomic data from the lines were in a wavelength region
+ranging from \SIrange{10000}{25000}{\AA}, covering the YJHK bands. EWs were measured for all iron
+lines with ARES \citep{Sousa2015a}, discarding any line with EW below \SI{5}{m\AA} or above
+\SI{200}{m\AA}. The oscillator strengths of the line list were calibrated using the solar spectrum,
+and the solar iron abundance from \citet{Gonzalez2000} at 7.47 dex. {\bf We chose this reference for
+consistency with our previous works on stellar parameters. Nevertheless, we note that this value is
+very similar to other more recent values \citep[e.g.][]{Asplund2009}}. The
+abundances of individual iron lines were obtained with the radiative transfer code MOOG
 \citep{Sneden1973} assuming LTE and using ATLAS model atmospheres \citep{Kurucz1993}. The line list
 was successfully used to derive atmospheric parameters for a late F star, HD20010.
 
 
-\section{Refining the NIR line list}
+\subsection{Refining the NIR line list}
 \label{sec:refining_the_line_list}
 
 In this work we will go one step forward, and test the previous line list for two K type stars.
 Before testing the line list from Paper I at cooler effective temperatures with two K stars, it is a
 primary goal of this work to refine the line list. This includes identifying recurring outliers
 (both from the work done in Paper I and in this work), and lines which we are not able to measure,
-e.g. if a line is amidst a forest of telluric lines. The refinement is needed, since we experienced
-{\bf an over-estimated metallicity of around 0.1 dex for HD 20010 compared to the literature value
-used in Paper I.} The errors on all parameters were also quite high compared to what is achievable
-for similar quality spectra from the visible. To identify these lines the solar atlas used in Paper
-I was revisited. In total 211 out of 295 \ion{Fe}{I} lines and 8 out of 13 \ion{Fe}{II} lines were
-removed in the process. Most of these were blended lines with either tellurics or other stellar
-lines. This procedure leaves us with 84 \ion{Fe}{I} lines and 5 \ion{Fe}{II} lines. These lines
-should be the best for deploying our technique of determining atmospheric stellar parameters.
+e.g. if a line is amidst a forest of telluric lines. {\bf These outliers are easier to find with
+three spectra compared to just one.} This refinement is needed, since we experienced {\bf an
+over-estimated metallicity of around 0.1 dex for HD 20010 compared to the literature value used in
+Paper I.} The errors on all parameters were also quite high compared to what is achievable for
+similar quality spectra from the visible. To identify these lines the solar atlas used in Paper I
+was revisited {\bf which is not clean of tellurics}. In total 211 out of 295 \ion{Fe}{I} lines and 8
+out of 13 \ion{Fe}{II} lines were removed in the process. Most of these were blended lines with
+either tellurics or other stellar lines. This procedure leaves us with 84 \ion{Fe}{I} lines and 5
+\ion{Fe}{II} lines. These lines should be the best for deploying our technique of determining
+atmospheric stellar parameters.
 
-During a second look at the Solar spectrum, the EW of the lines were measured by
-hand (this had previously been done automatically with ARES). Since we
-re-measured the EWs, the oscillator strengths, $\log \mathit{gf}$, had to be
-re-calibrated again. Here we simply change the $\log \mathit{gf}$ values for the
-measured EW until the abundance of a given line is equal to that of the Sun,
-using the same solar atmosphere model as in Paper I. The mean change in $\log
-\mathit{gf}$ for common lines is $-0.09 \pm 0.16$. The line list with the
-updated $\log \mathit{gf}$ is presented in Table~\ref{tab:linelist}.
+During a second look at the Solar spectrum, the EW of the lines were measured by hand (this had
+previously been done automatically with ARES). {\bf This process helped us identifying lines that
+was blended. In cases where there is severe line blending, the line was discarded as described
+above.} Since we re-measured the EWs, the oscillator strengths, $\log \mathit{gf}$, had to be
+re-calibrated again. Here we simply change the $\log \mathit{gf}$ values for the measured line until
+the abundance of a given line is equal to that of the Sun, using the same solar atmosphere model as
+in Paper I. The mean change in $\log \mathit{gf}$ for common lines is $-0.09 \pm 0.16$. The final
+revisited line list with the updated $\log \mathit{gf}$ is presented in Table~\ref{tab:linelist}.
 
 The \ion{Fe}{II} lines are used to determine $\log g$ by imposing ionization
 balance with the average \ion{Fe}{I} abundance. However, the low number of
@@ -289,13 +297,13 @@ numerous \ion{Fe}{I} lines.
 \section{Obtaining stellar parameters}
 \label{sec:method}
 
-The method used both in Paper I and here is based on the determination of the iron abundances
-on a number of lines from their measured EWs. This is done using the radiative transfer code MOOG
+The method used both in Paper I and here is based on the determination of the iron abundances on a
+number of lines from their measured EWs. This is done using the radiative transfer code MOOG
 \citep{Sneden1973} to determine the iron abundance from the measured EWs. Then, ionization balance
 between \ion{Fe}{I} and \ion{Fe}{II} lines, and excitation balance for all \ion{Fe}{I} lines is
 imposed, by changing the atmospheric parameters for the model atmosphere \citep[][ATLAS9 is used
 here]{Kurucz1993}. While this is a well tested method for getting atmospheric parameters utilising
-the optical part of the spectrum, {\bf little work have been done with the EW method in the NIR
+the optical part of the spectrum, {\bf little work has been done with the EW method in the NIR
 domain. Therefore we approach the measurements of the EWs with extra care, thus} the measurements of
 EWs are done with both manually (IRAF) and automatically (ARES) as a quality check. For both the
 automatically and manually measured EWs, we discard all lines with an EW below $\SI{5}{m}$\AA{} and
@@ -303,8 +311,8 @@ above $\SI{150}{m}$\AA{} before continuing the analysis. We decided to be a bit 
 the upper limit for the line strength decreasing it to $\SI{150}{m}$\AA{} to be sure that the
 Gaussian fit is a good approximation. Lines outside this range are either too weak to be reliably
 measured or saturated and do no longer contain information about the abundance. The entire procedure
-of obtaining the stellar parameters is done with the software FASMA \citep{Andreasen2017a} which
-does the minimization when imposing ionization end excitation balance.
+of obtaining the stellar parameters is done with the software \texttt{FASMA} \citep{Andreasen2017a}
+which does the minimization when imposing ionization end excitation balance.
 
 
 
@@ -320,13 +328,12 @@ $[\ion{Fe}/\ion{H}]=0.00\,$dex, and $\xi_\mathrm{micro}=\SI{1.00}{km/s}$.}.}
 \subsection{Revisiting HD 20010}
 \label{sec:hd20010}
 
-As a first step we revisit HD 20010 for which we derived atmospheric stellar
-parameters in Paper I using the newly revised line list presented in this paper.
-The results are shown in Table \ref{tab:results} along with the {\bf results for
-the two other stars analysed in this work}. We see better agreement with the
-average literature values adopted (especially $[\ion{Fe}/\ion{H}]$ and $\log g$),
-and smaller errors with the updated results. This suggests that the new line
-list is more reliable.
+As a first step we revisit HD 20010 for which we derived atmospheric stellar parameters in Paper I
+using the newly revised line list presented in this paper. The results are shown in Table
+\ref{tab:results} along with the {\bf results for the two other stars analysed in this work}. We see
+better agreement with the average literature values adopted (especially $[\ion{Fe}/\ion{H}]$ and
+$\log g$), and smaller errors with the updated results, {\bf although errors are still high compared
+to optical typical values}. This suggests that the new line list is more reliable.
 
 \begin{table}[htb!]
     \caption{Results for the three stars with first set of parameters are the
@@ -396,15 +403,14 @@ We did, however, measure a few lines from the winter data set to verify the
 agreement. Since the EWs are very similar we chose to only derive
 parameters of the summer set with EWs measured with ARES.
 
-{\bf Due to the low number of pressure sensitive \ion{Fe}{II} lines we derive}
-parameters with and without $\log g$ set to a fixed value (1.59\,dex, the average
-literature value adopted). The derivation of the parameters followed the
-procedure presented in Paper I, although we used the minimization routine of
-FASMA \citep{Andreasen2017a}. After we reached convergence using all the iron
-lines we were able to measure, one outlier above $3\sigma$ in abundance were
-removed, and the minimization routine was restarted. This process was done
-iteratively until there were no more outliers. The final results are presented
-in Table \ref{tab:results} together with mean parameters from the literature.
+{\bf Due to the low number of pressure sensitive \ion{Fe}{II} lines we derive} parameters with and
+without $\log g$ set to a fixed value (1.59 dex, the average literature value adopted). The
+derivation of the parameters followed the procedure presented \citet{Andreasen2017a} with the
+minimization routine \texttt{FASMA}. This is similar to the approach done in Paper I. After we
+reached convergence using all the iron lines we were able to measure, one outlier above $3\sigma$ in
+abundance were removed, and the minimization routine was restarted. This process was done
+iteratively until there were no more outliers. The final results are presented in Table
+\ref{tab:results} together with mean parameters from the literature.
 
 
 \begin{figure}[htpb!]
@@ -418,10 +424,10 @@ in Table \ref{tab:results} together with mean parameters from the literature.
     \label{fig:parameters}
 \end{figure}
 
-{\bf We derive $T_\mathrm{eff}$ a \SI{100}{K} too high for $\log g$ fixed compared to the
-literature, which is just wihtin the errorbars of the two measurements. When $\log g$ is derived we
-see a \SI{200}{K} difference. This especially shows the importance of $\log g$ which we derive 0.4
-dex lower than the literature value. The metallicity is derived with rather high precision (0.04
+{\bf We derive a $T_\mathrm{eff}$ \SI{100}{K} higher than in the literature with $\log g$ fixed,
+which is just within the errorbars of the two measurements. When $\log g$ is derived we see a
+\SI{200}{K} difference. This especially shows the effect when $\log g$ is wrong which we here derive
+0.4 dex lower than the literature value. The metallicity is derived with rather high precision (0.04
 dex) when $\log g$ is fixed and 0.10 dex when it is derived. The value in both cases are well within
 the errors of the literature value.}
 
@@ -429,14 +435,12 @@ the errors of the literature value.}
 \subsection{10 Leo}
 \label{sec:10Leo}
 
-The approach for determining the atmospheric stellar parameters for 10 Leo is
-identical to Arcturus. We use ARES on each band (YJ, H, and K-band) separately.
-For the small gaps in the spectrum, we simply set the flux to 1, since the
-spectrum is already normalised. This will also prevent ARES to identify and
-measure any lines in these regions. The EWs from the three regions are combined
-to one final line list used for the determination of the parameters. The
-final results can be seen in Fig.~\ref{fig:parameters} and
-Table~\ref{tab:results}.
+The approach for determining the atmospheric stellar parameters for 10 Leo is identical to Arcturus,
+{\bf although we did not measure the EWs by hand here}. We use ARES on each band (YJ, H, and K-band)
+separately. For the small gaps in the spectrum, we simply set the flux to 1, since the spectrum is
+already normalised. This will also prevent ARES to identify and measure any lines in these regions.
+The EWs from the three regions are combined to one final line list used for the determination of the
+parameters. The final results can be seen in Fig.~\ref{fig:parameters} and Table~\ref{tab:results}.
 
 Generally the derived parameters are in excellent agreement with the literature
 values listed here.  For $T_\mathrm{eff}$ we were \SI{64}{K} off with $\log
@@ -524,15 +528,15 @@ correction is not necessary for obtaining atmospheric parameters.
 
 \subsection{The refined line list}
 
-The line list from Paper I has been refined, i.e. several blended or
-otherwise unreliable measured lines have been removed. This was done using the
-same solar spectrum as in Paper I. In order to test this new line list it was
-first used to re-derive parameters for HD 20010, which was the test case in
-Paper I. Using the refined line list we were able to reduce the error, and
-derive parameters closer to the literature values. Especially important is the
-derived metallicity which was previously over-estimated by $\sim0.1$ dex. With
-the refined line list the metallicity went from $-0.14\pm0.14$ dex to
-$-0.18\pm0.11$, showing an overall improvement.
+The line list from Paper I has been refined, i.e. several blended or otherwise unreliable measured
+lines have been removed. {\bf Many of these lines were not identified in the previous work since we
+applied an automatic approach, mainly due to the extreme large amount of iron transitions available
+in the YJHK bands.} This was done using the same solar spectrum as in Paper I. In order to test this
+new line list it was first used to re-derive parameters for HD 20010, which was the test case in
+Paper I. Using the refined line list we were able to reduce the error, and derive parameters closer
+to the literature values. Especially important is the derived metallicity which was previously
+over-estimated by $\sim0.1$ dex. With the refined line list the metallicity went from $-0.14\pm0.14$
+dex to $-0.18\pm0.11$, showing an overall improvement.
 
 Furthermore, the refined line list was tested on the two K giants, Arcturus and 10 Leo. We see a
 good agreement between the derived parameters and the literature values used for comparison {\bf as
@@ -540,14 +544,12 @@ discussed above in the text. Additionally we mark two lines as outliers in Table
 which were both removed during the derivation of stellar parameters for both stars. These lines are
 the two \ion{Fe}{I} lines at \SI{10167.47}{\AA{}} and \SI{11641.80}{\AA{}}.}
 
-While this line list, and in particular this method for obtaining stellar
-atmospheric parameters, will fail at higher $T_\mathrm{eff}$, (above
-$\sim\SI{7000}{K}$\footnote{Due to the low number of absorption lines and
-non-LTE effects.}) it should still work at lower $T_\mathrm{eff}$. The biggest
-challenge in this regime is the continuum depression by molecular lines, however
-this is a smaller effect compared with the optical part of the spectrum. Hence
-it will still be interesting to see how far this line list might work in terms
-of $T_\mathrm{eff}$.
+While this line list, and in particular this method for obtaining stellar atmospheric parameters,
+will fail at higher $T_\mathrm{eff}$, (above $\sim\SI{7000}{K}$\footnote{Due to the low number of
+absorption lines and non-LTE effects.}) it should still work at lower $T_\mathrm{eff}$. The biggest
+challenge in this regime is the continuum depression by molecular lines {\bf for cool stars},
+however this is a smaller effect compared with the optical part of the spectrum. Hence it will still
+be interesting to see how far this line list might work in terms of $T_\mathrm{eff}$.
 
 
 
@@ -571,7 +573,7 @@ the same methodology. The obvious next step is to approach the even cooler M
 stars. Particular interesting are the M dwarf stars, known to be prone forming
 rocky planets. As important as cooler stars, we have yet to test our line list
 on any dwarf stars other than the Sun for which our line list is calibrated. The
-upcoming spectral library from CARMENES (priv. comm. with P. Amado) will provide
+upcoming spectral library from CARMENES \citep{Reiners2017} will provide
 the community with high quality spectra and allow us to extend our test to many
 different spectral types of interest.
 
@@ -579,24 +581,19 @@ different spectral types of interest.
 
 \begin{acknowledgements}
 
-We thank Jos\'e Caballero for many useful comments during the process which
-led to this paper.
+We thank Jos\'e Caballero for many useful comments during the process which led to this paper.
 
-This work was supported by Funda\c{c}\~ao para a Ci\^encia e a Tecnologia, FCT,
-(ref. UID/FIS/04434/2013, PTDC/FIS-AST/1526/2014, and PTDC/FIS-AST/7073/2014)
-through national funds and by FEDER through COMPETE2020 (ref.
-POCI-01-0145-FEDER-007672, POCI-01-0145-FEDER-016886, and
-POCI-01-0145-FEDER-016880). N.C.S., and S.G.S. acknowledge the support from FCT
-through Investigador FCT contracts of reference IF/00169/2012, and
-IF/00028/2014, respectively, and POPH/FSE (EC) by FEDER funding through the
-program “Programa Operacional de Factores de Competitividade - COMPETE”. E.D.M
-acknowledge the support from the FCT in the form of the grants
-IF/00849/2015/CP1273/CT0003. JJN acknowledges support from FCT in the form of a
-“PhD::Space” (PD/00040/2012) network doctoral grant, of reference
-PD/BD/52700/2014.
+This work was supported by Funda\c{c}\~ao para a Ci\^encia e a Tecnologia, FCT, (ref.
+UID/FIS/04434/2013, PTDC/FIS-AST/1526/2014, and PTDC/FIS-AST/7073/2014) through national funds and
+by FEDER through COMPETE2020 (ref. POCI-01-0145-FEDER-007672, POCI-01-0145-FEDER-016886, and
+POCI-01-0145-FEDER-016880). N.C.S., and S.G.S. acknowledge the support from FCT through Investigador
+FCT contracts of reference IF/00169/2012, and IF/00028/2014, respectively, and POPH/FSE (EC) by
+FEDER funding through the program “Programa Operacional de Factores de Competitividade - COMPETE”.
+E.D.M acknowledge the support from the FCT in the form of the grants IF/00849/2015/CP1273/CT0003.
+JJN acknowledges support from FCT in the form of a “PhD::Space” (PD/00040/2012) network doctoral
+grant, of reference PD/BD/52700/2014.
 
-This research has made use of the SIMBAD database operated at CDS, Strasbourg
-(France).
+This research has made use of the SIMBAD database operated at CDS, Strasbourg (France).
 
 \end{acknowledgements}
 
@@ -611,7 +608,7 @@ This research has made use of the SIMBAD database operated at CDS, Strasbourg
 
 The complete refined line list with Solar EWs measured by hand using IRAF,
 and the three stars also analysed in this work. Note that the EWs given here are
-after removal of outliers in abundance. This is done automatically with FASMA
+after removal of outliers in abundance. This is done automatically with \texttt{FASMA}
 \citep{Andreasen2017a}.
 
 \begin{onecolumn}
