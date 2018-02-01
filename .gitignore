@@ -2,6 +2,7 @@
 *.pyc
 *.fits
 Answer*.txt
+*.txt
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
