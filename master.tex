@@ -77,7 +77,7 @@ Arcturus and 10 Leo.}}
 % Methods
 {Our spectroscopic analysis is based on the iron excitation and ionization balance done in LTE and a
 line list of \ion{Fe}{I} and \ion{Fe}{II} lines in the NIR domain. The line list is being refined
-from our previous study, allowing us to obtain more reliable parameters.}
+from our previous study, allowing us to obtain more reliable parameters for a wider range of stars.}
 % Results
 {{\bf We present an updated line list for the derivation of stellar parameters in the NIR that has
 allowed us to successfully} obtain parameters for two K giants in agreement with average literature
@@ -112,7 +112,7 @@ example]{Kjeldsen1995}, and different spectroscopic approaches such as synthetic
 e.g.][]{Onehag2012,Tsantaki2017} and curve-of-growth analysis \citep[see
 e.g.][]{Sousa2008a,Andreasen2017a}.
 
-Not all the methods provide the same information, for example can asteroseismology alone not provide
+Not all the methods provide the same information, for example asteroseismology alone can not provide
 information of $T_\mathrm{eff}$ but is in turn dependent on this parameter. On the other hand it is
 also well known that the surface gravities provided by asteroseismology are typically more reliable
 than those from spectroscopy \citep[see e.g. the discussion by][]{Mortier2014}.
@@ -121,18 +121,19 @@ The derivation of stellar atmospheric parameters can be used to benchmark stella
 models, the study of different galactic populations and the galactic chemical evolution, and in
 recent years to study star-planet correlations. With the advance of high precision instruments, we
 have open entire new windows into the study of stellar astrophysics with e.g. the \emph{Kepler} and
-\emph{CoRoT} space missions \citep[see e.g.][]{Christensen-Dalsgaard2010,Chaplin2011,Huber2014}, and
+\emph{CoRoT} space missions \citep[see e.g.][]{ChristensenDalsgaard2010,Chaplin2011,Huber2014}, and
 spectrographs like HARPS for searching new exoplanets \citep{HARPS} and UVES \citep{UVES}.
 
 In recent years there has been an emphasis on exploring the near-IR (NIR) domain of the spectrum
 with high-resolution spectrographs ($R\ge50\,000$). These includes the GIANO spectrograph installed
 at \emph{Telescopio Nazionale Galileo} (TNG) \citep{GIANO}, as is the \emph{infrared doppler
-instrument} (IRD) installed at the Subaru telescope \citep{IRD} and \emph{Calar Alto high-Resolution
-search for M dwarfs with Exoearths with Near-infrared and optical Échelle Spectrographs} (CARMENES)
-at the \SI{3.5}{m} telescope at Calar Alto Observatory \citep{CARMENES}. Two new spectrographs are
+instrument} (IRD) installed at the Subaru telescope \citep{IRD}, \emph{iShell} at the NASA Infrared
+Telescope Facility on Maunakea \citep{Rayner2016}, and \emph{Calar Alto high-Resolution search for M
+dwarfs with Exoearths with Near-infrared and optical Échelle Spectrographs} (CARMENES) at the
+\SI{3.5}{m} telescope at Calar Alto Observatory \citep{CARMENES}. Three new spectrographs are
 planned for the near future: 1) The \emph{CRyogenic InfraRed Echelle Spectrograph Upgrade Project}
 (CRIRES+) at the \emph{Very Large Telescope} (VLT) \citep{CRIRESp} with expected first light in
-2017, and 2) \emph{un SpectroPolarimètre Infra-Rouge A Near-InfraRed Spectropolarimeter} (SPIRou) at
+2018, and 2) \emph{un SpectroPolarimètre Infra-Rouge A Near-InfraRed Spectropolarimeter} (SPIRou) at
 \emph{The Canada-France-Hawaii Telescope} (CFHT) \citep{SPIROU1,SPIROU2} with expected first light
 very soon, and 3) \emph{Near-InfraRed Planet Searcher to Join HARPS on the ESO 3.6-metre Telescope}
 (NIRPS) \citep{Bouchy2017}. The spectral resolutions for these spectrographs range between $50\,000$
@@ -147,14 +148,15 @@ work still needs to be done for the NIR part in order to make full use of these 
 In this paper we continue our study to explore the use of the NIR domain to derive stellar
 parameters for FGK and M stars using the curve-of-growth analysis with an iron line list, which was
 initiated in \citet{Andreasen2016} (referred to as Paper I). Here we analyse the atlas of Arcturus
-and the spectrum of 10 Leo. For the analysis we use the iron line list presented in Paper I which is
-improved and updated in this work. In Paper I we successfully tested our method on a slightly hotter
-star than the Sun, while in this work we aim to test the method on cooler stars. The strength of the
-NIR domain over the optical becomes clear when we move towards the cooler stars. Here we see less
-continuum depression and line blending due to in particular molecular features which are more
-prominent in the optical part for cool stars. Moreover, the coolest stars emit more light in the NIR
-domain than the optical, and with the stars with the lowest masses being intrinsically faint, we
-thus obtain the majority of the flux here.
+and the spectrum of 10 Leo which serves as benchmark for the evaluation of our method and linelist
+in the NIR.. For the analysis we use the iron line list presented in Paper I which is improved and
+updated in this work. In Paper I we successfully tested our method on a slightly hotter star than
+the Sun, while in this work we aim to test the method on cooler stars extending the aplicability of
+our NIR method. The strength of the NIR domain over the optical becomes clear when we move towards
+the cooler stars. Here we see less continuum depression and line blending due to in particular
+molecular features which are more prominent in the optical part for cool stars. Moreover, the
+coolest stars emit more light in the NIR domain than the optical, and with the stars with the lowest
+masses being intrinsically faint, we thus obtain the majority of the flux here.
 
 In Section~\ref{sec:data} we present the NIR spectra used in this analysis, while we explain how the
 previous iron line list is being refined in Section~\ref{sec:linelist}. The method to obtain the
@@ -178,13 +180,14 @@ spectrum will be used for inspecting the line list presented in Paper I. This sp
 from the Kitt Peak telescope by \citet{Hinkle1995}.
 
 The spectrum of HD 20010 will be reused from Paper I as well {\bf in order to check that the line
-list works well for hotter stars after our modifications}. This spectrum was obtained with the
-CRIRES spectrograph by \citet{Lebzelter2012} as part of the CRIRES-POP. HD 20010 will be reanalysed
-as to confirm the improvement of the refined line list which will be presented in the section below.
+list continues to works well for hotter stars after our modifications}. This spectrum was obtained
+with the CRIRES spectrograph by \citet{Lebzelter2012} as part of the CRIRES-POP. HD 20010 will be
+reanalysed as to confirm the improvement of the refined line list which will be presented in the
+section below.
 
-The two {\bf new stars that are now used to test the line list as well} Arcturus and 10 Leo. These
-two extra stars will increase the range of spectral type for the test of the line list, allowing to
-test cool giant stars with different metallicities regimes.
+The two {\bf new stars, that are now used to test our EW method the line list as well,} are Arcturus
+and 10 Leo. These two extra stars will increase the range of spectral type for the test of the line
+list, allowing to test cool giant stars with different metallicities regimes.
 
 Arcturus is one of the brightest stars on the Northern hemisphere, and is well
 studied \citep[see e.g.][to mention just a
@@ -208,7 +211,7 @@ small gaps are present in the spectrum due to tellurics that could not be
 properly removed, low S/N, bad pixels, etc. Rather than giving an uncertain
 interpolation, \citet{Nicholls2017} decided to leave small gaps in the data.
 This has very little effect on our line by line analysis, however, due to those
-gaps and as we will se below, we were unable to measure one \ion{Fe}{II} line which are generally
+gaps and as we will see below, we were unable to measure one \ion{Fe}{II} line which are generally
 important to determine the surface gravity.
 
 The data for the two stars are very similar in terms of S/N (around 300 as
@@ -223,7 +226,7 @@ Specifically for Arcturus, we use the same parameters as reported in Table 1 in}
 are the median values of all measurements for a given star, where the errors reported are the
 standard deviation of those values. {\bf This also explains the slightly higher errors than what is
 usually possible with a single measurement.} $\xi_\mathrm{micro}$ is estimated using the empirical
-relation by \citet{Tsantaki2013} for {\bf HD 20010}, and \citet{Adibekyan2015} for the {\bf 10
+relation by \citet{Tsantaki2013} for {\bf HD 20010}, and \citet{Adibekyan2015} for {\bf 10
 Leo\footnote{The two relations are valid for different evolutionary stages, main sequence stars and
 giants, respectively.}. The first relation by \citet{Tsantaki2013} is only valid for $\log
 g\ge3.85$, while the other relation is for giant stars. For Arcturus the value is a mean of the
@@ -258,13 +261,13 @@ same way as the rest of the parameters.
 \label{sec:linelist}
 
 There have been different recent studies compiling line lists for high resolution NIR spectra. For M
-dwarfs there is the line list by \citet{Onehag2012,Lindgren2016} {\bf which covers the J band},
+dwarfs there is the line list by \citet{Onehag2012,Lindgren2016} {\bf which covers the J band}, and
 which has been tested extensively on CRIRES spectra ($R\sim100\,000$) using the spectral synthesis
 method. {\bf Then there is the work by \citet{Shetrone2015} for deriving parameters of giant stars
-using the H band in APOGEE spectra.}
+using the H band in APOGEE spectra also with the spectral synthesis method.}
 
 {\bf Our goal is to compile an iron line list that will be optimised to derive parameters for FGK
-and possible M dwarf stars using an EW method using the same approach as in e.g. \citet{Sousa2008a}.
+and possibly M dwarf stars using an EW method with the same approach as in e.g. \citet{Sousa2008a}.
 To achieve this we start with the list of NIR lines that we found in VALD \citep{VALD1,VALD2} and
 then use a selection process to compile the best lines for our method.} This was initially done in
 Paper I as we prepared a \ion{Fe}{I} and \ion{Fe}{II} line list in the NIR domain. The atomic data
@@ -297,8 +300,8 @@ one. A tentative to refine this is motivated by the fact that in Paper I we foun
 $[\ion{Fe}/\ion{H}]$ values for HD 20010 that were about 0.1 dex higher than those found in the
 literature. Given that the errors on all the parameters in Paper I were significantly higher when
 compared with what we can do in the analysis of the optical spectrum, in the refinement of the line
-list we were more rigid in the constrains to select the best lines. This is also one of the reasons
-for the drastic decrease of the number of lines that we present here}.
+list we were more rigid in the constrains to select the best lines. This is also another reason for
+the drastic decrease of the number of lines that we present here}.
 
 To identify outliers the solar atlas used in Paper I was revisited {\bf which is not clean of
 tellurics}. In total 211 out of 295 \ion{Fe}{I} lines and 8 out of 13 \ion{Fe}{II} lines were
@@ -309,7 +312,7 @@ parameters.
 
 During a second look at the Solar spectrum, the EW of the lines were measured by hand (this had
 previously been done automatically with ARES). {\bf This process helped us identifying lines that
-was blended. In cases where there is severe line blending, the line was discarded as described
+were blended. In cases where there is severe line blending, the line was discarded as described
 above.} Since we re-measured the EWs, the oscillator strengths, $\log \mathit{gf}$, had to be
 re-calibrated again. Here we simply change the $\log \mathit{gf}$ values for the measured line until
 the abundance of a given line is equal to that of the Sun, using the same solar atmosphere model as
@@ -335,11 +338,11 @@ here]{Kurucz1993}. While this is a well tested method for getting atmospheric pa
 the optical part of the spectrum, {\bf little work has been done with the EW method in the NIR
 domain. Therefore we approach the measurements of the EWs with extra care, thus} the measurements of
 EWs were done with both manually (IRAF) and automatically (ARES) as a quality check. For both the
-automatically and manually measured EWs, we discard all lines with an EW below $\SI{5}{m}$\AA{} and
-above $\SI{150}{m}$\AA{} before continuing the analysis. We decided to be a bit more constrained in
-the upper limit for the line strength to be sure that the Gaussian fit is a good approximation.
-Lines outside this range are either too weak to be reliably measured or saturated. The entire
-procedure of obtaining the stellar parameters is done with the software \texttt{FASMA}
+automatically and manually measured EWs, we discard at this point all lines with an EW below
+$\SI{5}{m}$\AA{} and above $\SI{150}{m}$\AA{} before continuing the analysis. We decided to be a bit
+more constrained in the upper limit for the line strength to be sure that the Gaussian fit is a good
+approximation. Lines outside this range are either too weak to be reliably measured or saturated.
+The entire procedure of obtaining the stellar parameters is done with the software \texttt{FASMA}
 \citep{Andreasen2017a} which does the minimization when imposing ionization end excitation balance.
 
 
@@ -349,9 +352,10 @@ procedure of obtaining the stellar parameters is done with the software \texttt{
 \label{sec:results}
 
 {\bf The results for the revisited spectrum of HD 20010, and the two additional K stars are
-presented here. We chose not to present the results for the Sun since the line list is calibrated
-for this star\footnote{The solar parameters used were: $T_\mathrm{eff}=\SI{5777}{K}$, $\log
-g=4.44\,$dex, $[\ion{Fe}/\ion{H}]=0.00\,$dex, and $\xi_\mathrm{micro}=\SI{1.00}{km/s}$.}.}
+presented here. These results serve as a benchmark for the presented NIR EW method and the
+respective NIR line list. We chose not to present the results for the Sun since the line list is
+calibrated for this star\footnote{The solar parameters used were: $T_\mathrm{eff}=\SI{5777}{K}$,
+$\log g=4.44\,$dex, $[\ion{Fe}/\ion{H}]=0.00\,$dex, and $\xi_\mathrm{micro}=\SI{1.00}{km/s}$.}.}
 
 \subsection{Revisiting HD 20010}
 \label{sec:hd20010}
@@ -360,9 +364,8 @@ As a first step we revisit HD 20010 for which we derived atmospheric stellar par
 using the newly revised line list presented in this paper. The results are shown in Table
 \ref{tab:results} along with the {\bf results for the two other stars analysed in this work}. Our
 new analysis, based on the refined line-list (see above), provides results that are in better
-agreement with the average literature values adopted (especially $[\ion{Fe}/\ion{H}]$ and $\log g$),
-and smaller errors with the updated results. This suggests that the new line list is indeed more
-reliable.
+agreement with the average literature values adopted (especially $\log g$), and smaller errors with
+the updated results. This suggests that the new line list is indeed more reliable.
 
 \begin{table}[htb!]
     \caption{Results for the three stars with first set of parameters are the
@@ -453,10 +456,10 @@ iteratively until there were no more outliers. The final results are presented i
     \centering
     \includegraphics[width=1.0\linewidth]{figures/parameters.pdf}
     \caption{Parameters for Arcturus, 10 Leo, and HD 20010 (revisited in this paper). The blue
-             points show the literature values as discussed in the text. The green points are the
-             derived values with $\log g$ fixed to the literature value, and the red points show the
-             derived parameters when $\log g$ is also derived. {\bf For $T_\mathrm{eff}$ the results
-             are shown compared to the literature value to see the difference.}}
+             points show the literature values as discussed in the text. The orange points are the
+             derived values with $\log g$ fixed to the literature value, and the green points show
+             the derived parameters when $\log g$ is also derived. {\bf For $T_\mathrm{eff}$ and
+             $\log g$ the results are shown compared to the literature value to see the difference.}}
     \label{fig:parameters}
 \end{figure}
 
@@ -571,8 +574,7 @@ applied an automatic approach, mainly due to the extreme large amount of iron tr
 in the YJHK bands.} This was done using the same solar spectrum as in Paper I. In order to test this
 new line list it was first used to re-derive parameters for HD 20010, which was the test case in
 Paper I. Using the refined line list we were able to reduce the error, and derive parameters closer
-to the literature values. Especially important is the derived metallicity which was previously
-over-estimated by $\sim0.1$ dex.
+to the literature values.
 
 Furthermore, the refined line list was tested on the two K giants, Arcturus and 10 Leo. We see a
 good agreement between the derived parameters and the literature values used for comparison {\bf as
