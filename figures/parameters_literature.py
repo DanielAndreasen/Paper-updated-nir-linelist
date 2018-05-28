@@ -57,8 +57,8 @@ for number, star in enumerate(stars):
 stars = ['Arcturus', '10 Leo', 'HD20010']
 ax4.set_xticks(range(len(stars)))
 ax4.set_xticklabels(map(lambda x: x.replace('.dat', ''), stars))
-ax1.set_ylabel('Teff [K]')
-ax2.set_ylabel('logg')
+ax1.set_ylabel('$\Delta$ Teff [K]')
+ax2.set_ylabel('$\Delta$ logg')
 ax3.set_ylabel('[Fe/H]')
 ax4.set_ylabel(r'$\xi_\mathrm{micro}$ [km/s]')
 

@@ -1,0 +1,888 @@
+% mnras_template.tex
+%
+% LaTeX template for creating an MNRAS paper
+%
+% v3.0 released 14 May 2015
+% (version numbers match those of mnras.cls)
+%
+% Copyright (C) Royal Astronomical Society 2015
+% Authors:
+% Keith T. Smith (Royal Astronomical Society)
+
+% Change log
+%
+% v3.0 May 2015
+%    Renamed to match the new package name
+%    Version number matches mnras.cls
+%    A few minor tweaks to wording
+% v1.0 September 2013
+%    Beta testing only - never publicly released
+%    First version: a simple (ish) template for creating an MNRAS paper
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Basic setup. Most papers should leave these options alone.
+\documentclass[a4paper,fleqn,usenatbib]{mnras}
+
+% MNRAS is set in Times font. If you don't have this installed (most LaTeX
+% installations will be fine) or prefer the old Computer Modern fonts, comment
+% out the following line
+\usepackage{newtxtext,newtxmath}
+% Depending on your LaTeX fonts installation, you might get better results with one of these:
+%\usepackage{mathptmx}
+%\usepackage{txfonts}
+
+% Use vector fonts, so it zooms properly in on-screen viewing software
+% Don't change these lines unless you know what you are doing
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+
+
+%%%%% AUTHORS - PLACE YOUR OWN PACKAGES HERE %%%%%
+
+% Only include extra packages if you really need them. Common packages are:
+\usepackage{graphicx}	% Including figure files
+\usepackage{amsmath}	% Advanced maths commands
+\usepackage{amssymb}	% Extra maths symbols
+
+%\sisetup{range-units = brackets}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% AUTHORS - PLACE YOUR OWN COMMANDS HERE %%%%%
+
+% Please keep new commands to a minimum, and use \newcommand not \def to avoid
+% overwriting existing commands. Example:
+%\newcommand{\pcm}{\,cm$^{-2}$}	% per cm-squared
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%% TITLE PAGE %%%%%%%%%%%%%%%%%%%
+
+% Title of the paper, and the short title which is used in the headers.
+% Keep the title short and informative.
+\title[High resolution near-IR spectroscopic stellar characterization]{High resolution 
+near-IR spectroscopic stellar characterization: Refining an iron line list}
+
+% The list of authors, and the short list which is used in the headers.
+% If you need two or more lines of authors, add an extra line using \newauthor
+\author[D.~T.~Andreasen et al.]{
+D.~T.~Andreasen,$^{1,2}$
+S.~G.~Sousa,$^{2}$\thanks{E-mail: sergio.sousa@astro.up.pt}
+E.~Delgado Mena $^{2}$
+N.~C.~Santos$^{1,2}$
+\newauthor
+T.~Lebzelter$^{2}$
+A.~Mucciarelli$^{4,5}$
+and J.J.~Neal$^{1,2}$
+\\
+% List of institutions
+$^{1}$Instituto de Astrof\'isica e Ci\^encias do Espa\c{c}o, Universidade do Porto, CAUP, Rua das Estrelas, 4150-762 Porto, Portugal,\\
+$^{2}$Departamento de F\'isica e Astronomia, Faculdade de Ci\^encias, Universidade do Porto, Rua Campo Alegre, 4169-007 Porto, Portugal\\
+$^{3}$Institute for Astrophysics, University of Vienna, T\"urkenschanzstrasse 17, 1180 Vienna, Austria\\
+$^{4}$Dipartimento di Fisica e Astronomia, Universita' degli Studi di Bologna, Viale Berti Pichat, 6/2, 40126, Bologna, Italy\\
+$^{5}$INAF - Osservatorio Astronomico di Bologna, Via Ranzani 1, 40127, Bologna, Italy
+}
+
+% These dates will be filled out by the publisher
+\date{Accepted XXX. Received YYY; in original form ZZZ}
+
+% Enter the current year, for the copyright statements etc.
+\pubyear{2018}
+
+% Don't change these lines
+\begin{document}
+\label{firstpage}
+\pagerange{\pageref{firstpage}--\pageref{lastpage}}
+\maketitle
+
+% Abstract of the paper
+\begin{abstract}
+% This is a simple template for authors to write new MNRAS papers.
+% The abstract should briefly describe the aims, methods, and main results of the paper.
+% It should be a single paragraph not more than 250 words (200 words for Letters).
+% No references should appear in the abstract.
+
+Stellar atmospheric parameters for FGK stars are commonly obtained using high resolution and 
+high S/N optical spectroscopy. The advent of a new generation of high resolution ($R>50\,000$) 
+near-IR spectrographs opens the possibility of using classic spectroscopic methods with 
+high resolution and high S/N in the NIR spectral window.
+We aim to refine a NIR iron line list used for the determination of stellar atmospheric parameters
+using an Equivalent-Width method. To test the new line list we derive parameters of two K giant stars,
+Arcturus and 10 Leo.
+The spectroscopic analysis applied here is based on the iron excitation and ionization balance assuming LTE 
+and a new line list of \ion{Fe}{I} and \ion{Fe}{II} lines in the NIR domain. The line list is being refined
+from our previous study so it can now be applyed to a wider range of spectral types.
+We present an updated list of lines in the NIR that allow us to successfully obtain parameters from NIR spectroscopy 
+for two K giants.
+With these positive results our goal is to extend the method towards cooler stars, thus
+allowing us to explore the M dwarf stars in the future. The improvement of the derivation of
+stellar parameters for M dwarfs is very important for the study of the Galactic Chemical Evolution
+and crucial for the characterisation of many Earth-like planets, expected to be very common around
+these kind of stars.
+
+
+\end{abstract}
+
+% Select between one and six entries from the list of approved keywords.
+% Don't make up new ones.
+\begin{keywords}
+stars: fundamental parameters -- techniques: spectroscopic -- methods: data analysis -- stars: abundances
+\end{keywords}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%% BODY OF PAPER %%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+\label{sec:introduction}
+% This is a simple template for authors to write new MNRAS papers.
+% See \texttt{mnras\_sample.tex} for a more complex example, and \texttt{mnras\_guide.tex}
+% for a full user guide.
+% 
+% All papers should start with an Introduction section, which sets the work
+% in context, cites relevant earlier studies in the field by \citet{Others2013},
+% and describes the problem the authors aim to solve \citep[e.g.][]{Author2012}.
+
+
+The study of stellar atmospheric parameters have always been important in astronomy. These
+parameters consists of e.g. the effective temperature, the surface gravity, the chemical composition
+of the stellar atmosphere, and the overall metallicity (where $[\ion{Fe}/\ion{H}]$ is often used as
+a proxy). These, or a subset of these, can be derived with many different methods such as, but not
+limited to, the infrared flux method (IRFM) \citep{Blackwell1977}, temperature-metallicity-colour
+correlations \citep[see e.g.][]{Ramirez2005b}, asteroseismology \citep[see][for a classic
+example]{Kjeldsen1995}, and different spectroscopic approaches such as synthetic fitting \citep[see
+e.g.][]{Onehag2012,Tsantaki2017} and curve-of-growth analysis \citep[see e.g.][]{Sousa2008a,Andreasen2017a}.
+
+Not all the methods provide the same information, for example asteroseismology alone can not provide
+information of $T_\mathrm{eff}$ but is in turn dependent on this parameter. On the other hand it is
+also well known that the surface gravities provided by asteroseismology are typically more reliable
+than those from spectroscopy alone \citep[see e.g. the discussion by][]{Mortier2014}.
+
+The derivation of stellar atmospheric parameters can be used to benchmark stellar evolutionary
+models, the study of different galactic populations and the galactic chemical evolution, and in
+recent years to study star-planet correlations. With the advance of high precision instruments, we
+have open entire new windows into the study of stellar astrophysics with e.g. the \emph{Kepler} and
+\emph{CoRoT} space missions \citep[see e.g.][]{ChristensenDalsgaard2010,Chaplin2011,Huber2014}, and
+spectrographs like HARPS for searching new exoplanets \citep{HARPS} and UVES \citep{UVES}.
+
+In recent years there has been an emphasis on exploring the near-IR (NIR) domain of the spectrum
+with high-resolution spectrographs ($R\ge50\,000$). These includes the GIANO spectrograph installed
+at \emph{Telescopio Nazionale Galileo} (TNG) \citep{GIANO}, as is the \emph{infrared doppler
+instrument} (IRD) installed at the Subaru telescope \citep{IRD}, \emph{iShell} at the NASA Infrared
+Telescope Facility on Maunakea \citep{Rayner2016}, and \emph{Calar Alto high-Resolution search for M
+dwarfs with Exoearths with Near-infrared and optical \'echelle Spectrographs} (CARMENES) at the
+3.5m telescope at Calar Alto Observatory \citep{CARMENES}. Three new spectrographs are
+planned for the near future: 1) The \emph{CRyogenic InfraRed Echelle Spectrograph Upgrade Project}
+(CRIRES+) at the \emph{Very Large Telescope} (VLT) \citep{CRIRESp} with expected first light in
+2018, and 2) \emph{un SpectroPolarim\`etre Infra-Rouge A Near-InfraRed Spectropolarimeter} (SPIRou) at
+\emph{The Canada-France-Hawaii Telescope} (CFHT) \citep{SPIROU1,SPIROU2} with expected first light
+very soon, and 3) \emph{Near-InfraRed Planet Searcher to Join HARPS on the ESO 3.6-metre Telescope}
+(NIRPS) \citep{Bouchy2017}. The spectral resolutions for these spectrographs range between $50\,000$
+and $100\,000$.
+
+With the advance of the next generation high resolution NIR spectrographs, the community is still
+preparing the data analysis of stellar spectra, in particular how to get reliable atmospheric
+parameters \citep[see e.g.][]{Onehag2012,Lindgren2016,Andreasen2016,Passegger2016}. The analysis of
+stellar spectra is well understood for FGK stars in the optical part of the spectrum, however some
+work still needs to be done for the NIR part in order to make full use of these instruments.
+
+In this paper we continue our study to explore the use of the NIR domain to derive stellar
+parameters for FGK and M stars using the curve-of-growth analysis with an iron line list, which was
+initiated in \citet{Andreasen2016} (referred to as Paper I). Here we analyse the atlas of Arcturus
+and the spectrum of 10 Leo which serves as benchmark for the evaluation of our method and linelist
+in the NIR. For the analysis we use the iron line list presented in Paper I which we improve and 
+in this work. In Paper I we successfully tested our method on a slightly hotter star than
+the Sun, while in this work we aim to test the method on cooler stars extending the aplicability of
+our NIR method. The strength of the NIR domain over the optical becomes clear when we move towards
+the cooler stars. Here we see less continuum depression and line blending due to in particular
+molecular features which are more prominent in the optical part for cool stars. Moreover, the
+coolest stars emit more light in the NIR domain than the optical, and with the stars with the lowest
+masses being intrinsically faint, we thus obtain the majority of the flux here.
+
+In Section~\ref{sec:data} we present the NIR spectra used in this analysis, while we explain how the
+previous iron line list is being refined in Section~\ref{sec:linelist}. The method to obtain the
+parameters are briefly explained in Section~\ref{sec:method} before the results are presented in
+Section~\ref{sec:results}. This is finally followed by a discussion in Section~\ref{sec:discussion}
+and conclusion in Section~\ref{sec:conclusion}.
+
+
+
+\section{Stellar spectra}
+\label{sec:data}
+
+While the community is currently on the verge to access large amounts of high resolution NIR
+spectra, the available spectra at start of this work was still very sparse. For Paper I we started with 
+the subgiant HD 20010, a star hotter than the Sun, but still the closest one in terms of spectroscopic 
+parameters, thus making it an ideal first step for our goal. To continue our work we chose here two additional 
+stars with NIR spectra that are cooler than the Sun. The solar spectrum was still used for inspecting the line 
+list presented in Paper I. This spectrum was obtained from the Kitt Peak telescope by \citet{Hinkle1995}.
+
+The spectrum of HD 20010 will be reused as well. This spectrum was obtained with the CRIRES spectrograph 
+by \citet{Lebzelter2012} as part of the CRIRES-POP. HD 20010 will therefore be reanalysed to confirm the 
+the improvement of the refined line list is still consistent for hotter stars.
+
+The two new stars introduced in this work are Arcturus and 10 Leo. They will serve to continue the test of 
+the NIR EW method and the line list that we refine here. These two extra stars significantly increase the 
+range of spectral types, allowing to test cool giant stars with different metallicities regimes.
+
+Arcturus is one of the brightest stars on the Northern hemisphere, and is well studied \citep[see e.g.][to mention just a
+few]{Griffin1967,McWilliam1990,Ramirez2013}, and a benchmark star in
+current spectroscopic surveys such as Gaia-ESO \citep{Jofre2014,Smiljanic2014}.
+The atlas of Arcturus (acquired at Kitt Peak National Observatory using the FTS
+spectrograph at the Mayall telescope by \citet{Hinkle1995a}), covers the
+spectral range of interest (YJHK bands). Strong telluric features were
+identified with a spectrum from the TAPAS web page \citep{Bertaux2014}. The
+atlas also comes with a telluric standard and the ratio of the two spectra in
+order to correct for the tellurics. The telluric spectrum from TAPAS is only
+used for telluric line identification. We use both the telluric corrected and
+non-corrected spectrum.
+
+The spectrum for 10 Leo is made available by the CRIRES-POP team
+\citep{Nicholls2017}. 10 Leo is very similar to Arcturus, which is also one
+reason this star was the first to be fully reduced by the CRIRES-POP team. The
+spectrum is divided into several pieces according to the atmospheric windows in
+the NIR: YJ (only together), H, K, L, and M. We use only the first three. Some
+small gaps are present in the spectrum due to tellurics that could not be
+properly removed, low S/N, bad pixels, etc. Rather than giving an uncertain
+interpolation, \citet{Nicholls2017} decided to leave small gaps in the data.
+This has very little effect on our line by line analysis, however, due to those
+gaps and as we will see below, we were unable to measure one \ion{Fe}{II} line which are very
+important to determine the surface gravity with our EW method.
+
+The data for the two stars are very similar in terms of S/N (around 300 as
+measured by IRAF in a continuum region in the YJ band), resolution
+(approximately $100\;000$), and spectral coverage.
+
+A summary of the four stars used can be seen in Table~\ref{tab:stars}. The parameters are obtained
+from the PASTEL catalogue \citep{Soubiran2016} which is a compilation of stellar atmospheric
+parameters from the literature obtained mostly from high resolution and high S/N spectra. 
+Specifically for Arcturus, we use the same parameters as reported in Table 1 in \citet{Jofre2014}.
+These parameters are a mean from the PASTEL catalogue between 2000 and 2012. The parameters
+are the median values of all measurements for a given star, where the errors reported are the
+standard deviation of those values. This also explains the slightly higher errors than what is
+usually possible with a single measurement. $\xi_\mathrm{micro}$ is estimated using the empirical
+relation by \citet{Tsantaki2013} for HD 20010, and \citet{Adibekyan2015} for 10
+Leo. The first relation by \citet{Tsantaki2013} is only valid for $\log
+g\ge3.85$, while the other relation is for giant stars. For Arcturus the value is a mean of the
+derived microturbulence from different groups as explained in \citet{Jofre2014}. This is done for
+each literature value in the catalogue. The value presented in the Table here is calculated on the
+same way as the rest of the parameters.
+
+\begin{table*}
+    \caption{Stellar parameters used as reference in this work.}
+    \label{tab:stars}
+    \centering
+    \begin{tabular}{lllllll}
+      \hline\hline
+        Star          & Spectrographs  & Resolution  & $T_\mathrm{eff}$ (K) &  $\log g$ (dex)  &   $\xi_\mathrm{micro}$ (km/s)   & [Fe/H] (dex)      \\
+      \hline
+        Sun           & FTS            & 600\,000    & $5777$               &  $4.44$          &    $1.00$                       & $ 0.00$          \\
+        Arcturus (a)  & FTS            & 100\,000    & $4247 \pm  37$       &  $1.59 \pm 0.04$ &    $1.30 \pm 0.12$              & $-0.54 \pm 0.04$ \\
+        HD 20010 (b)  & CRIRES         & 100\,000    & $6152 \pm  95$       &  $3.96 \pm 0.11$ &    $1.17 \pm 0.24$              & $-0.27 \pm 0.06$ \\
+        10 Leo (c)    & CRIRES         & 100\,000    & $4742 \pm  61$       &  $2.76 \pm 0.17$ &    $1.45 \pm 0.08$              & $-0.03 \pm 0.02$ \\
+      \hline
+    \end{tabular}
+    \vspace{1ex}
+
+     \raggedright The stellar parameters were compiled using the the PASTEL catalogue \citep{Soubiran2016} (see text for details), 
+     except the parameters for the Sun. \\
+     (a) -  {\citet{Luck2015,Ramirez2013,Massarotti2008,McWilliam1990,Soubiran2008,Griffin1967,Gray2003,Luck2007,Sheffield2012,AllendePrieto2004,Gratton1953,Schwarzschild1957,CayrelDeStrobel1970,Maeckle1975,Penston1977,Martin1977,Oinas1977,Branch1978,Cenarro2007,Lambert1981,Gratton1982,Bell1985,Gratton1986,Kyrolainen1986,Leep1987,Edvardsson1988,FernandezVillacanas1990,Brown1992,McWilliam1994,Sneden1994,Hill1997,Gonzalez1998b,Tomkin1999,Carr2000,Frasca2009,Prugniel2011}} \\
+     (b) {See references in Paper I} \\
+     (c) {\citet{Park2013,Luck2015,Massarotti2008,Soubiran2008,daSilva2011}}
+%}
+\end{table*}
+
+
+\section{The line list}
+\label{sec:linelist}
+
+There have been different recent studies compiling line lists for high resolution NIR spectra using 
+the spectral synthesis method. For M dwarfs there is the line list by \citet{Onehag2012,Lindgren2016} which 
+covers the J band, and which has been tested extensively on CRIRES spectra ($R\sim100\,000$). There is also the 
+work by \citet{Shetrone2015} for deriving parameters of giant stars using the H band in APOGEE spectra.
+
+However, our goal is to compile an iron line list that is optimised to derive parameters for FGK
+and possibly M dwarf stars using an EW method which follows the same approach as described in e.g. \citet{Sousa2008a}.
+To achieve this we start with the list of NIR lines that we were able to collect using VALD \citep{VALD1,VALD2} and
+then applied a selection process to compile the best lines for our method. This was initially done in Paper I as we 
+prepared a \ion{Fe}{I} and \ion{Fe}{II} line list in the NIR domain, selecting lines in the wavelength region ranging 
+from 10\,000 to 25\,000\AA (covering the YJHK bands). EWs were measured for all iron lines with ARES \citep{Sousa2015a}, discarding any line
+with EW below 5 m\AA\ or above 200m\AA. The oscillator strengths of the line list were
+calibrated using the solar spectrum, and the solar iron abundance from \citet{Gonzalez2000} at 7.47
+dex. We chose this reference for consistency with our previous works on stellar parameters.
+Nevertheless, we note that this value is very similar to other more recent values
+\citep[e.g.][]{Asplund2009}. Since all our analysis is relative to the Sun, this choice has no significantly relevant
+influence in the final results. The abundances of individual iron lines were then obtained with the radiative
+transfer code MOOG \citep{Sneden1973} assuming LTE and using ATLAS model atmospheres
+\citep{Kurucz1993}.
+
+
+\subsection{Refining the NIR line list}
+\label{sec:refining_the_line_list}
+
+In Paper I the line list was used to derive atmospheric parameters for a late F star, HD20010. In this work we will go 
+one step forward, and test the previous line list for two K giant stars.
+Our goal is to have a unique line-list that works well for different spectral types. Although this
+is a difficult task given that the line strengths change with spectral types, we try to keep this as
+a goal for homogenisation reasons. As a consequence of this, we expect a decrease of the number 
+of good lines that are measured simultaneously for different types of stars. Because of this, and before 
+testing the original line list from Paper I at cooler effective temperatures with two K stars, it was mandatory to 
+first try to refine the line list. This includes identifying recurring outliers (both from the work done
+in Paper I and in this work), and double check if there are still lines which are not good to be measured, e.g. if 
+a line is amidst a forest of telluric lines. These outliers will be easily identified since we now can use three spectra compared to just
+one in the original work. Another justification to redo this step is because in Paper I we found
+$[\ion{Fe}/\ion{H}]$ values for HD 20010 that were about 0.1 dex higher than those found in the
+literature which lead us to conclude that we could improve the method. Moreover, since the errors for all the 
+parameters derived in Paper I were significantly higher when compared with what we would expect given our experience in the analysis of the 
+optical spectrum, in the refinement done in this work for the line list we were more rigid in the constrains for the selection of the best lines. This is also another reason for the drastic decrease of the number of lines that we present here.
+
+To identify outliers the solar atlas used in Paper I was revisited. This solar atlas is contaminated with telluric lines and given our new very strong constrains we removed a significant part of the original lines. In total 211 out of 295 \ion{Fe}{I} lines and 
+8 out of 13 \ion{Fe}{II} lines were removed in the process. Most of these were blended lines with either tellurics or other stellar
+lines. This procedure leaves us with 84 \ion{Fe}{I} lines and 5 \ion{Fe}{II} lines. These lines
+should be the best for deploying our EW technique of determining atmospheric stellar parameters.
+
+In this process, the EW of the lines in the Solar spectrum were now measured by visual inspection (this had
+previously been done totally automatically with ARES). This process helped us to better identify the lines that
+were blended. In cases where there is severe line blending, the line was discarded as described
+above. Since we re-measured the EWs, the oscillator strengths, $\log \mathit{gf}$, were also
+re-calibrated again for consistency reasons. Here we simply change the $\log \mathit{gf}$ values for the measured line until
+the abundance of a given line is equal to that of the Sun, using the a solar atmosphere model, the same as
+in Paper I. The final revisited line list with the updated $\log \mathit{gf}$ is presented in Table~\ref{tab:linelist}.
+%The mean change in $\log \mathit{gf}$ for common lines is $-0.09 \pm 0.16$.
+
+Our EW method implies the use of \ion{Fe}{II} lines to determine $\log g$ by imposing ionization balance with the average \ion{Fe}{I}
+abundance. However, the low number of selected \ion{Fe}{II} lines in the NIR is a concern, given that average
+abundance of \ion{Fe}{II} will be more affected by small number statistics compared to the numerous \ion{Fe}{I} lines.
+
+
+\section{Obtaining stellar parameters}
+\label{sec:method}
+
+The method used both in Paper I and here is based on the determination of the iron abundances on a
+number of lines from their measured EWs. This is done using the radiative transfer code MOOG
+\citep{Sneden1973} to determine the iron abundance from the measured EWs. Then, ionization balance
+between \ion{Fe}{I} and \ion{Fe}{II} lines, and excitation balance for all \ion{Fe}{I} lines is
+imposed, by changing the atmospheric parameters for the model atmosphere \citep[][ATLAS9 is used
+here]{Kurucz1993}. While this is a well tested method for getting atmospheric parameters utilising
+the optical part of the spectrum, little work has been done with the EW method in the NIR
+domain. Therefore we approach the measurements of the EWs with extra care, thus the measurements of
+EWs were done with both manually (IRAF) and automatically (ARES) as a quality check. For both the
+automatically and manually measured EWs, we discard at this point all lines with an EW below
+5 m\AA\ and above 150 m\AA\ before continuing the analysis. We decided to be a bit
+more constrained in the upper limit for the line strength to be sure that the Gaussian fit is a good
+approximation. Lines outside this range are either too weak to be reliably measured or saturated.
+The entire procedure of obtaining the stellar parameters is done with the software \texttt{FASMA}
+\citep{Andreasen2017a} which does the minimization when imposing ionization end excitation balance.
+
+
+%-----
+
+\section{Results}
+\label{sec:results}
+
+The results for the revisited spectrum of HD 20010, and the two additional K stars are
+presented here. These results serve as a benchmark for the presented NIR EW method and the
+respective refined NIR line list. We do not derive any parameters for the Sun since the line list is
+calibrated for this star. The solar parameters used in this process are listed in the Table \ref{tab:stars}.
+
+\subsection{Revisiting HD 20010}
+\label{sec:hd20010}
+
+As a first step we revisit HD 20010 for which we derived atmospheric stellar parameters 
+using the newly revised line list presented in this paper. The results are shown in Table
+\ref{tab:results} along with the results for the two other stars analysed in this work. Our
+new analysis, based on the refined line-list (see above), provides results that are in better
+agreement with the average literature values adopted (especially $\log g$), and smaller errors with
+the updated results. This suggests that the new line list is indeed more reliable dispite the significantly 
+lower number of lines used in the anylisis. It shows a clear example that quality can be better than the quantity.
+
+\begin{table}
+    \caption{NIR Spectroscopic Parameters derived in this work.}
+    \label{tab:results}
+    \centering
+    \begin{tabular}{llll}
+      \hline\hline
+                                    & HD 20010          &  10 Leo           &  Arcturus        \\
+      \hline
+        Literature                  &                   &                   &                  \\
+        $T_\mathrm{eff}$ (lit.)     & $6152 \pm  95$    &  $4741 \pm  60$   & $4247 \pm 37$   \\
+        $\log g$ (lit.)             & $3.96 \pm 0.19$   &  $2.76 \pm 0.17$  & $1.59 \pm 0.04$  \\
+        $[\ion{Fe}/\ion{H}]$ (lit.) & $-0.27 \pm 0.06$  &  $-0.03 \pm 0.02$ & $-0.54 \pm 0.04$ \\
+        $\xi_\mathrm{micro}$ (lit.) & $1.17 \pm 0.24$   &  $1.45 \pm 0.08$  & $1.30 \pm 0.12$  \\
+      \hline
+        $\log g$ fixed              &                   &                   &                  \\
+        $T_\mathrm{eff}$            & $6161 \pm 164$    &  $4761 \pm 118$   & $4357 \pm  74$   \\
+        $\log g$                    & 3.96 (fixed)      &  2.76 (fixed)     & 1.59 (fixed)     \\
+        $[\ion{Fe}/\ion{H}]$        & $-0.18 \pm 0.11$  &  $ 0.01 \pm 0.07$ & $-0.55 \pm 0.04$ \\
+        $\xi_\mathrm{micro}$        & $1.72 \pm 0.44$   &  $1.25 \pm 0.11$  & $1.55 \pm 0.10$  \\
+      \hline
+        All free                    &                   &                   &                  \\
+        $T_\mathrm{eff}$            & $6162 \pm 184$    &  $4805 \pm  98$   & $4439 \pm  62$   \\
+        $\log g$                    & $4.08 \pm 0.77$   &  $2.42 \pm 0.61$  & $1.20 \pm 0.20$  \\
+        $[\ion{Fe}/\ion{H}]$        & $-0.18 \pm 0.11$  &  $-0.01 \pm 0.07$ & $-0.58 \pm 0.06$ \\
+        $\xi_\mathrm{micro}$        & $1.59 \pm 0.49$   &  $1.23 \pm 0.10$  & $1.55 \pm 0.10$  \\
+        \hline\hline
+    \end{tabular}
+     \vspace{1ex}
+
+     \raggedright
+     \textbf{Note:} Results for the three stars with first set of parameters
+     are the literature values as presented in Table.~\ref{tab:stars}, second set of parameters 
+     are results with $\log g$ set to the same value during the minimization procedure as found 
+     in the literature (fixed), and last set of parameters are with all parameters free during 
+     the minimization procedure.
+     
+\end{table}
+
+The comparison of the derived parameters with those considered as reference, collected from literature, is visualised in
+Fig.~\ref{fig:parameters}. Given the small number of available \ion{Fe}{II} lines, we adopted two different
+methodologies to derive the spectroscopic parameters: deriving all stellar parameters simultaneously ($T_\mathrm{eff}$, $\log g$,
+$\xi_\mathrm{micro}$ and $[\ion{Fe}/\ion{H}]$) or deriving only $T_\mathrm{eff}$,
+$\xi_\mathrm{micro}$, and $[\ion{Fe}/\ion{H}]$ but constraining the $\log g$ to the reference value. The
+latter approach does not make use of any of the \ion{Fe}{II} lines.
+In the figure we show the reference values (blue - listed in table \ref{tab:stars}), the 
+derived parameters with $\log g$ fixed to the reference value for each star (green), and the derived parameters with $\log g$ is free during the
+minimization procedure (red points).
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1.0\linewidth]{figures/parameters.pdf}
+    \caption{Parameters for Arcturus, 10 Leo, and HD 20010 (revisited in this paper). The blue
+             points show the reference values as discussed in the text. The orange points are the
+             derived values with $\log g$ fixed to the literature value, and the green points show
+             the derived parameters when $\log g$ is also derived. For $T_\mathrm{eff}$ and
+             $\log g$ the results are shown compared to the literature value to see the difference.}
+    \label{fig:parameters}
+\end{figure}
+
+
+\subsection{Arcturus}
+\label{sec:arcturus}
+
+Arcturus is one of the brightest stars on the night sky with a V magnitude of
+-0.05 \citep{Ducati2002}. Hence it is a prime target for testing with the
+numerous measurements of the atmospheric parameters as mentioned above.
+
+The atlas consists of both a summer observation set and a winter observation
+set. The two data sets have been obtained in order to minimise the effect of
+tellurics at different spectral regions. A comparison between the two sets of
+measured EWs - both the manual measurements using IRAF and the automatic
+measurements using ARES - are shown in Fig.~\ref{fig:EWcomp}. The automatic EW
+measurements for the summer set and winter set show excellent agreement
+with a mean difference of 3\%. This means that the EWs measured from the two data sets 
+are very similar, and thus was enough to manually measure the EWs for our lines for only one set (summer).
+However, we did measure a few lines from the winter data set to certify a good agreement. Since the automatic EWs are very 
+similar to the manual ones we chose to only derive parameters of the summer set with EWs measured with ARES.
+
+Due to the low number of pressure sensitive \ion{Fe}{II} lines we again derive parameters with and
+without $\log g$ set to a fixed reference value (1.59 dex, the average literature value adopted). 
+After we reached convergence using all the iron lines we were able 
+to identify any outlier above $3\sigma$ in abundance. The outliers were removed one-by-one, followed by the restarting of 
+the minimization routine. This process was done iteratively until there were no more outliers. The final results are 
+presented in Table \ref{tab:results} together with reference parameters from the literature.
+
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1.0\linewidth]{figures/EWcomp.pdf}
+    \caption{Top figure: Difference of the automatic EW measurements between the
+             summer observations and winter observations from the Arcturus
+             spectra. Bottom figure: Same as above, but with manual measurements
+             from ARES (summer) and automatic measurements (summer).}
+    \label{fig:EWcomp}
+\end{figure}
+
+
+From our analysis with $\log g$ fixed we derive a $T_\mathrm{eff}$ 100 K higher than the 
+reference, which is just within the errorbars. When $\log g$ is also set as a free parameter, 
+we see a 200 K difference. From this second analysis we also derive a $\log g$ that is $\sim 0.4$ 
+dex below the reference value. On the other hand, the $[\ion{Fe}/\ion{H}]$ value we derived is in 
+very close agreement with the literature values: only 0.04 dex distant when $\log g$ is fixed, and 
+0.10 dex otherwise. The value in both cases are well within the errors of the literature value.
+
+
+\subsection{10 Leo}
+\label{sec:10Leo}
+
+The approach for determining the atmospheric stellar parameters for 10 Leo is identical to Arcturus, although 
+we did not measure any EWs by hand here. We use ARES on each band (YJ, H, and K-band)
+separately. For the small gaps in the spectrum, we simply set the flux to 1, since the spectrum is
+already normalised. This will also prevent ARES to identify and measure any lines in these regions.
+The EWs from the three regions are combined to one final line list used for the determination of the
+parameters. The final results can be seen in Fig.~\ref{fig:parameters} and Table~\ref{tab:results}.
+
+Generally the derived parameters are in excellent agreement with the literature
+values listed here.  For $T_\mathrm{eff}$ we were 64 K off with $\log
+g$ set as a free parameter, well within the errors. The only parameter that show
+a discrepancy compared to the reference value is $\xi_\mathrm{micro}$ with a
+difference of 0.22 km/s, which is at the limit of the errors reported. We
+note that this parameter is not reported in the PASTEL database, and this was a
+derived parameter from an empirical relation. We were able to derive good $\log
+g$ values, although with larger errors compared to the results from the
+literature.
+
+
+
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{The role of $\log g$}
+
+One of the most difficult atmospheric stellar parameters to get from a spectrum
+is the surface gravity. For this we need the lines of pressure sensitive ionized
+atoms such as \ion{Fe}{II}. However, they are more sparse than neutral iron,
+\ion{Fe}{I}, making the determination more challenging. This is true in the
+optical \citep[see e.g. the discussion by][]{Mortier2013c}, and even more in the
+NIR (see e.g. Paper I). One solution to this problem is to fix the value of
+surface gravity and derive the other parameters. With the parallaxes from e.g.
+Gaia \citep{GAIA} we will have access to accurate $\log g$. However, this
+requires a priori knowledge of the mass from e.g. isochrones, and
+$T_\mathrm{eff}$. By iteratively obtaining the $T_\mathrm{eff}$ from
+spectroscopy and the corresponding $\log g$ from the parallaxes, we can obtain
+reliable $T_\mathrm{eff}$, $\log g$, and $[\ion{Fe}/\ion{H}]$. Another
+approach is to use asteroseismic $\log g$ which are becoming a new standard.
+This has previously been done in the APOGEE+\emph{Kepler} (APOKASC) context by
+\citet{Pinsonneault2014,Hawkins2016}. It is important to mention, that the
+asteroseismic $\log g$ in turn is dependent on $T_\mathrm{eff}$ through the
+scaling relations \citep[see e.g.][]{Kjeldsen1995}. Moreover, this is not
+possible for all spectral classes. It is e.g. not possible for M dwarfs, since
+no pulsations have been observed here.
+
+Since there is a dependence between the other derived parameters with $\log g$,
+simply using a mean value as a reference value can lead to misleading
+parameters. To verify the impact of using the wrong $\log g$ as baseline, we
+tested what was the $T_\mathrm{eff}$ and $[\ion{Fe}/\ion{H}]$ for Arcturus that we derive by
+setting $\log g$ fixed to values between 0.9\,dex and 2.2\,dex, i.e., in the
+range of the literature values found. The results show that $T_\mathrm{eff}$ and
+$[\ion{Fe}/\ion{H}]$ can change by 200 K and 0.21\,dex, respectively.
+This is most likely the origin of the small discrepancies seen for the
+parameters of Arcturus when the $\log g$ is fixed and free.
+
+Furthermore, note that the ionized iron lines are not only sparse, they are also
+rather weak. The lowest measured EW for an \ion{Fe}{II} line is
+9.7 m\AA\ (in Arcturus), while the highest measured value is only
+24.4 m\AA\ (in 10 Leo). However, with the upcoming high quality spectra
+for the NIR, the community should still be able to measure these \ion{Fe}{II}
+lines in this kind of stars. We showed in Paper I that a minimum S/N of around 50 is required to
+utilise this method, however this was only tested for the Sun, and a higher S/N
+might be needed for other spectral types.
+
+
+\subsection{Proper data reduction}
+
+The relative novelty of NIR high resolution spectroscopy is reflected on a
+number of problems regarding the available spectra that made our analysis
+particularly difficult. For instance, in Paper I we had to deal with a less
+reliable wavelength calibration for the spectrum of HD 20010. This meant the
+wavelength was stretched when compared to a synthetic spectrum, which is
+discussed in more detail by \citet{Nicholls2017}. The poor wavelength
+calibration for HD 20010 most likely caused bad EW measurements. In addition,
+the spectrum was not corrected for telluric lines which also caused minor
+deviation from the true EW when measured. Another reason was the original
+derived line list used, which we improve in this work. The refined line
+list has made the derivation of the metallicity more reliable compared with the
+adopted literature as it is demonstrated in Sec.~\ref{sec:hd20010}. It is
+expected that even better results will be obtained for this star once the final
+spectrum is presented by the CRIRES-POP team.
+
+All the above problems we had with HD 20010 have been solved for 10 Leo, and it
+is clear the results are of much higher quality. This can be seen by the smaller
+errors we have on our parameters, and the good agreement of all parameters
+compared with the literature. Therefore, it may be necessary that a telluric
+correction is applied to the spectrum before atmospheric stellar parameters can
+be determined reliably. However, with our limited sample it is difficult to make
+a clear conclusion yet. Note that this is unlike the optical where a telluric
+correction is not necessary for obtaining atmospheric parameters.
+
+
+\subsection{The refined line list}
+
+The line list from Paper I has been refined, i.e. several blended or otherwise unreliable measured
+lines have been removed. Many of these lines were not identified in the previous work since we
+applied an automatic approach, mainly due to the extreme large amount of iron transitions available
+in the YJHK bands. The new line list provides better results for HD 20010. Furthermore, the refined 
+line list was tested on the two additional K giants, Arcturus and 10 Leo. We see a good agreement between 
+the derived parameters and the literature values used for comparison. During the spectroscopic analysis of 
+these stars we have identified two additional lines as outliers in Table~\ref{tab:linelist}. These lines 
+are the two \ion{Fe}{I} lines at 10167.47 \AA\ and 11641.80 \AA.
+
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+In this paper we presented a refined \ion{Fe}{I} and \ion{Fe}{II} line list in the NIR domain to
+derive parameters for high resolution spectra. The method should work in all spectral ranges,
+however, it was important to identify the best iron lines. For the NIR we need a relative large
+coverage (YJHK, although few lines are in the K band). The method used here which is usually adopted
+in the optical domain to derive spectroscopic parameters can now be applyed to NIR spectra as well. The 
+refined line list has been used to sucessfully derive parameters for the late F-star HD 20010, as well as for 
+two K-giants (Arcturus and 10 Leo). The results show that the stellar atmospheric parameters derived
+using our line list are perfectly compatible with the reference values. We are thus now extending
+the line list towards cooler temperatures. With the updated results for HD 20010, and the results
+for Arcturus and 10 Leo, we are now reaching the same precision that has been reached in the optical
+for similar spectral types using the same methodology. The obvious next step is to approach the even
+cooler M stars. Particular interesting are the M dwarf stars, known to be prone forming rocky
+planets. As important as cooler stars, we have yet to test our line list on any dwarf stars other
+than the Sun for which our line list is calibrated. The new spectral library from
+CARMENES\footnote{This library was not available when this work was carried out.}
+\citep{Reiners2017} will provide the community with high quality spectra and allow us to extend our
+test to many different spectral types of interest.
+
+
+%\section{Methods, Observations, Simulations etc.}
+
+% Normally the next section describes the techniques the authors used.
+% It is frequently split into subsections, such as Section~\ref{sec:maths} below.
+% 
+% \subsection{Maths}
+% \label{sec:maths} % used for referring to this section from elsewhere
+% 
+% Simple mathematics can be inserted into the flow of the text e.g. $2\times3=6$
+% or $v=220$\,km\,s$^{-1}$, but more complicated expressions should be entered
+% as a numbered equation:
+% 
+% \begin{equation}
+%     x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}.
+% 	\label{eq:quadratic}
+% \end{equation}
+% 
+% Refer back to them as e.g. equation~(\ref{eq:quadratic}).
+% 
+% \subsection{Figures and tables}
+% 
+% Figures and tables should be placed at logical positions in the text. Don't
+% worry about the exact layout, which will be handled by the publishers.
+% 
+% Figures are referred to as e.g. Fig.~\ref{fig:example_figure}, and tables as
+% e.g. Table~\ref{tab:example_table}.
+% 
+% % Example figure
+% \begin{figure}
+% 	% To include a figure from a file named example.*
+% 	% Allowable file formats are eps or ps if compiling using latex
+% 	% or pdf, png, jpg if compiling using pdflatex
+% 	\includegraphics[width=\columnwidth]{example}
+%     \caption{This is an example figure. Captions appear below each figure.
+% 	Give enough detail for the reader to understand what they're looking at,
+% 	but leave detailed discussion to the main body of the text.}
+%     \label{fig:example_figure}
+% \end{figure}
+% 
+% % Example table
+% \begin{table}
+% 	\centering
+% 	\caption{This is an example table. Captions appear above each table.
+% 	Remember to define the quantities, symbols and units used.}
+% 	\label{tab:example_table}
+% 	\begin{tabular}{lccr} % four columns, alignment for each
+% 		\hline
+% 		A & B & C & D\\
+% 		\hline
+% 		1 & 2 & 3 & 4\\
+% 		2 & 4 & 6 & 8\\
+% 		3 & 5 & 7 & 9\\
+% 		\hline
+% 	\end{tabular}
+% \end{table}
+
+
+% \section{Conclusions}
+% 
+% The last numbered section should briefly summarise what has been done, and describe
+% the final conclusions which the authors draw from their work.
+
+\section*{Acknowledgements}
+
+% The Acknowledgements section is not numbered. Here you can thank helpful
+% colleagues, acknowledge funding agencies, telescopes and facilities used etc.
+% Try to keep it short.
+
+
+% \begin{acknowledgements}
+% 
+We thank Jos\'e Caballero for many useful comments during the process which led to this paper.
+
+This work was supported by Funda\c{c}\~ao para a Ci\^encia e a Tecnologia, FCT, (ref.
+UID/FIS/04434/2013, PTDC/FIS-AST/1526/2014, and PTDC/FIS-AST/7073/2014) through national funds and
+by FEDER through COMPETE2020 (ref. POCI-01-0145-FEDER-007672, POCI-01-0145-FEDER-016886, and
+POCI-01-0145-FEDER-016880). N.C.S., and S.G.S. acknowledge the support from FCT through Investigador
+FCT contracts of reference IF/00169/2012, and IF/00028/2014, respectively, and POPH/FSE (EC) by
+FEDER funding through the program “Programa Operacional de Factores de Competitividade - COMPETE”.
+E.D.M acknowledge the support from the FCT in the form of the grants IF/00849/2015/CP1273/CT0003.
+JJN acknowledges support from FCT in the form of a “PhD::Space” (PD/00040/2012) network doctoral
+grant, of reference PD/BD/52700/2014.
+
+This research has made use of the SIMBAD database operated at CDS, Strasbourg (France).
+% 
+% \end{acknowledgements}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%% REFERENCES %%%%%%%%%%%%%%%%%%
+
+% The best way to enter references is to use BibTeX:
+
+\bibliographystyle{mnras}
+\bibliography{thesis} % if your bibtex file is called example.bib
+
+
+% Alternatively you could enter them by hand, like this:
+% This method is tedious and prone to error if you have lots of references
+% \begin{thebibliography}{99}
+% \bibitem[\protect\citeauthoryear{Author}{2012}]{Author2012}
+% Author A.~N., 2013, Journal of Improbable Astronomy, 1, 1
+% \bibitem[\protect\citeauthoryear{Others}{2013}]{Others2013}
+% Others S., 2012, Journal of Interesting Stuff, 17, 198
+% \end{thebibliography}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%% APPENDICES %%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+
+% \section{Some extra material}
+% 
+% If you want to present additional material which would interrupt the flow of the main paper,
+% it can be placed in an Appendix which appears after the list of references.
+
+
+\section{Complete refined line list}
+\label{app:linelist}
+
+The complete refined line list with Solar EWs measured by hand using IRAF,
+and the three stars also analysed in this work. Note that the EWs given here are
+after removal of outliers in abundance. This is done automatically with \texttt{FASMA}
+\citep{Andreasen2017a}.
+
+ \begin{onecolumn}
+   \begin{table}
+   \label{tab:linelist}
+       \caption{\label{tab:linelist} Refined line list with all \ion{Fe}{I} and \ion{Fe}{II} lines.}
+   \begin{tabular}{cclrrrrrl}
+         \hline\hline
+           Wavelength (\AA) & Element        & EP (eV)  &  $\log \mathit{gf}$  &  Sun  & HD 20010  & 10 Leo & Arcturus & Giant outlier\\
+         \hline
+%         \endfirsthead
+%         \caption{continued.}\\
+%         \hline\hline
+%           Wavelength (\AA) & Element        & EP (eV)  &  $\log \mathit{gf}$  &  Sun  & HD 20010  & 10 Leo & Arcturus & Giant outlier\\
+%         \hline
+%         \endhead
+           10065.05         & \ion{Fe}{I}    &  4.83    &    -0.279            &  94.0 &  ...      & 115.2  & 107.0    & no \\
+           10080.42         & \ion{Fe}{I}    &  5.10    &    -1.964            &   5.9 &  ...      &  ...   & ...      & no \\
+           10081.39         & \ion{Fe}{I}    &  2.42    &    -4.512            &   6.9 &  ...      &  42.9  &  49.8    & no \\
+           10086.24         & \ion{Fe}{I}    &  2.95    &    -3.978            &   7.0 &  39.5     &  34.2  & ...      & no \\
+           10137.10         & \ion{Fe}{I}    &  5.09    &    -1.736            &   9.8 &  ...      &  21.1  &  12.1    & no \\
+           ...              &    ...         &  ...     &    ...               &  ...  &  ...      &  ...   &  ...     & .. \\
+
+%           10142.84         & \ion{Fe}{I}    &  5.06    &    -1.554            &  14.9 &   5.5     &  36.3  & ...      & no \\
+%           10145.56         & \ion{Fe}{I}    &  4.80    &    -0.118            & 109.0 & 146.5     & 137.0  & ...      & no \\
+%           10155.16         & \ion{Fe}{I}    &  2.18    &    -4.336            &  16.2 &  79.0     &  87.8  & ...      & no \\
+%           10156.51         & \ion{Fe}{I}    &  4.59    &    -2.109            &  12.2 &  ...      &  29.2  &  24.4    & no \\
+%           10167.47         & \ion{Fe}{I}    &  2.20    &    -2.319            & 125.7 &  ...      &  ...   & ...      & yes\\
+%           10195.11         & \ion{Fe}{I}    &  2.73    &    -3.608            &  22.6 &  10.7     &  76.3  &  78.4    & no \\
+%           10216.31         & \ion{Fe}{I}    &  4.73    &     0.047            & 129.9 & 144.9     & 128.6  & ...      & no \\
+%           10218.41         & \ion{Fe}{I}    &  3.07    &    -2.893            &  40.9 & 101.7     &  98.2  & ...      & no \\
+%           10265.22         & \ion{Fe}{I}    &  2.22    &    -4.648            &   8.1 &  ...      &  52.6  &  55.4    & no \\
+%           10307.45         & \ion{Fe}{I}    &  4.59    &    -2.432            &   6.4 &  16.8     &   9.1  & ...      & no \\
+%           10332.33         & \ion{Fe}{I}    &  3.63    &    -3.131            &  10.5 &  ...      &  48.6  &  34.4    & no \\
+%           10340.89         & \ion{Fe}{I}    &  2.20    &    -3.665            &  46.6 & 116.5     & 127.1  & ...      & no \\
+%           10347.97         & \ion{Fe}{I}    &  5.39    &    -0.717            &  37.0 &  19.5     &  58.2  &  36.6    & no \\
+%           10353.81         & \ion{Fe}{I}    &  5.39    &    -0.989            &  24.2 &  12.1     &  39.6  &  33.4    & no \\
+%           10364.06         & \ion{Fe}{I}    &  5.45    &    -1.100            &  18.0 &   9.0     &  33.5  &  16.6    & no \\
+%           10379.00         & \ion{Fe}{I}    &  2.22    &    -4.236            &  18.7 &   6.2     &  76.4  &  80.1    & no \\
+%           10388.75         & \ion{Fe}{I}    &  5.45    &    -1.471            &   8.7 &  ...      &  16.5  &   8.2    & no \\
+%           10395.80         & \ion{Fe}{I}    &  2.18    &    -3.435            &  61.3 & 129.3     & 147.7  & ...      & no \\
+%           10423.03         & \ion{Fe}{I}    &  2.69    &    -3.658            &  22.9 &   8.4     &  80.6  &  79.3    & no \\
+%           10423.74         & \ion{Fe}{I}    &  3.07    &    -3.119            &  29.9 &  ...      &  ...   & ...      & no \\
+%           10469.65         & \ion{Fe}{I}    &  3.88    &    -1.277            &  89.3 & 131.9     & 127.4  & ...      & no \\
+%           10532.24         & \ion{Fe}{I}    &  3.93    &    -1.650            &  64.4 & 109.1     &  98.8  & ...      & no \\
+%           10555.65         & \ion{Fe}{I}    &  5.45    &    -1.282            &  13.1 &   7.1     &  25.5  &  15.4    & no \\
+%           10577.14         & \ion{Fe}{I}    &  3.30    &    -3.222            &  17.2 &   6.0     &  67.0  &  56.1    & no \\
+%           10616.72         & \ion{Fe}{I}    &  3.27    &    -3.306            &  15.6 &   6.5     &  57.0  &  50.8    & no \\
+%           10725.19         & \ion{Fe}{I}    &  3.64    &    -2.948            &  15.7 &   6.8     &  57.5  &  48.9    & no \\
+%           10753.00         & \ion{Fe}{I}    &  3.96    &    -2.077            &  39.7 &  81.8     &  73.4  & ...      & no \\
+%           10780.69         & \ion{Fe}{I}    &  3.24    &    -3.553            &  10.4 &  ...      &  49.7  &  34.2    & no \\
+%           10783.05         & \ion{Fe}{I}    &  3.11    &    -2.786            &  47.0 & 100.4     & 103.3  & ...      & no \\
+%           10818.28         & \ion{Fe}{I}    &  3.96    &    -2.160            &  35.6 &  20.3     &  76.2  & ...      & no \\
+%           10863.52         & \ion{Fe}{I}    &  4.73    &    -0.877            &  67.1 &  84.2     &  75.4  & ...      & no \\
+%           10884.26         & \ion{Fe}{I}    &  3.93    &    -2.129            &  39.1 &  79.3     &  75.5  & ...      & no \\
+%           10896.30         & \ion{Fe}{I}    &  3.07    &    -2.911            &  42.9 & 101.8     & 100.3  & ...      & no \\
+%           11013.24         & \ion{Fe}{I}    &  4.80    &    -1.240            &  42.4 &  ...      &  ...   & ...      & no \\
+%           11026.79         & \ion{Fe}{I}    &  3.94    &    -2.517            &  21.2 &  49.4     &  68.6  & ...      & no \\
+%           11119.80         & \ion{Fe}{I}    &  2.85    &    -2.452            &  84.8 & 142.5     &  ...   & ...      & no \\
+%           11641.80         & \ion{Fe}{I}    &  4.58    &    -2.116            &  15.6 &  ...      &  ...   & ...      & yes\\
+%           11778.42         & \ion{Fe}{I}    &  5.34    &    -1.708            &   8.4 &  6.3      &  11.2  & ...      & no \\
+%           12053.08         & \ion{Fe}{I}    &  4.56    &    -1.602            &  41.3 &  33.5     &  76.5  & ...      & no \\
+%           12119.50         & \ion{Fe}{I}    &  4.59    &    -1.897            &  25.0 &  ...      &  50.1  & ...      & no \\
+%           12213.34         & \ion{Fe}{I}    &  4.64    &    -2.006            &  19.1 &  16.5     &  37.5  & ...      & no \\
+%           12227.11         & \ion{Fe}{I}    &  4.61    &    -1.408            &  51.5 &  ...      &  72.0  & ...      & no \\
+%           12244.92         & \ion{Fe}{I}    &  3.64    &    -3.222            &  11.8 &  54.2     &  ...   & ...      & no \\
+%           12340.48         & \ion{Fe}{I}    &  2.28    &    -4.680            &   9.4 &  ...      &  58.2  &  54.8    & no \\
+%           12342.92         & \ion{Fe}{I}    &  4.64    &    -1.545            &  42.1 &  19.4     &  80.4  &  65.9    & no \\
+%           12510.52         & \ion{Fe}{I}    &  4.96    &    -1.930            &  12.9 &  39.1     &  20.4  & ...      & no \\
+%           12557.00         & \ion{Fe}{I}    &  2.28    &    -4.026            &  33.8 &  14.6     & 113.7  & 124.0    & no \\
+%           12615.93         & \ion{Fe}{I}    &  4.64    &    -1.686            &  35.7 &  ...      &  44.1  & ...      & no \\
+%           12638.70         & \ion{Fe}{I}    &  4.56    &    -0.679            & 112.3 &  ...      &  ...   & ...      & no \\
+%           12807.15         & \ion{Fe}{I}    &  3.64    &    -2.649            &  37.1 &  ...      &  97.7  & ...      & no \\
+%           12808.24         & \ion{Fe}{I}    &  4.99    &    -1.811            &  16.4 &   9.8     &  47.9  &  33.6    & no \\
+%           12824.86         & \ion{Fe}{I}    &  3.02    &    -3.612            &  20.1 &   6.6     &  84.1  &  83.7    & no \\
+%           12840.57         & \ion{Fe}{I}    &  4.96    &    -1.612            &  25.3 &  10.9     &  72.1  & ...      & no \\
+%           12879.77         & \ion{Fe}{I}    &  2.28    &    -3.525            &  68.7 & 126.2     & 168.7  & ...      & no \\
+%           12896.12         & \ion{Fe}{I}    &  4.91    &    -1.713            &  23.2 &  12.4     &  55.7  &  49.1    & no \\
+%           12933.01         & \ion{Fe}{I}    &  5.02    &    -1.879            &  13.9 &   6.6     &  19.0  & ...      & no \\
+%           12934.67         & \ion{Fe}{I}    &  5.39    &    -1.103            &  30.9 &  20.8     &  49.9  & ...      & no \\
+%           13014.84         & \ion{Fe}{I}    &  5.45    &    -1.542            &  12.3 &  10.4     &  22.3  & ...      & no \\
+%           13352.17         & \ion{Fe}{I}    &  5.31    &    -0.355            &  94.4 &  74.8     & 145.3  & ...      & no \\
+%           13392.10         & \ion{Fe}{I}    &  5.35    &    -0.105            & 115.1 & 142.4     &  ...   & ...      & no \\
+%           15194.49         & \ion{Fe}{I}    &  2.22    &    -4.808            &  14.1 &  ...      & 116.4  & ...      & no \\
+%           15201.57         & \ion{Fe}{I}    &  5.49    &    -1.315            &  29.0 &  ...      &  43.6  & ...      & no \\
+%           15490.34         & \ion{Fe}{I}    &  2.20    &    -4.787            &  16.1 &  ...      &  70.3  & 119.5    & no \\
+%           15593.74         & \ion{Fe}{I}    &  5.03    &    -1.796            &  28.0 &  14.6     &  65.5  & ...      & no \\
+%           15611.15         & \ion{Fe}{I}    &  3.42    &    -2.966            &  51.6 &  31.4     & 102.1  & ...      & no \\
+%           15648.51         & \ion{Fe}{I}    &  5.43    &    -0.633            &  93.8 &  57.2     & 138.5  & 127.6    & no \\
+%           15676.58         & \ion{Fe}{I}    &  5.11    &    -1.848            &  22.3 &  36.1     &  27.4  & ...      & no \\
+%           16198.50         & \ion{Fe}{I}    &  5.41    &    -0.376            & 131.4 &  84.7     & 172.3  & 176.5    & no \\
+%           17420.83         & \ion{Fe}{I}    &  3.88    &    -3.628            &   6.7 &  51.0     &  ...   & ...      & no \\
+%           19923.34         & \ion{Fe}{I}    &  5.02    &    -1.536            &  49.7 & 128.6     & 119.8  & ...      & no \\
+%           21851.38         & \ion{Fe}{I}    &  3.64    &    -3.578            &  12.7 &   5.0     &  62.5  & ...      & no \\
+%           22257.11         & \ion{Fe}{I}    &  5.06    &    -0.704            & 132.5 & 109.3     &  ...   & ...      & no \\
+%           22380.80         & \ion{Fe}{I}    &  5.03    &    -0.377            & 179.4 & 107.8     &  ...   & ...      & no \\
+%           22392.88         & \ion{Fe}{I}    &  5.10    &    -1.330            &  60.8 &  32.9     & 171.8  & 128.2    & no \\
+%           22619.84         & \ion{Fe}{I}    &  4.99    &    -0.564            & 158.2 &  ...      &  ...   & ...      & no \\
+%           23308.48         & \ion{Fe}{I}    &  4.08    &    -2.705            &  31.3 &  80.9     &  68.2  & ...      & no \\
+%           10427.31         & \ion{Fe}{II}   &  6.08    &    -1.575            &  13.7 &   8.1     &  20.7  &  10.3    & no \\
+%           10501.50         & \ion{Fe}{II}   &  5.55    &    -1.861            &  19.5 &  16.8     &  24.4  & ...      & no \\
+%           10862.64         & \ion{Fe}{II}   &  5.59    &    -2.006            &  15.3 &  15.8     &  10.0  &   9.7    & no \\
+%           11125.58         & \ion{Fe}{II}   &  5.62    &    -2.213            &  10.5 &  14.1     &  ...   & ...      & no \\
+%           13251.14         & \ion{Fe}{II}   &  9.41    &     0.768            &  13.4 &  50.3     &  ...   & ...      & no \\
+         \hline
+\end{tabular}
+
+    \vspace{1ex}
+
+    \raggedright This table contains the atomic data, including the updated $\log \mathit{gf}$. The fifth to
+                the eight columns are the measured EWs in m\AA{} for the four stars analysed in this
+                work. {\bf The last column shows where Arcturus and 10 Leo both had outliers in the
+                derivation of parameters.} This table is available in an electronic form online.
+
+   \end{table}
+ \end{onecolumn}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Don't change these lines
+\bsp	% typesetting comment
+\label{lastpage}
+\end{document}
+
+% End of mnras_template.tex
